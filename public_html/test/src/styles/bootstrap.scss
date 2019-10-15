@@ -39,3 +39,6 @@
  @import "../../../../node_modules/bootstrap/scss/_spinners";
  @import "../../../../node_modules/bootstrap/scss/_utilities";
  @import "../../../../node_modules/bootstrap/scss/_print";
+
+ //переопределение стилей
+ @import "custom";

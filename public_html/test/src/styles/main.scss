@@ -26,6 +26,17 @@ a:focus {
   align-items: flex-start;
   position: relative;
 
+  &__link,
+  &__link:active,
+  &__link:link,
+  &__link:visited,
+  &__link:focus {
+    display: block;
+    padding: 1.8rem 0.5rem 0.2rem;
+    border-top: 2px solid transparent;
+    transition: border 0.3s ease 0s, color 0.3s ease 0s;
+  }
+
   &__top-menu {
     display: flex;
     flex-flow: row nowrap;
@@ -38,17 +49,6 @@ a:focus {
     font-weight: 500;
   }
 
-  &__link,
-  &__link:active,
-  &__link:link,
-  &__link:visited,
-  &__link:focus {
-    display: block;
-    padding: 1.8rem 0.5rem 0.2rem;
-    border-top: 2px solid transparent;
-    transition: border 0.3s ease 0s, color 0.3s ease 0s;
-  }
-
   &__link:hover {
     border-top: 2px solid $link-hover-color;
     text-decoration: none;
@@ -59,9 +59,8 @@ a:focus {
     font-weight: bold;
     font-size: 1.5rem;
     width: 25%;
-    padding-top: 1rem;
+    margin-top: 1rem;
     color: $brand-color;
-    text-shadow: 1px 1px 1px rgb(170, 170, 170);
     opacity: 0.85;
     transition: opacity 0.3s ease 0s;
 
@@ -80,17 +79,26 @@ a:focus {
 
     &-logo {
       width: 60px;
-      opacity: 0.85;
-      transition: opacity 0.3s ease 0s;
     }
   }
 
   &__hamburger {
     font-size: 2rem;
     display: none;
-    height: auto;
     margin: 0;
     padding: 0;
+  }
+
+  &__cart {
+    margin-left: 2rem;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    transition: opacity 0.3s ease 0s !important;
+    opacity: 0.85;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -147,8 +155,22 @@ a:focus {
   margin: auto 0;
 
   &__title,
-  &__desc, &__desc-2 {
+  &__desc,
+  &__desc-2 {
     margin: 0;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+  }
+
+  &__desc {
+    font-size: 1.4rem;
+  }
+
+  &__desc-2 {
+    width: 800px;
+    margin-bottom: 0.5rem;
   }
 
   &__hr {
@@ -173,10 +195,106 @@ a:focus {
     padding: 0.8rem 1rem;
     border-radius: 0.3rem;
     font-size: 1.25rem;
-    margin: .6rem 0 0;
+    margin: 0.6rem 0 0;
   }
 
   &__buy:hover {
     background-color: $button-bg-color-hover;
+  }
+}
+
+/** Преимущества **/
+
+.advant {
+  margin-top: 1.5rem;
+  text-align: center;
+
+  &__header {
+    margin-bottom: 1rem;
+  }
+
+  &__img {
+    height: 250px;
+    margin: 0 auto 0.8rem;
+  }
+
+  &__item {
+  }
+
+  &__glass {
+    background: url("/test/dist/images/glass.jpg");
+    background-position: top left;
+    background-size: cover;
+  }
+
+  &__protection {
+    background: url("/test/dist/images/protection.jpg");
+    background-position: center top;
+    background-size: cover;
+  }
+
+  &__design {
+    background: url("/test/dist/images/design.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/** Характеристики **/
+.characters {
+  margin-top: 1rem;
+
+  &__header {
+    text-align: center !important;
+    margin-bottom: 1rem;
+  }
+
+  &__carousel {
+    margin: auto 0;
+  }
+
+  &__item {
+    display: flex;
+
+    & span {
+      margin-left: auto;
+    }
+  }
+
+  &__list {
+    margin-left: 0;
+    list-style: none;
+    counter-reset: li;
+    margin: 0;
+    padding: 0;
+
+    & li {
+      position: relative;
+      margin-bottom: 0.65rem;
+      border: 2px solid rgb(45, 3, 85);
+      padding: 0.6em;
+      border-radius: 4px;
+      background: #fefefe;
+      color: rgb(0, 0, 0);
+      font-family: "Trebuchet MS", "Lucida Sans";
+    }
+
+    & li:last-child {
+      margin: 0;
+    }
+
+    & li:before {
+      position: absolute;
+      top: -0.7em;
+      padding-left: 0.4em;
+      padding-right: 0.4em;
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(6, 88, 155);
+      background: #fefefe;
+      border-radius: 50%;
+      counter-increment: li;
+      content: counter(li);
+    }
   }
 }
