@@ -85,19 +85,21 @@
                 <div class="col-lg-4 advant__item">
                     <div class="advant__img advant__design"></div>
                     <h4>Безупречный дизайн</h4>
-                    <p>Внешний вид часов отлично дополнит образ владельца и придаст статусности</p>
+                    <p>Внешний вид часов отлично дополнит образ владельца и придаст статусности.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <div class="middle-buy">
+    <section id="section-discount">
         <hr />
-        <a class="middle-buy__button" href="#" role="button">Заказать</a>
         <div class="container">
-            <p class="middle-buy__discount"><b>СКИДКА 10%</b> на все товары до 11.10.2019</p>
+            <div class="middle-buy">
+                <p class="middle-buy__desctiption"></p>
+                <a class="middle-buy__button" href="#" role="button">Заказать</a>
+                <p class="middle-buy__discount"><b>СКИДКА 10%</b> на все товары до 11.10.2019</p>
+            </div>
         </div>
-    </div>
+    </section>
 
     <section id="section-characters">
         <div class="container">
@@ -192,34 +194,46 @@
             </div>
         </div>
     </section>
-    <div class="container">
-        <div class="b2" id="l1">
-            <div class="seсtion">
-                <ul>
-                    <li>
-                        <img alt="Diesel 5 bar" title="Diesel 5 bar" src="./Diesel 5 bar - элитные мужские часы_files/li1.png">
-                        <h3>ЭЛИТНЫЙ БРЕНД</h3>
-                        <p>Международный бренд. Всемирная популярность. Высокие продажи по всему миру. Diesel - олицетворение статуса и успеха, чувства стиля и вкуса, оригинальности и самодостаточности.</p>
-                    </li>
-                    <li>
-                        <img alt="Diesel 5 bar" title="Diesel 5 bar" src="./Diesel 5 bar - элитные мужские часы_files/li2.png">
-                        <h3>СОВЕРШЕННЫЙ ДИЗАЙН</h3>
-                        <p>Diesel - это нечто большее, чем просто часы, это шедевры высокого часового искусства, которое зародилось в США. "Каждый уважающий себя мужчина должен носить эти часы!"</p>
-                    </li>
-                    <li>
-                        <img alt="Diesel 5 bar" title="Diesel 5 bar" src="./Diesel 5 bar - элитные мужские часы_files/li3.png">
-                        <h3>МИРОВАЯ ПОПУЛЯРНОСТЬ</h3>
-                        <p>На сегодняшний день являются показателем успеха современного мужчины. Звёзды Голливуда, шоу-бизнеса, политики и спортсмены не могут ошибаться.</p>
-                    </li>
-                    <li>
-                        <img alt="Diesel 5 bar" title="Diesel 5 bar" src="./Diesel 5 bar - элитные мужские часы_files/li4.png">
-                        <h3>ВЫСОКОЕ КАЧЕСТВО</h3>
-                        <p>Корпус часов устойчив к коррозии. Поверхность не восприимчива к царапинам, ударам и не чувствительна к воздействию света и морской воды.</p>
-                    </li>
-                </ul>
+    <section id="section-why-we">
+        <div class="container why-we">
+            <div class="why-we__header">
+                <h3>ПОЧЕМУ МЫ?</h3>
+                <img src="/test/dist/images/hr.png" class="characters__hr" />
+            </div>
+            <div class="why-we__content">
+                <div class="row why-we__main ">
+                    <div class="col-lg-6 mb-3">
+                        <div class="why-we__item">
+                            <img src="/test/dist/images/air.png">
+                            <h3>БЫСТРАЯ ДОСТАВКА</h3>
+                            <p>Срок доставки почтой России - от 1 до 10 дней. Отправление товара осуществляется первым классом в виде посылки.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <div class="why-we__item">
+                            <img src="/test/dist/images/r.png">
+                            <h3>ОПЛАТА ПРИ ПОЛУЧЕНИИ</h3>
+                            <p>Оплата товара только при получении на руки. Никаких предоплат. Доставка за наш счет.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <div class="why-we__item">
+                            <img src="/test/dist/images/support.png">
+                            <h3>ТЕХНИЧЕСКАЯ ПОДДЕРЖКА</h3>
+                            <p>Служба поддержки ответит на любой Ваш вопрос.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <div class="why-we__item">
+                            <img src="/test/dist/images/lock.png">
+                            <h3>ГАРАНТИИ</h3>
+                            <p>Продукт прошел 100% проверку. Мы также соблюдаем закон «О защите прав потребителя». Свяжитесь с нами, если по какой-либо причине решили вернуть товар. </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 </body>
 
 </html>
