@@ -70,6 +70,7 @@
             <div class="row advant">
                 <div class="col-lg-12 advant__header">
                     <h3>ПРЕИМУЩЕСТВА ЧАСОВ</h3>
+                    <img src="/test/dist/images/hr.png" class="advant__hr" />
                 </div>
                 <div class="col-lg-4 advant__item">
                     <div class="advant__img advant__glass"></div>
@@ -79,7 +80,7 @@
                 <div class="col-lg-4 advant__item">
                     <div class="advant__img advant__protection"></div>
                     <h4>Защита от повреждений</h4>
-                    <p>Нержавеющая сталь металлических часов защищает их от окисления и внешних повреждений.</p>
+                    <p>Нержавеющая сталь металлических часов защищает их от окисления и внешних повреждений. Часы также защищены от влаги.</p>
                 </div>
                 <div class="col-lg-4 advant__item">
                     <div class="advant__img advant__design"></div>
@@ -89,12 +90,21 @@
             </div>
         </div>
     </section>
-    <hr />
+
+    <div class="middle-buy">
+        <hr />
+        <a class="middle-buy__button" href="#" role="button">Заказать</a>
+        <div class="container">
+            <p class="middle-buy__discount"><b>СКИДКА 10%</b> на все товары до 11.10.2019</p>
+        </div>
+    </div>
+
     <section id="section-characters">
         <div class="container">
             <div class="row characters">
                 <div class="col-lg-12 characters__header">
                     <h3>ХАРАКТЕРИСТИКИ ЧАСОВ</h3>
+                    <img src="/test/dist/images/hr.png" class="characters__hr" />
                 </div>
                 <div class="col-lg-6 characters__carousel">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -182,6 +192,34 @@
             </div>
         </div>
     </section>
+    <div class="container">
+        <div class="b2" id="l1">
+            <div class="seсtion">
+                <ul>
+                    <li>
+                        <img alt="Diesel 5 bar" title="Diesel 5 bar" src="./Diesel 5 bar - элитные мужские часы_files/li1.png">
+                        <h3>ЭЛИТНЫЙ БРЕНД</h3>
+                        <p>Международный бренд. Всемирная популярность. Высокие продажи по всему миру. Diesel - олицетворение статуса и успеха, чувства стиля и вкуса, оригинальности и самодостаточности.</p>
+                    </li>
+                    <li>
+                        <img alt="Diesel 5 bar" title="Diesel 5 bar" src="./Diesel 5 bar - элитные мужские часы_files/li2.png">
+                        <h3>СОВЕРШЕННЫЙ ДИЗАЙН</h3>
+                        <p>Diesel - это нечто большее, чем просто часы, это шедевры высокого часового искусства, которое зародилось в США. "Каждый уважающий себя мужчина должен носить эти часы!"</p>
+                    </li>
+                    <li>
+                        <img alt="Diesel 5 bar" title="Diesel 5 bar" src="./Diesel 5 bar - элитные мужские часы_files/li3.png">
+                        <h3>МИРОВАЯ ПОПУЛЯРНОСТЬ</h3>
+                        <p>На сегодняшний день являются показателем успеха современного мужчины. Звёзды Голливуда, шоу-бизнеса, политики и спортсмены не могут ошибаться.</p>
+                    </li>
+                    <li>
+                        <img alt="Diesel 5 bar" title="Diesel 5 bar" src="./Diesel 5 bar - элитные мужские часы_files/li4.png">
+                        <h3>ВЫСОКОЕ КАЧЕСТВО</h3>
+                        <p>Корпус часов устойчив к коррозии. Поверхность не восприимчива к царапинам, ударам и не чувствительна к воздействию света и морской воды.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
