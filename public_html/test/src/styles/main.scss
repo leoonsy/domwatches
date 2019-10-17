@@ -206,23 +206,21 @@ a:focus {
 
 /** Преимущества **/
 
+#section-advant {
+  background: url('/test/dist/images/pat.jpg') left top repeat;
+}
+
 .advant {
-  margin-top: 1.5rem;
+  padding: 1.5rem 0 3rem;
   text-align: center;
 
   &__header {
     margin-bottom: 0.5rem;
   }
 
-  &__hr {
-  }
-
   &__img {
     height: 250px;
     margin: 0 auto 0.8rem;
-  }
-
-  &__item {
   }
 
   &__glass {
@@ -247,7 +245,7 @@ a:focus {
 /** Скидка - кнопка посередине **/
 
 #section-discount {
-  margin: 2.5rem 0 0;
+
 }
 
 .middle-buy {
@@ -261,7 +259,7 @@ a:focus {
   &__button:link,
   &__button:visited,
   &__button:focus {
-    margin-top: -4rem;
+    margin-top: -3rem;
     display: inline-block;
     color: #fff !important;
     transition: background-color 0.25s ease 0s;
@@ -329,7 +327,6 @@ a:focus {
       border-radius: 4px;
       background: #fefefe;
       color: rgb(0, 0, 0);
-      font-family: "Trebuchet MS", "Lucida Sans";
     }
 
     & li:last-child {
@@ -386,5 +383,49 @@ a:focus {
       position: absolute;
       left: -2.35rem;   
     }
+  }
+}
+
+/** Отзывы **/
+
+.review {
+  margin-top: 1.5rem;
+  &__header {
+    text-align: center;
+  }
+
+  &__carousel {
+    margin-top: 1rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__avatar {
+    flex: 0 0 auto;
+    border-radius: 8px;
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    margin-left: 1.6rem;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    width: auto;
+    color: rgb(0, 0, 0);
+  }
+
+  .carousel-control-prev-icon {
+    $carousel-control-color: $color-blue;
+    background-image: str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e"), "#", "%23");
+  }
+
+  .carousel-control-next-icon {
+    $carousel-control-color: $color-blue;
+
+    background-image: str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e"), "#", "%23");
   }
 }

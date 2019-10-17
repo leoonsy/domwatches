@@ -60,7 +60,9 @@
                 <h1 class="top-info__title">Современные мужские часы DOM</h1>
                 <h2 class="top-info__desc">Наручные металлические и кожаные часы с хронографом</h2>
                 <hr class="top-info__hr" />
-                <p class="top-info__desc-2">Стильные, устойчивые к царапинам водонепроницаемые часы DOM прослужат вам многие годы и подчеркнут вашу индивидуальность!</p>
+                <p class="top-info__desc-2">
+                    Стильные, устойчивые к царапинам водонепроницаемые часы DOM прослужат вам многие годы и подчеркнут вашу индивидуальность!
+                </p>
                 <a class="top-info__buy" href="#" role="button">Выбрать часы</a>
             </div>
         </div>
@@ -91,12 +93,11 @@
         </div>
     </section>
     <section id="section-discount">
-        <hr />
         <div class="container">
             <div class="middle-buy">
                 <p class="middle-buy__desctiption"></p>
                 <a class="middle-buy__button" href="#" role="button">Заказать</a>
-                <p class="middle-buy__discount"><b>СКИДКА 10%</b> на все товары до 11.10.2019</p>
+                <p class="middle-buy__discount"><b>СКИДКА 10%</b> на все часы до 11.10.2019</p>
             </div>
         </div>
     </section>
@@ -204,31 +205,80 @@
                 <div class="row why-we__main ">
                     <div class="col-lg-6 mb-3">
                         <div class="why-we__item">
-                            <img src="/test/dist/images/air.png">
+                            <img src="/test/dist/images/icons/air.png">
                             <h3>БЫСТРАЯ ДОСТАВКА</h3>
-                            <p>Срок доставки почтой России - от 1 до 10 дней. Отправление товара осуществляется первым классом в виде посылки.</p>
+                            <p>Срок доставки почтой России - от 1 до 10 дней (в зависимости от Вашего региона). Отправление товара осуществляется первым классом в виде посылки.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 mb-3">
                         <div class="why-we__item">
-                            <img src="/test/dist/images/r.png">
+                            <img src="/test/dist/images/icons/r.png">
                             <h3>ОПЛАТА ПРИ ПОЛУЧЕНИИ</h3>
                             <p>Оплата товара только при получении на руки. Никаких предоплат. Доставка за наш счет.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 mb-3">
                         <div class="why-we__item">
-                            <img src="/test/dist/images/support.png">
+                            <img src="/test/dist/images/icons/support.png">
                             <h3>ТЕХНИЧЕСКАЯ ПОДДЕРЖКА</h3>
-                            <p>Служба поддержки ответит на любой Ваш вопрос.</p>
+                            <p>Служба поддержки ответит на любой Ваш вопрос. Вы можете написать на письмо на электронную почту либо заказать звонок.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 mb-3">
                         <div class="why-we__item">
-                            <img src="/test/dist/images/lock.png">
+                            <img src="/test/dist/images/icons/lock.png">
                             <h3>ГАРАНТИИ</h3>
                             <p>Продукт прошел 100% проверку. Мы также соблюдаем закон «О защите прав потребителя». Свяжитесь с нами, если по какой-либо причине решили вернуть товар. </p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-review">
+        <div class="container">
+            <div class="review">
+                <div class="review__header">
+                    <h3>ОТЗЫВЫ</h3>
+                    <img src="/test/dist/images/rev.png" class="characters__hr" />
+                </div>
+                <div class="review__carousel">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner mx-5 w-auto">
+                            <div class="carousel-item active">
+                                <div class="review__item">
+                                    <img src="/test/dist/images/reviews/1.jpg" class="review__avatar" />
+                                    <div class="review__text">
+                                        <h3>Михаил Быков</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="review__item">
+                                    <img src="/test/dist/images/reviews/2.jpg" class="review__avatar" />
+                                    <div class="review__text">
+                                        <h3>Алексей Сазонов</h3>
+                                        <p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="review__item">
+                                    <img src="/test/dist/images/reviews/3.jpg" class="review__avatar" />
+                                    <div class="review__text">
+                                        <h3>Шведчиков Александр</h3>
+                                        <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
                     </div>
                 </div>
             </div>
