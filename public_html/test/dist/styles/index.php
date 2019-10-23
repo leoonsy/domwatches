@@ -41,19 +41,19 @@
                         <a class="navbar__link navbar__active" href="#">ГЛАВНАЯ</a>
                     </li>
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">КАТАЛОГ</a>
+                        <a class="navbar__link" href="#">ТОВАРЫ</a>
                     </li>
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">ГАРАНТИЯ</a>
+                        <a class="navbar__link" href="#">ВИДЕО</a>
                     </li>
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">О НАС</a>
+                        <a class="navbar__link" href="#">ФОТО</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="#">ДОСТАВКА</a>
                     </li>
                     <li class="navbar__item">
                         <a class="navbar__link" href="#">КОНТАКТЫ</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a class="navbar__link" href="#">КОРЗИНА</a>
                     </li>
                 </ul>
                 <i class="navbar__hamburger fa fa-bars"></i>
@@ -122,7 +122,7 @@
                 <div class="col-4 discount__img">
                     <img src="/test/dist/images/discount.png" />
                 </div>
-            </div>
+            </div>       
         </div>
     </section>
     <section id="section-characters">
@@ -258,21 +258,6 @@
             </div>
         </div>
     </section>
-    <section id="section-how-works">
-        <div class="container how-works">
-            <div class="how-works__header">
-                <h3>Как получить часы</h3>
-                <img src="/test/dist/images/hr.png" class="characters__hr" />
-            </div>
-            <div class="how-works__sequence">
-                <div class="how-works__basket">Вы выбираете понравившиеся часы и добавляете их в корзину</div>
-                <div class="how-works__form">Вы оставляете заявку через форму заявки на сайте</div>
-                <div class="how-works__call">Мы перезваниваем вам для подтверждения заказа</div>
-                <div class="how-works__send">Отправляем ваш заказ в пункт назначения</div>
-                <div class="how-works__check">Вы проверяете и оплачиваете товар на почте</div>
-            </div>
-        </div>
-    </section>
     <section id="section-review">
         <div class="container">
             <div class="review">
@@ -320,6 +305,14 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section id="section-how-works">
+        <div class="how-works">
+            <div class="how-works__form"></div>
+            <div class="how-works__detail"></div>
+            <div class="how-works__send"></div>
+            <div class="how-works__check"></div>           
         </div>
     </section>
 </body>

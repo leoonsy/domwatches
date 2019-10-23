@@ -207,7 +207,7 @@ a:focus {
 /** Преимущества **/
 
 #section-advant {
-  background: url('/test/dist/images/pat.jpg') left top repeat;
+  background: url("/test/dist/images/pat.jpg") left top repeat;
 }
 
 .advant {
@@ -242,24 +242,108 @@ a:focus {
   }
 }
 
-/** Скидка - кнопка посередине **/
+/** Скидка для определенного товара **/
 
 #section-discount {
-
+  background: url("/test/dist/images/discount-bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: white;
 }
 
-.middle-buy {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.discount {
+  padding: 2rem 0 0 0;
+  align-items: flex-start;
+
+  &__attention {
+    font-size: 3rem;
+  }
+
+  &__amount {
+    font-size: 2rem;
+    color: $color-orange;
+    text-shadow: 1px 1px 1px rgb(63, 63, 63);
+  }
+
+  &__end {
+    font-size: 1.7rem;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .price {
+    margin: 2rem 0 2rem 0;
+    width: 60%;
+    text-align: center;
+    &__text {
+      display: flex;
+      font-size: 1.2rem;
+      margin: 0 0 0.2rem 0;
+
+      &-old {
+        flex: 0 1 50%;
+        margin: 0;
+      }
+
+      &-new {
+        flex: 0 1 50%;
+        margin: 0;
+      }
+    }
+
+    &__number {
+      display: flex;
+      font-size: 1.7rem;
+
+      &-old {
+        flex: 0 1 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3rem;
+        color: #a5a5a5;
+        text-decoration: line-through;
+        background: #fff;
+        border-radius: 50px 0px 0px 50px;
+      }
+
+      &-new {
+        flex: 0 1 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3rem;
+        position: relative;
+        background: $color-blue;
+        border-radius: 0 50px 50px 0px;
+      }
+
+      &-new:before {
+        content: "";
+        width: 30px;
+        height: 3rem;
+        background: $color-blue;
+        position: absolute;
+        left: -9px;
+        transform: skewX(-15deg) skewY(0deg);
+      }
+    }
+  }
+
+  &__img {
+    margin: -2rem 0 0 0;
+    img {
+      width: 315px;
+      //transform: rotate(10deg);
+    }
+  }
 
   &__button,
   &__button:active,
   &__button:link,
   &__button:visited,
   &__button:focus {
-    margin-top: -3rem;
+    margin: 0.7rem 0 2rem 0;
     display: inline-block;
     color: #fff !important;
     transition: background-color 0.25s ease 0s;
@@ -267,23 +351,12 @@ a:focus {
     font-weight: 400;
     padding: 0.8rem 1rem;
     border-radius: 0.3rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-align: center;
   }
 
   &__button:hover {
     background-color: $button-bg-color-hover;
-  }
-
-  &__discount {
-    align-self: flex-end;
-    font-size: 1.2rem;
-    margin-top: -1.3rem;
-    color: rgb(104, 17, 17);
-
-    & b {
-      font-weight: 500;
-    }
   }
 }
 
@@ -344,7 +417,7 @@ a:focus {
       background: #fefefe;
       border-radius: 50%;
       counter-increment: li;
-      content: '•';
+      content: "•";
     }
   }
 }
@@ -352,7 +425,7 @@ a:focus {
 /** Почему мы **/
 
 #section-why-we {
-  background: url('/test/dist/images/pat.jpg') left top repeat;
+  background: url("/test/dist/images/pat.jpg") left top repeat;
   margin-top: 2rem;
 }
 
@@ -381,15 +454,69 @@ a:focus {
 
     & img {
       position: absolute;
-      left: -2.35rem;   
+      left: -2.35rem;
     }
+  }
+}
+
+/** Как получить часы **/
+
+#section-how-works {
+  margin-top: 2rem;
+}
+
+.how-works {
+
+  &__header {
+    text-align: center;
+  }
+
+  &__sequence {
+    display: flex;
+    background: url("/test/dist/images/how-to.png") center top no-repeat;
+    background-size: 100% auto;
+    height: 300px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__basket { 
+    flex: 0 0 160px;
+    position: relative;
+    bottom: 20px;
+    left: 10px;
+  }
+
+  &__form { 
+    flex: 0 0 160px;
+    position: relative;
+    left: 35px;
+    top: 16px;
+  }
+
+  &__call {
+    flex: 0 0 190px;
+    position: relative;
+    left: 14px;
+  }
+
+  &__send {
+    flex: 0 0 160px;
+    position: relative;
+    left: 8px;
+  }
+
+  &__check {
+    flex: 0 0 160px;
   }
 }
 
 /** Отзывы **/
 
 .review {
-  margin-top: 1.5rem;
+  margin-top: 3.3rem;
   &__header {
     text-align: center;
   }
@@ -413,19 +540,28 @@ a:focus {
     margin-left: 1.6rem;
   }
 
-  .carousel-control-prev, .carousel-control-next {
+  .carousel-control-prev,
+  .carousel-control-next {
     width: auto;
     color: rgb(0, 0, 0);
   }
 
   .carousel-control-prev-icon {
     $carousel-control-color: $color-blue;
-    background-image: str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e"), "#", "%23");
+    background-image: str-replace(
+      url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e"),
+      "#",
+      "%23"
+    );
   }
 
   .carousel-control-next-icon {
     $carousel-control-color: $color-blue;
 
-    background-image: str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e"), "#", "%23");
+    background-image: str-replace(
+      url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e"),
+      "#",
+      "%23"
+    );
   }
 }

@@ -10,9 +10,16 @@
     <script src="/test/dist/scripts/popper.js"></script>
     <script src="/test/dist/scripts/bootstrap.js"></script>
     <script src="/test/dist/scripts/fontawesome.js"></script>
+    <script src="/test/dist/scripts/jquery.flipper-responsive.js"></script>
     <link rel="stylesheet" href="/test/dist/styles/bootstrap.css">
     <link rel="stylesheet" href="/test/dist/styles/main.css">
+    <link rel="stylesheet" href="/test/dist/styles/countdown.css">
 
+    <script>
+        $(function() {
+            $('#myFlipper').flipper('init');
+        });
+    </script>
 </head>
 
 <body>
@@ -34,19 +41,19 @@
                         <a class="navbar__link navbar__active" href="#">ГЛАВНАЯ</a>
                     </li>
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">ТОВАРЫ</a>
+                        <a class="navbar__link" href="#">КАТАЛОГ</a>
                     </li>
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">ВИДЕО</a>
+                        <a class="navbar__link" href="#">ГАРАНТИЯ</a>
                     </li>
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">ФОТО</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a class="navbar__link" href="#">ДОСТАВКА</a>
+                        <a class="navbar__link" href="#">О НАС</a>
                     </li>
                     <li class="navbar__item">
                         <a class="navbar__link" href="#">КОНТАКТЫ</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="#">КОРЗИНА</a>
                     </li>
                 </ul>
                 <i class="navbar__hamburger fa fa-bars"></i>
@@ -94,14 +101,30 @@
     </section>
     <section id="section-discount">
         <div class="container">
-            <div class="middle-buy">
-                <p class="middle-buy__desctiption"></p>
-                <a class="middle-buy__button" href="#" role="button">Заказать</a>
-                <p class="middle-buy__discount"><b>СКИДКА 10%</b> на все часы до 11.10.2019</p>
+            <div class="row discount">
+                <div class="col-8 discount__left">
+                    <h2 class="discount__attention">Внимание! Действует скидка</h2>
+                    <h3 class="discount__amount">на часы <b>M-635D-7M</b> в размере <b>40%</b></h3>
+                    <div class="price">
+                        <div class="price__text">
+                            <p class="price__text-old">Старая цена:</p>
+                            <p class="price__text-new">Новая цена:</p>
+                        </div>
+                        <div class="price__number">
+                            <div class="price__number-old">1850р.</div>
+                            <div class="price__number-new">1110р.</div>
+                        </div>
+                    </div>
+                    <p class="discount__end">До конца акции осталось:</p>
+                    <div class="flipper w-75  discount_timer" data-datetime="2019-12-23 21:45:00" data-template="ddd|HH|ii|ss" data-labels="Дней|Часов|Минут|Секунд" data-reverse="true" id="myFlipper"></div>
+                    <a class="discount__button" href="#">Заказать со скидкой</a>
+                </div>
+                <div class="col-4 discount__img">
+                    <img src="/test/dist/images/discount.png" />
+                </div>
             </div>
         </div>
     </section>
-
     <section id="section-characters">
         <div class="container">
             <div class="row characters">
@@ -235,6 +258,21 @@
             </div>
         </div>
     </section>
+    <section id="section-how-works">
+        <div class="container how-works">
+            <div class="how-works__header">
+                <h3>Как получить часы</h3>
+                <img src="/test/dist/images/hr.png" class="characters__hr" />
+            </div>
+            <div class="how-works__sequence">
+                <div class="how-works__basket">Вы выбираете понравившиеся часы и добавляете их в корзину</div>
+                <div class="how-works__form">Вы оставляете заявку через форму заявки на сайте</div>
+                <div class="how-works__call">Мы перезваниваем вам для подтверждения заказа</div>
+                <div class="how-works__send">Отправляем ваш заказ в пункт назначения</div>
+                <div class="how-works__check">Вы проверяете и оплачиваете товар на почте</div>
+            </div>
+        </div>
+    </section>
     <section id="section-review">
         <div class="container">
             <div class="review">
@@ -250,7 +288,7 @@
                                     <img src="/test/dist/images/reviews/1.jpg" class="review__avatar" />
                                     <div class="review__text">
                                         <h3>Михаил Быков</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p> 
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                                     </div>
                                 </div>
                             </div>
