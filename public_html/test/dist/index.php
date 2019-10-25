@@ -18,6 +18,15 @@
     <script>
         $(function() {
             $('#myFlipper').flipper('init');
+            $('.navbar__hamburger').on('click', function(e) {
+                $(this).toggleClass('is-active');
+                $('.navbar__top-menu').stop().slideToggle(800, function() {
+                    if ($(this).css('display') === "none")
+                        $(this).removeAttr('style');
+                    else
+                        $(this).css('display', 'flex');
+                });
+            });
         });
     </script>
 </head>
@@ -30,15 +39,17 @@
     <div id="wrapper">
         <div id="content">
             <header id="header">
-                <div class="container">
+                <div class="nav-container">
+
+
                     <nav class="navbar">
                         <div class="navbar__brand">
                             <a href="#" class="navbar__brand-link">
                                 <img class="navbar__brand-logo" src="/test/dist/images/logo.png" />
-                                <span>DOMWATCHES</span>
+                                <span class="navbar__brand-text">DOMWATCHES</span>
                             </a>
                         </div>
-                        <ul class="navbar__top-menu">
+                        <ul class="navbar__top-menu is-active">
                             <li class="navbar__item">
                                 <a class="navbar__link navbar__active" href="#">ГЛАВНАЯ</a>
                             </li>
@@ -52,13 +63,24 @@
                                 <a class="navbar__link" href="#">ОТЗЫВЫ</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="#">ВОПРОСЫ-ОТВЕТЫ</a>
+                                <a class="navbar__link" href="#">ВОПРОС-ОТВЕТ</a>
                             </li>
                             <li class="navbar__item">
                                 <a class="navbar__link" href="#">КОНТАКТЫ</a>
                             </li>
                         </ul>
-                        <i class="navbar__hamburger fa fa-bars"></i>
+                        <!-- <div class="navbar__hamburger">
+                            <span class="navbar__hamburger-text">Меню</span>
+                            <i class="navbar__hamburger-img fa fa-times fa-bars"></i>
+                        </div> -->
+                        <div class="hamburger navbar__hamburger" id="hamburger-1">
+                            <span class="navbar__hamburger-text">Меню</span>
+                            <div class="navbar__hamburger-icon">
+                                <span class="line"></span>
+                                <span class="line"></span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
                     </nav>
                 </div>
             </header>
@@ -71,7 +93,7 @@
                         <p class="top-info__desc-2">
                             Стильные, устойчивые к царапинам водонепроницаемые часы DOM прослужат вам многие годы и подчеркнут вашу индивидуальность!
                         </p>
-                        <a class="top-info__buy" href="#" role="button">Заказать часы</a>
+                        <a class="top-info__buy" href="#" role="button">Выбрать часы</a>
                     </div>
                 </div>
             </section>
@@ -177,9 +199,9 @@
                         </div>
                         <div class="col-lg-6 characters__info">
                             <ul class="characters__list">
-                                <li class="characters__item"><b>Модель:</b><span>M-635</span></li>                              
+                                <li class="characters__item"><b>Модель:</b><span>M-635</span></li>
                                 <li class="characters__item"><b>Стекло:</b><span>Закаленное минеральное</span></li>
-                                <li class="characters__item"><b>Корпус:</b><span>Нержавеющая сталь</span></li> 
+                                <li class="characters__item"><b>Корпус:</b><span>Нержавеющая сталь</span></li>
                                 <li class="characters__item"><b>Ремешок:</b><span>Кожа / Нержавеющая сталь</span></li>
                                 <li class="characters__item"><b>Механизм:</b><span>Кварцевый</span></li>
                                 <li class="characters__item"><b>Водонепроницаемость:</b><span>30м</span></li>
