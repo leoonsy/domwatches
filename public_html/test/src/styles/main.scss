@@ -10,6 +10,20 @@ body {
   height: 100%;
 }
 
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+#content {
+  flex: 1 0 auto;
+}
+
+#footer {
+  flex: 0 0 auto;
+}
+
 a,
 a:active,
 a:link,
@@ -147,14 +161,13 @@ a:focus {
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: cover;
-  height: 60%;
+  height: 550px;
+  height: 60vh;
   margin: 1rem 0 0;
   color: #fff;
 }
 
 .top-info {
-  margin: auto 0;
-
   &__title,
   &__desc,
   &__desc-2 {
@@ -211,7 +224,7 @@ a:focus {
 }
 
 .advant {
-  padding: 1.5rem 0 3rem;
+  padding: 2rem 0 2rem;
   text-align: center;
 
   &__header {
@@ -362,7 +375,7 @@ a:focus {
 
 /** Характеристики **/
 .characters {
-  margin-top: 1rem;
+  margin-top: 2rem;
 
   &__hr {
     margin-bottom: 0.5rem;
@@ -430,7 +443,7 @@ a:focus {
 }
 
 .why-we {
-  padding-top: 1rem;
+  padding-top: 2rem;
   &__header {
     text-align: center;
   }
@@ -466,7 +479,6 @@ a:focus {
 }
 
 .how-works {
-
   &__header {
     text-align: center;
   }
@@ -482,14 +494,14 @@ a:focus {
     align-items: flex-end;
   }
 
-  &__basket { 
+  &__basket {
     flex: 0 0 160px;
     position: relative;
     bottom: 20px;
     left: 10px;
   }
 
-  &__form { 
+  &__form {
     flex: 0 0 160px;
     position: relative;
     left: 35px;
@@ -514,9 +526,13 @@ a:focus {
 }
 
 /** Отзывы **/
+#section-review {
+  background: url("/test/dist/images/pat.jpg") left top repeat;
+  padding: 2rem 0 2.5rem;
+  margin-top: 3.4rem;
+}
 
 .review {
-  margin-top: 3.3rem;
   &__header {
     text-align: center;
   }
@@ -563,5 +579,95 @@ a:focus {
       "#",
       "%23"
     );
+  }
+}
+
+/** Футер **/
+
+.footer {
+  background-color: #3c3d41;
+  color: #ffffff;
+  padding-top: 2rem;
+
+  &__copyright {
+    background-color: #333333;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  &__list {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+  }
+
+  &__menu-name {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  &__logo {
+    margin-top: -0.3rem;
+    &-href {
+      font-size: 2rem;
+    }
+  }
+
+  a {
+    color: rgb(230, 230, 230);
+    transition: 0.2s;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    color: rgb(147, 185, 243);
+  }
+
+  &__icons {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  &__icons-vk:hover {
+    color: #6dbbff !important;
+  }
+
+  &__icons-youtube:hover {
+    color: rgb(255, 81, 81) !important;
+  }
+
+  &__icons-mail:hover {
+    color: rgb(255, 244, 149) !important;
+  }
+
+  &__button,
+  &__button:active,
+  &__button:link,
+  &__button:visited,
+  &__button:focus {
+    margin: 0 auto;
+    display: block;
+    color: #fff !important;
+    transition: background-color 0.25s ease 0s;
+    background-color: $button-bg-color;
+    font-weight: 400;
+    padding: 0.4rem;
+    width: 12rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  &__button:hover {
+    background-color: $button-bg-color-hover;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    text-align: center;
   }
 }
