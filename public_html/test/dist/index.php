@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <script src="/test/dist/scripts/jquery-3.4.1.js"></script>
+    <script src="/test/dist/scripts/parallax.js"></script>
     <script src="/test/dist/scripts/popper.js"></script>
     <script src="/test/dist/scripts/bootstrap.js"></script>
     <script src="/test/dist/scripts/fontawesome.js"></script>
@@ -40,8 +41,6 @@
         <div id="content">
             <header id="header">
                 <div class="nav-container">
-
-
                     <nav class="navbar">
                         <div class="navbar__brand">
                             <a href="#" class="navbar__brand-link">
@@ -84,7 +83,7 @@
                     </nav>
                 </div>
             </header>
-            <section id="section-top">
+            <section id="section-top" class="parallax-window" data-parallax="scroll" data-image-src="/test/dist/images/bg-top.jpg" data-speed="-0.1" data-position="bottom right">
                 <div class="container h-100 d-flex align-items-center">
                     <div class="top-info">
                         <h1 class="top-info__title">Современные мужские часы DOM</h1>
@@ -101,20 +100,20 @@
                 <div class="container">
                     <div class="row advant">
                         <div class="col-lg-12 advant__header">
-                            <h3>ПРЕИМУЩЕСТВА ЧАСОВ</h3>
+                            <h3 class="advant__header-text">ПРЕИМУЩЕСТВА ЧАСОВ</h3>
                             <img src="/test/dist/images/hr.png" class="advant__hr" />
                         </div>
-                        <div class="col-lg-4 advant__item">
+                        <div class="col-md-4 advant__item">
                             <div class="advant__img advant__glass"></div>
                             <h4>Устойчивость к царапинам</h4>
                             <p>Закаленное минеральное стекло имеет высокую прочность и сопротивление к царапинам. Данное покрытие сложно поцарапать даже намеренно.</p>
                         </div>
-                        <div class="col-lg-4 advant__item">
+                        <div class="col-md-4 advant__item">
                             <div class="advant__img advant__protection"></div>
                             <h4>Защита от повреждений</h4>
                             <p>Нержавеющая сталь металлических часов защищает их от окисления и внешних повреждений. Часы также защищены от влаги.</p>
                         </div>
-                        <div class="col-lg-4 advant__item">
+                        <div class="col-md-4 advant__item">
                             <div class="advant__img advant__design"></div>
                             <h4>Безупречный дизайн</h4>
                             <p>Внешний вид часов отлично дополнит образ владельца и придаст статусности.</p>
@@ -124,8 +123,8 @@
             </section>
             <section id="section-discount">
                 <div class="container">
-                    <div class="row discount">
-                        <div class="col-8 discount__left">
+                    <div class="discount">
+                        <div class="discount__left">
                             <h2 class="discount__attention">Внимание! Действует скидка</h2>
                             <h3 class="discount__amount">на часы <b>M-635D-7M</b> в размере <b>40%</b></h3>
                             <div class="price">
@@ -139,11 +138,11 @@
                                 </div>
                             </div>
                             <p class="discount__end">До конца акции осталось:</p>
-                            <div class="flipper w-75  discount_timer" data-datetime="2019-12-23 21:45:00" data-template="ddd|HH|ii|ss" data-labels="Дней|Часов|Минут|Секунд" data-reverse="true" id="myFlipper"></div>
+                            <div class="flipper  discount__timer" data-datetime="2019-12-23 21:45:00" data-template="ddd|HH|ii|ss" data-labels="Дней|Часов|Минут|Секунд" data-reverse="true" id="myFlipper"></div>
                             <a class="discount__button" href="#">Заказать со скидкой</a>
                         </div>
-                        <div class="col-4 discount__img">
-                            <img src="/test/dist/images/discount.png" />
+                        <div>
+                            <img class="discount__img" src="/test/dist/images/discount.png" />
                         </div>
                     </div>
                 </div>
@@ -239,7 +238,7 @@
                                 <div class="why-we__item">
                                     <img src="/test/dist/images/icons/support.png">
                                     <h3>ТЕХНИЧЕСКАЯ ПОДДЕРЖКА</h3>
-                                    <p>Служба поддержки ответит на любой Ваш вопрос. Вы можете написать на письмо на электронную почту либо заказать звонок.</p>
+                                    <p>Служба поддержки ответит на любой Ваш вопрос. Вы можете написать нам письмо на электронную почту либо заказать звонок.</p>
                                 </div>
                             </div>
                             <div class="col-lg-6 mb-3">

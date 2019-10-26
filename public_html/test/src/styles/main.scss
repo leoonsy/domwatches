@@ -9,6 +9,7 @@
 html,
 body {
   height: 100%;
+  min-width: 240px;
 }
 
 #wrapper {
@@ -215,25 +216,24 @@ a:focus {
       &-text {
         display: none;
       }
-
-      
     }
   }
 }
 
 /** Верхняя секция **/
 #section-top {
-  background: url("/test/dist/images/bg-top.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-size: cover;
-  height: 550px;
-  height: 60vh;
+  // background: url("/test/dist/images/bg-top.jpg");
+  // background-repeat: no-repeat;
+  // background-position: top right;
+  // background-size: cover;
+  height: 55vh;
   margin: 1rem 0 0;
   color: #fff;
 }
 
 .top-info {
+  width: 800px;
+
   &__title,
   &__desc,
   &__desc-2 {
@@ -249,7 +249,6 @@ a:focus {
   }
 
   &__desc-2 {
-    width: 800px;
     margin-bottom: 0.5rem;
   }
 
@@ -259,7 +258,6 @@ a:focus {
     height: 0;
     border: none;
     border-top: 1px solid rgb(136, 136, 136);
-    width: 800px;
   }
 
   &__buy,
@@ -283,6 +281,101 @@ a:focus {
   }
 }
 
+@media only screen and (min-width: #{map-get($grid-breakpoints, 'xl')}) {
+  #section-top {
+    min-height: 300px;
+  }
+}
+
+@media only screen and (max-width: #{map-get($grid-breakpoints, 'xl')}) {
+  #section-top {
+    min-height: 300px;
+  }
+
+  .top-info {
+    width: 700px;
+  }
+}
+
+@media only screen and (max-width: #{map-get($grid-breakpoints, 'lg')}) {
+  .top-info {
+    width: 550px;
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__desc {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 884px) {
+  .top-info {
+    width: 550px;
+
+    &__hr {
+      width: 90%;
+    }
+  }
+}
+
+@media only screen and (max-width: #{map-get($grid-breakpoints, 'md')}) {
+  .top-info {
+    width: auto;
+    &__title {
+      font-size: 1.7rem;
+    }
+
+    &__desc {
+      font-size: 1.1rem;
+    }
+
+    &__hr {
+      width: auto;
+    }
+
+    &__buy,
+    &__buy:active,
+    &__buy:link,
+    &__buy:visited,
+    &__buy:focus {
+      display: inline-block;
+      color: #fff !important;
+      transition: background-color 0.25s ease 0s;
+      background-color: $button-bg-color;
+      font-weight: 400;
+      padding: 0.6rem 0.8rem;
+      border-radius: 0.3rem;
+      font-size: 1rem;
+      margin: 0.6rem 0 0;
+    }
+
+    &__buy:hover {
+      background-color: $button-bg-color-hover;
+    }
+  }
+}
+
+@media only screen and (max-width: #{map-get($grid-breakpoints, 'sm')}) {
+  #section-top {
+    min-height: 330px;
+  }
+
+  .top-info {
+    width: auto;
+    &__title {
+      margin-bottom: 0.3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  #section-top {
+    min-height: 450px;
+  }
+}
 /** Преимущества **/
 
 #section-advant {
@@ -321,6 +414,33 @@ a:focus {
   }
 }
 
+@media only screen and (max-width: #{map-get($grid-breakpoints, 'lg')}) {
+  .advant {
+    &__glass {
+      background-position: top center;
+    }
+  }
+}
+
+@media only screen and (max-width: #{map-get($grid-breakpoints, 'md')}) {
+  .advant {
+    &__img {
+      height: 350px;
+    }
+  }
+}
+@media only screen and (max-width: 460px) {
+  .advant {
+    &__img {
+      height: 250px;
+    }
+
+    &__header-text {
+      font-size: 1.5rem !important;
+    }
+  }
+}
+
 /** Скидка для определенного товара **/
 
 #section-discount {
@@ -332,8 +452,15 @@ a:focus {
 }
 
 .discount {
-  padding: 2rem 0 0 0;
+  position: relative;
+  display: flex;
   align-items: flex-start;
+
+  &__left {
+    width: 60%;
+    padding: 2rem 0 0 0;
+    flex: 0 0 auto;
+  }
 
   &__attention {
     font-size: 3rem;
@@ -345,9 +472,18 @@ a:focus {
     text-shadow: 1px 1px 1px rgb(63, 63, 63);
   }
 
+  &__left {
+    position: relative;
+    z-index: 2;
+  }
+
   &__end {
     font-size: 1.7rem;
     margin: 0 0 0.5rem 0;
+  }
+
+  &__timer {
+    width: 75%;
   }
 
   .price {
@@ -410,11 +546,11 @@ a:focus {
   }
 
   &__img {
-    margin: -2rem 0 0 0;
-    img {
-      width: 315px;
-      //transform: rotate(10deg);
-    }
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    width: 315px;
   }
 
   &__button,
@@ -436,6 +572,114 @@ a:focus {
 
   &__button:hover {
     background-color: $button-bg-color-hover;
+  }
+}
+
+@media only screen and (max-width: #{map-get($grid-breakpoints, 'xl')}) {
+  .discount {
+    &__attention {
+      font-size: 2.5rem;
+    }
+    &__img {
+      width: 295px;
+    }
+  }
+}
+
+@media only screen and (max-width: #{map-get($grid-breakpoints, 'lg')}) {
+  .discount {
+    &__attention {
+      font-size: 2.4rem;
+    }
+
+    &__amount {
+      font-size: 2rem;
+    }
+
+    &__left {
+      width: 80%;
+    }
+
+    &__timer {
+      width: 100%;
+    }
+    &__img {
+      width: 310px;
+    }
+  }
+}
+
+@media only screen and (max-width: #{map-get($grid-breakpoints, 'md')}) {
+  .discount {
+    &__attention {
+      font-size: 2.1rem;
+    }
+
+    &__amount {
+      font-size: 1.8rem;
+    }
+
+    &__img {
+      right: 80px;
+      width: 330px;
+    }
+  }
+}
+
+@media only screen and (max-width: #{map-get($grid-breakpoints, 'sm')}) {
+  .discount {
+    .price {
+      width: 80%;
+    }
+
+    &__end {
+      font-size: 1.6rem;
+    }
+
+    &__img {
+      right: 140px;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .discount {
+    &__left {
+      width: 100%;
+    }
+
+    &__attention {
+      font-size: 1.9rem;
+    }
+
+    &__amount {
+      font-size: 1.7rem;
+    }
+
+    &__end {
+      font-size: 1.4rem;
+    }
+
+
+    &__img {
+      width: 330px;
+      right: 170px;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .discount {
+    .price {
+      width: 100%;
+      &__number {
+        font-size: 1.2rem;
+      }
+    }
+
+    &__button {
+      font-size: 1.1rem !important;
+    }
   }
 }
 
