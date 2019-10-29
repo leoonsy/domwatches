@@ -198,15 +198,15 @@
                         </div>
                         <div class="col-lg-6 characters__info">
                             <ul class="characters__list">
-                                <li class="characters__item"><b>Модель:</b><span>M-635</span></li>
-                                <li class="characters__item"><b>Стекло:</b><span>Закаленное минеральное</span></li>
-                                <li class="characters__item"><b>Корпус:</b><span>Нержавеющая сталь</span></li>
-                                <li class="characters__item"><b>Ремешок:</b><span>Кожа / Нержавеющая сталь</span></li>
-                                <li class="characters__item"><b>Механизм:</b><span>Кварцевый</span></li>
-                                <li class="characters__item"><b>Водонепроницаемость:</b><span>30м</span></li>
-                                <li class="characters__item"><b>Производитель:</b><span>Китай</span></li>
-                                <li class="characters__item"><b>Диаметр:</b><span>42мм</span></li>
-                                <li class="characters__item"><b>Год:</b><span>2019</span></li>
+                                <li class="characters__item"><b>Модель:</b> <span>M-635</span></li>
+                                <li class="characters__item"><b>Стекло:</b> <span>Закаленное минеральное</span></li>
+                                <li class="characters__item"><b>Корпус:</b> <span>Нержавеющая сталь</span></li>
+                                <li class="characters__item"><b>Ремешок:</b> <span>Кожа / Нержавеющая сталь</span></li>
+                                <li class="characters__item"><b>Механизм:</b> <span>Кварцевый</span></li>
+                                <li class="characters__item"><b>Водонепроницаемость:</b> <span>30м</span></li>
+                                <li class="characters__item"><b>Производитель:</b> <span>Китай</span></li>
+                                <li class="characters__item"><b>Диаметр:</b> <span>42мм</span></li>
+                                <li class="characters__item"><b>Год:</b> <span>2019</span></li>
                             </ul>
                         </div>
                     </div>
@@ -222,29 +222,29 @@
                         <div class="row why-we__main ">
                             <div class="col-lg-6 mb-3">
                                 <div class="why-we__item">
-                                    <img src="/test/dist/images/icons/air.png">
-                                    <h3>БЫСТРАЯ ДОСТАВКА</h3>
+                                    <img src="/test/dist/images/icons/why-we/air.png">
+                                    <h4 class="why-we__item-head">БЫСТРАЯ ДОСТАВКА</h4>
                                     <p>Срок доставки почтой России - от 1 до 10 дней (в зависимости от Вашего региона). Отправление товара осуществляется первым классом.</p>
                                 </div>
                             </div>
                             <div class="col-lg-6 mb-3">
                                 <div class="why-we__item">
-                                    <img src="/test/dist/images/icons/r.png">
-                                    <h3>ОПЛАТА ПРИ ПОЛУЧЕНИИ</h3>
+                                    <img src="/test/dist/images/icons/why-we/r.png">
+                                    <h4 class="why-we__item-head">ОПЛАТА ПРИ ПОЛУЧЕНИИ</h4>
                                     <p>Оплата товара только при получении на руки. Никаких предоплат. Доставка за наш счет.</p>
                                 </div>
                             </div>
                             <div class="col-lg-6 mb-3">
                                 <div class="why-we__item">
-                                    <img src="/test/dist/images/icons/support.png">
-                                    <h3>ТЕХНИЧЕСКАЯ ПОДДЕРЖКА</h3>
+                                    <img src="/test/dist/images/icons/why-we/support.png">
+                                    <h4 class="why-we__item-head">ТЕХНИЧЕСКАЯ ПОДДЕРЖКА</h4>
                                     <p>Служба поддержки ответит на любой Ваш вопрос. Вы можете написать нам письмо на электронную почту либо заказать звонок.</p>
                                 </div>
                             </div>
                             <div class="col-lg-6 mb-3">
-                                <div class="why-we__item">
-                                    <img src="/test/dist/images/icons/lock.png">
-                                    <h3>ГАРАНТИИ</h3>
+                                <div class="why-we__item why-we__item-last">
+                                    <img src="/test/dist/images/icons/why-we/lock.png">
+                                    <h4 class="why-we__item-head">ГАРАНТИИ</h4>
                                     <p>Продукт прошел 100% проверку. Мы также соблюдаем закон «О защите прав потребителя». Свяжитесь с нами, если по какой-либо причине решили вернуть товар. </p>
                                 </div>
                             </div>
@@ -255,7 +255,7 @@
             <section id="section-how-works">
                 <div class="container how-works">
                     <div class="how-works__header">
-                        <h3>Как получить часы</h3>
+                        <h3>КАК ПОЛУЧИТЬ ЧАСЫ</h3>
                         <img src="/test/dist/images/hr.png" class="characters__hr" />
                     </div>
                     <div class="how-works__sequence">
@@ -264,6 +264,28 @@
                         <div class="how-works__call">Мы перезваниваем Вам для подтверждения заказа</div>
                         <div class="how-works__send">Отправляем Ваш заказ в пункт назначения</div>
                         <div class="how-works__check">Вы проверяете и оплачиваете товар на почте</div>
+                    </div>
+                    <div class="how-works__sequence-mobile row">
+                        <div class="how-works__basket-mobile col">
+                            <img src="/test/dist/images/icons/how-works/1.png" />
+                            <p>Вы выбираете понравившиеся часы</p>
+                        </div>
+                        <div class="how-works__form-mobile col">
+                            <img src="/test/dist/images/icons/how-works/2.png" />
+                            <p>Оставляете заявку через форму заявки на сайте</p>
+                        </div>
+                        <div class="how-works__call-mobile col">
+                            <img src="/test/dist/images/icons/how-works/3.png" />
+                            <p>Мы перезваниваем Вам для подтверждения заказа</p>
+                        </div>
+                        <div class="how-works__send-mobile col">
+                            <img src="/test/dist/images/icons/how-works/4.png" />
+                            <p>Отправляем Ваш заказ в пункт назначения</p>
+                        </div>
+                        <div class="how-works__check-mobile col">
+                            <img src="/test/dist/images/icons/how-works/5.png" />
+                            <p>Вы проверяете и оплачиваете товар на почте</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -281,7 +303,7 @@
                                         <div class="review__item">
                                             <img src="/test/dist/images/reviews/1.jpg" class="review__avatar" />
                                             <div class="review__text">
-                                                <h3>Матвей Гуляев</h3>
+                                                <h3 class="review__name">Матвей Гуляев</h3>
                                                 <p>Часы пришли через неделю после заказа. Качество отличное, проблем не встречал. Руки можно спокойно мыть, не снимая часы, но, например, нырять в них я бы не стал). Стекло действительно прочное и не царапается, что порадовало. Рекомендую к покупке.</p>
                                             </div>
                                         </div>
@@ -290,7 +312,7 @@
                                         <div class="review__item">
                                             <img src="/test/dist/images/reviews/2.jpg" class="review__avatar" />
                                             <div class="review__text">
-                                                <h3>Артем Сазонов</h3>
+                                                <h3 class="review__name">Артем Сазонов</h3>
                                                 <p>Солидные, красивые часы. На удивление всё очень хорошо упаковано. Выглядят даже лучше, чем на картинках. Пару раз падали - никаких проблем! Ничего не люфтит, не шатается. Я очень доволен покупкой.</p>
                                             </div>
                                         </div>
@@ -299,7 +321,7 @@
                                         <div class="review__item">
                                             <img src="/test/dist/images/reviews/3.jpg" class="review__avatar" />
                                             <div class="review__text">
-                                                <h3>Сергей Фомин</h3>
+                                                <h3 class="review__name">Сергей Фомин</h3>
                                                 <p>Часы удобно лежат на руке, смотрятся СУПЕР! Выглядят дороже своей цены. Заказал по акции еще одни для своего троюродного брата. Ему тоже они понравились!) Спасибо большое вашему сайту.</p>
                                             </div>
                                         </div>
@@ -320,12 +342,12 @@
         <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-lg-3 col-12 d-lg-block d-sm-none">
                         <h2 class="footer__logo">
                             <a class="footer__logo-href" href="#">DOMWATCHES</a>
                         </h2>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2 col-sm-2">
                         <h5 class="footer__menu-name">Меню</h5>
                         <ul class="footer__list">
                             <li><a href="#">Главная</a></li>
@@ -333,7 +355,7 @@
                             <li><a href="#">Фото</a></li>
                         </ul>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2 col-sm-3">
                         <h5 class="footer__menu-name">Поддержка</h5>
                         <ul class="footer__list">
                             <li><a href="#">Отзывы</a></li>
@@ -341,14 +363,14 @@
                             <li><a href="#">Контакты</a></li>
                         </ul>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2 col-sm-3">
                         <h5 class="footer__menu-name">Связь</h5>
                         <ul class="footer__list">
                             <li><a href="#">8 (919) 859-21-35</a></li>
                             <p>г. Оренбург</p>
                         </ul>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-lg-3 col-sm-4">
                         <div class="footer__icons">
                             <a href="#" class="footer__icons-vk"><i class="fab fa-vk"></i></a>
                             <a href="#" class="footer__icons-youtube"><i class="fab fa-youtube"></i></a>
