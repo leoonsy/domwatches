@@ -449,9 +449,93 @@ a:focus {
   }
 }
 
+/** Характеристики **/
+
+#section-characters {
+  margin-top: 2rem;
+}
+
+.characters {
+  &__hr {
+    margin-bottom: 0.5rem;
+  }
+
+  &__header {
+    text-align: center !important;
+    margin-bottom: 1rem;
+  }
+
+  &__carousel {
+    margin: auto 0;
+  }
+
+  &__item {
+    display: block;
+
+    & span {
+      float: right;
+    }
+  }
+
+  &__list {
+    margin-left: 0;
+    list-style: none;
+    counter-reset: li;
+    margin: 0;
+    padding: 0;
+
+    & li {
+      position: relative;
+      margin-bottom: 0.75rem;
+      border: 2px solid rgb(45, 3, 85);
+      padding: 0.6em;
+      border-radius: 4px;
+      background: #fefefe;
+      color: rgb(0, 0, 0);
+    }
+
+    & li:last-child {
+      margin: 0;
+    }
+
+    & li:before {
+      position: absolute;
+      top: -0.8em;
+      padding-left: 0.4em;
+      padding-right: 0.4em;
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(6, 88, 155);
+      background: #fefefe;
+      border-radius: 50%;
+      counter-increment: li;
+      content: "•";
+    }
+  }
+}
+
+@media only screen and (max-width: #{map-get($grid-breakpoints, 'lg')}) {
+  .characters {
+    &__carousel {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .characters {
+    &__item {
+      & span {
+        float: none;
+      }
+    }
+  }
+}
+
 /** Скидка для определенного товара **/
 
 #section-discount {
+  margin: 2rem 0 0 0;
   background: url("/test/dist/images/discount-bg.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -545,6 +629,7 @@ a:focus {
         background: $color-blue;
         position: absolute;
         left: -9px;
+        top: 0;
         transform: skewX(-15deg) skewY(0deg);
       }
     }
@@ -701,85 +786,156 @@ a:focus {
   }
 }
 
-/** Характеристики **/
-.characters {
+/** Товары **/
+#section-goods {
   margin-top: 2rem;
+}
 
-  &__hr {
-    margin-bottom: 0.5rem;
-  }
-
+.goods {
   &__header {
-    text-align: center !important;
-    margin-bottom: 1rem;
+    text-align: center;
   }
 
-  &__carousel {
-    margin: auto 0;
+  &__title {
+    margin: 1rem 0;
+  }
+
+  &__content {
+    margin: 1rem 0 .4rem 0;
+    text-align: left;
   }
 
   &__item {
-    display: block;
-
-    & span {
-      float: right;
-    }
-  }
-
-  &__list {
-    margin-left: 0;
-    list-style: none;
-    counter-reset: li;
-    margin: 0;
-    padding: 0;
-
-    & li {
-      position: relative;
-      margin-bottom: 0.75rem;
-      border: 2px solid rgb(45, 3, 85);
-      padding: 0.6em;
-      border-radius: 4px;
-      background: #fefefe;
-      color: rgb(0, 0, 0);
+    position: relative;
+    border: 1px solid #e9e9e9;
+    border-right: none;
+    &:hover {
+      border-color: #dbdbdb;
     }
 
-    & li:last-child {
-      margin: 0;
-    }
+    &:last-child {
+      border-right: 1px solid #e9e9e9;
 
-    & li:before {
-      position: absolute;
-      top: -0.8em;
-      padding-left: 0.4em;
-      padding-right: 0.4em;
-      font-size: 16px;
-      font-weight: bold;
-      color: rgb(6, 88, 155);
-      background: #fefefe;
-      border-radius: 50%;
-      counter-increment: li;
-      content: "•";
-    }
-  }
-}
-
-@media only screen and (max-width: #{map-get($grid-breakpoints, 'lg')}) {
-  .characters {
-    &__carousel {
-      margin-bottom: 1rem;
-    }
-  }
-}
-
-@media only screen and (max-width: 366px) {
-  .characters {
-    &__item {
-      & span {
-        float: none;
+      &:hover {
+        border: 1px solid #dbdbdb;
       }
     }
   }
+
+  &__item-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  &__img {
+    & img {
+      width: 100%;
+      max-width: 180px;
+    }
+  }
+
+  &__separator {
+    width: 100%;
+  }
+
+  &__discount {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 40px;
+    background: rgb(255, 39, 244);
+    padding: 0.3rem;
+    color: #fff;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 68px;
+      width: 50px;
+      height: 40px;
+      background: rgb(255, 39, 244);
+      transform: skewX(-20deg) skewY(0);
+      z-index: 0;
+    }
+
+    span {
+      position: relative;
+      z-index: 100;
+    }
+
+    &--few {
+      background: rgb(82, 92, 104);
+
+      &::after {
+        background: rgb(82, 92, 104);
+      }
+    }
+  }
+
+  &__price {
+    margin-top: auto;
+    display: flex;
+    font-size: 1.4rem;
+
+    &-old {
+      color: rgb(155, 155, 155);
+      text-decoration: line-through;
+    }
+    &-new {
+      margin-left: auto;
+      color: rgb(4, 22, 39);
+    }
+  }
+
+  &__buy {
+    text-align: center;
+    margin: 1rem 0 0 0;
+  }
+
+  &__button,
+  &__button:active,
+  &__button:link,
+  &__button:visited,
+  &__button:focus {
+    text-align: center;
+    display: inline-block;
+    color: #fff !important;
+    transition: background-color 0.25s ease 0s;
+    background-color: $button-bg-color;
+    font-weight: 400;
+    padding: 0.8rem 1rem;
+    border-radius: 0.3rem;
+    font-size: 1.4rem;
+  }
+
+  &__button:hover {
+    background-color: $button-bg-color-hover;
+  }
 }
+
+
+@media only screen and (max-width: 298px) {
+  .goods {
+    &__item-content {
+      padding: 1rem;
+    }
+    &__title {
+      font-size: 1.3rem;
+    }
+
+    &__price {
+      font-size: 1.2rem;
+    }
+  }
+}
+
 
 /** Почему мы **/
 
@@ -977,9 +1133,10 @@ a:focus {
   }
 
   &__avatar {
-    flex: 0 0 auto;
     border-radius: 8px;
-    min-height: 100%;
+    width: 100%;
+    max-width: 190px;
+    flex: 0 0 auto;
   }
 
   &__text {
@@ -1013,9 +1170,31 @@ a:focus {
   }
 }
 
+.final-buy {
+  margin: 1rem 0 0 0;
+  text-align: center;
+  &__button,
+  &__button:active,
+  &__button:link,
+  &__button:visited,
+  &__button:focus {
+    display: inline-block;
+    color: #fff !important;
+    transition: background-color 0.25s ease 0s;
+    background-color: $button-bg-color;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+  }
+
+  &__button:hover {
+    background-color: $button-bg-color-hover;
+  }
+}
+
 @media only screen and (max-width: #{map-get($grid-breakpoints, 'md')}) {
   .review {
-  
     &__item {
       flex-direction: column;
       align-items: center;
@@ -1025,7 +1204,6 @@ a:focus {
     &__text {
       margin: 1rem 0 0 0;
     }
-
   }
 }
 

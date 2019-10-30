@@ -12,13 +12,16 @@
     <script src="/test/dist/scripts/bootstrap.js"></script>
     <script src="/test/dist/scripts/fontawesome.js"></script>
     <script src="/test/dist/scripts/jquery.flipper-responsive.js"></script>
+    <script src="/test/dist/scripts/wow.js"></script>
     <link rel="stylesheet" href="/test/dist/styles/bootstrap.css">
     <link rel="stylesheet" href="/test/dist/styles/main.css">
     <link rel="stylesheet" href="/test/dist/styles/countdown.css">
+    <link rel="stylesheet" href="/test/dist/styles/animate.css">
 
     <script>
         $(function() {
             $('#myFlipper').flipper('init');
+            new WOW().init();
             $('.navbar__hamburger').on('click', function(e) {
                 $(this).toggleClass('is-active');
                 $('.navbar__top-menu').stop().slideToggle(800, function() {
@@ -103,17 +106,17 @@
                             <h3 class="advant__header-text">ПРЕИМУЩЕСТВА ЧАСОВ</h3>
                             <img src="/test/dist/images/hr.png" class="advant__hr" />
                         </div>
-                        <div class="col-md-4 advant__item">
+                        <div class="col-md-4 advant__item wow fadeInLeft">
                             <div class="advant__img advant__glass"></div>
                             <h4>Устойчивость к царапинам</h4>
                             <p>Закаленное минеральное стекло имеет высокую прочность и сопротивление к царапинам. Данное покрытие сложно поцарапать даже намеренно.</p>
                         </div>
-                        <div class="col-md-4 advant__item">
+                        <div class="col-md-4 advant__item wow fadeIn" data-wow-delay="0.4s">
                             <div class="advant__img advant__protection"></div>
                             <h4>Защита от повреждений</h4>
                             <p>Нержавеющая сталь металлических часов защищает их от окисления и внешних повреждений. Часы также защищены от влаги.</p>
                         </div>
-                        <div class="col-md-4 advant__item">
+                        <div class="col-md-4 advant__item wow fadeInRight" data-wow-delay="0.8s">
                             <div class="advant__img advant__design"></div>
                             <h4>Безупречный дизайн</h4>
                             <p>Внешний вид часов отлично дополнит образ владельца и придаст статусности.</p>
@@ -121,33 +124,7 @@
                     </div>
                 </div>
             </section>
-            <section id="section-discount">
-                <div class="container">
-                    <div class="discount">
-                        <div class="discount__left">
-                            <h2 class="discount__attention">Внимание! Действует скидка</h2>
-                            <h3 class="discount__amount">на часы <b>M-635D-7M</b> в размере <b>40%</b></h3>
-                            <div class="price">
-                                <div class="price__text">
-                                    <p class="price__text-old">Старая цена:</p>
-                                    <p class="price__text-new">Новая цена:</p>
-                                </div>
-                                <div class="price__number">
-                                    <div class="price__number-old">1850р.</div>
-                                    <div class="price__number-new">1110р.</div>
-                                </div>
-                            </div>
-                            <p class="discount__end">До конца акции осталось:</p>
-                            <div class="flipper  discount__timer" data-datetime="2019-12-23 21:45:00" data-template="ddd|HH|ii|ss" data-labels="Дней|Часов|Минут|Секунд" data-reverse="true" id="myFlipper"></div>
-                            <a class="discount__button" href="#">Заказать со скидкой</a>
-                        </div>
-                        <div>
-                            <img class="discount__img" src="/test/dist/images/discount.png" />
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="section-characters">
+            <section id="section-characters" class="wow fadeIn" data-wow-offset="130" data-wow-duration="2s"> 
                 <div class="container">
                     <div class="row characters">
                         <div class="col-lg-12 characters__header">
@@ -201,7 +178,7 @@
                                 <li class="characters__item"><b>Модель:</b> <span>M-635</span></li>
                                 <li class="characters__item"><b>Стекло:</b> <span>Закаленное минеральное</span></li>
                                 <li class="characters__item"><b>Корпус:</b> <span>Нержавеющая сталь</span></li>
-                                <li class="characters__item"><b>Ремешок:</b> <span>Кожа / Нержавеющая сталь</span></li>
+                                <li class="characters__item"><b>Ремешок / браслет:</b> <span>Кожа / Нержавеющая сталь</span></li>
                                 <li class="characters__item"><b>Механизм:</b> <span>Кварцевый</span></li>
                                 <li class="characters__item"><b>Водонепроницаемость:</b> <span>30м</span></li>
                                 <li class="characters__item"><b>Производитель:</b> <span>Китай</span></li>
@@ -212,8 +189,141 @@
                     </div>
                 </div>
             </section>
+            <section id="section-discount">
+                <div class="container">
+                    <div class="discount">
+                        <div class="discount__left wow pulse" data-wow-delay="2s">
+                            <h2 class="discount__attention">Внимание! Действует скидка</h2>
+                            <h3 class="discount__amount">на часы <b>M-635D-7M</b> в размере <b>40%</b></h3>
+                            <div class="price">
+                                <div class="price__text">
+                                    <p class="price__text-old">Старая цена:</p>
+                                    <p class="price__text-new">Новая цена:</p>
+                                </div>
+                                <div class="price__number">
+                                    <div class="price__number-old">2499₽</div>
+                                    <div class="price__number-new">1499₽</div>
+                                </div>
+                            </div>
+                            <p class="discount__end">До конца акции осталось:</p>
+                            <div class="flipper  discount__timer" data-datetime="2019-12-23 21:45:00" data-template="ddd|HH|ii|ss" data-labels="Дней|Часов|Минут|Секунд" data-reverse="true" id="myFlipper"></div>
+                            <a class="discount__button" href="#">Заказать со скидкой</a>
+                        </div>
+                        <div>
+                            <img class="discount__img" src="/test/dist/images/discount.png" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section-goods" class="wow zoomIn" data-wow-offset="50">
+                <div class="container goods">
+                    <div class="goods__header">
+                        <h3>ЧАСЫ DOM</h3>
+                        <img src="/test/dist/images/hr.png" class="characters__hr" />
+                    </div>
+                    <div class="row goods__content text-lg-left text-center">
+                        <div class="col-lg-3 goods__item">
+                            <div class="goods__item-content">
+                                <div class="goods__img">
+                                    <img src="/test/dist/images/watches/0.png" />
+                                </div>
+                                <div class="goods__discount goods__discount--few">
+                                    <span>СКИДКА 20%</span>
+                                </div>
+                                <h3 class="goods__title">M-635D-1M9</h3>
+                                <p class="goods__description">Стильные часы DOM с белым стальным браслетом и желто-черным циферблатом.</p>
+                                <div class="mt-auto">
+                                    <hr class="goods__separator" />
+                                    <div class="goods__price">
+                                        <div class="goods__price-old">
+                                            2499₽
+                                        </div>
+                                        <div class="goods__price-new">
+                                            1999₽
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 goods__item">
+                            <div class="goods__item-content">
+                                <div class="goods__img">
+                                    <img src="/test/dist/images/watches/1.png" />
+                                </div>
+                                <div class="goods__discount goods__discount--few">
+                                    <span>СКИДКА 20%</span>
+                                </div>
+                                <h3 class="goods__title">M-635BK-1M</h3>
+                                <p class="goods__description">Часы DOM со строгим черно-белым дизайном и стальным браслетом.</p>
+                                <div class="mt-auto">
+                                    <hr class="goods__separator" />
+                                    <div class="goods__price">
+                                        <div class="goods__price-old">
+                                            2499₽
+                                        </div>
+                                        <div class="goods__price-new">
+                                            1999₽
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 goods__item">
+                            <div class="goods__item-content">
+                                <div class="goods__img">
+                                    <img src="/test/dist/images/watches/2.png" />
+                                </div>
+                                <div class="goods__discount">
+                                    <span>СКИДКА 40%</span>
+                                </div>
+                                <h3 class="goods__title">M-635L-1M9</h3>
+                                <p class="goods__description">Элегантные часы DOM с натуральным кожаным ремешком и желто-черным циферблатом.</p>
+                                <div class="mt-auto">
+                                    <hr class="goods__separator" />
+                                    <div class="goods__price">
+                                        <div class="goods__price-old">
+                                            2499₽
+                                        </div>
+                                        <div class="goods__price-new">
+                                            1499₽
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 goods__item">
+                            <div class="goods__item-content">
+                                <div class="goods__img">
+                                    <img src="/test/dist/images/watches/3.png" />
+                                </div>
+                                <div class="goods__discount goods__discount--few">
+                                    <span>СКИДКА 30%</span>
+                                </div>
+                                <h3 class="goods__title">M-635L-7M</h3>
+                                <p class="goods__description">Красивые часы с натуральным кожаным ремешком и черно-белым циферблатом</p>
+                                <div class="mt-auto">
+                                    <hr class="goods__separator" />
+                                    <div class="goods__price">
+                                        <div class="goods__price-old">
+                                            2499₽
+                                        </div>
+                                        <div class="goods__price-new">
+                                            1749₽
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="goods__buy">
+                        <a href="#" class="goods__button">Заказать часы</a>
+                    </div>
+                </div>
+            </section>
             <section id="section-why-we">
-                <div class="container why-we">
+                <div class="container why-we wow fadeIn" data-wow-offset="150" data-wow-duration="2s">
                     <div class="why-we__header">
                         <h3>ПОЧЕМУ МЫ?</h3>
                         <img src="/test/dist/images/hr.png" class="characters__hr" />
@@ -252,7 +362,7 @@
                     </div>
                 </div>
             </section>
-            <section id="section-how-works">
+            <section id="section-how-works" class="wow fadeIn" data-wow-offset="150" data-wow-duration="1.5s">
                 <div class="container how-works">
                     <div class="how-works__header">
                         <h3>КАК ПОЛУЧИТЬ ЧАСЫ</h3>
@@ -266,23 +376,23 @@
                         <div class="how-works__check">Вы проверяете и оплачиваете товар на почте</div>
                     </div>
                     <div class="how-works__sequence-mobile row">
-                        <div class="how-works__basket-mobile col">
+                        <div class="how-works__basket-mobile col-sm">
                             <img src="/test/dist/images/icons/how-works/1.png" />
                             <p>Вы выбираете понравившиеся часы</p>
                         </div>
-                        <div class="how-works__form-mobile col">
+                        <div class="how-works__form-mobile col-sm">
                             <img src="/test/dist/images/icons/how-works/2.png" />
                             <p>Оставляете заявку через форму заявки на сайте</p>
                         </div>
-                        <div class="how-works__call-mobile col">
+                        <div class="how-works__call-mobile col-sm">
                             <img src="/test/dist/images/icons/how-works/3.png" />
                             <p>Мы перезваниваем Вам для подтверждения заказа</p>
                         </div>
-                        <div class="how-works__send-mobile col">
+                        <div class="how-works__send-mobile col-sm">
                             <img src="/test/dist/images/icons/how-works/4.png" />
                             <p>Отправляем Ваш заказ в пункт назначения</p>
                         </div>
-                        <div class="how-works__check-mobile col">
+                        <div class="how-works__check-mobile col-sm">
                             <img src="/test/dist/images/icons/how-works/5.png" />
                             <p>Вы проверяете и оплачиваете товар на почте</p>
                         </div>
@@ -290,7 +400,7 @@
                 </div>
             </section>
             <section id="section-review">
-                <div class="container">
+                <div class="container wow fadeInRight" data-wow-offset="50">
                     <div class="review">
                         <div class="review__header">
                             <h3>ОТЗЫВЫ</h3>
@@ -335,6 +445,9 @@
                                 </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="final-buy">
+                        <a href="#" class="final-buy__button">Сделать заказ</a>
                     </div>
                 </div>
             </section>
