@@ -5,34 +5,13 @@
     <title>Domwatches</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
-    <script src="/test/dist/scripts/jquery-3.4.1.js"></script>
-    <script src="/test/dist/scripts/parallax.js"></script>
-    <script src="/test/dist/scripts/popper.js"></script>
-    <script src="/test/dist/scripts/bootstrap.js"></script>
-    <script src="/test/dist/scripts/fontawesome.js"></script>
-    <script src="/test/dist/scripts/jquery.flipper-responsive.js"></script>
-    <script src="/test/dist/scripts/wow.js"></script>
-    <link rel="stylesheet" href="/test/dist/styles/bootstrap.css">
-    <link rel="stylesheet" href="/test/dist/styles/main.css">
-    <link rel="stylesheet" href="/test/dist/styles/countdown.css">
-    <link rel="stylesheet" href="/test/dist/styles/animate.css">
 
-    <script>
-        $(function() {
-            $('#myFlipper').flipper('init');
-            new WOW().init();
-            $('.navbar__hamburger').on('click', function(e) {
-                $(this).toggleClass('is-active');
-                $('.navbar__top-menu').stop().slideToggle(800, function() {
-                    if ($(this).css('display') === "none")
-                        $(this).removeAttr('style');
-                    else
-                        $(this).css('display', 'flex');
-                });
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="styles/countdown.min.css">
+    <link rel="stylesheet" href="styles/animate.min.css">
 </head>
 
 <body>
@@ -47,7 +26,7 @@
                     <nav class="navbar">
                         <div class="navbar__brand">
                             <a href="#" class="navbar__brand-link">
-                                <img class="navbar__brand-logo" src="/test/dist/images/logo.png" />
+                                <img class="navbar__brand-logo" src="images/logo.png" />
                                 <span class="navbar__brand-text">DOMWATCHES</span>
                             </a>
                         </div>
@@ -59,7 +38,7 @@
                                 <a class="navbar__link" href="#">ЗАКАЗАТЬ</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="#">ФОТО</a>
+                                <a class="navbar__link" href="photo.php">ФОТО</a>
                             </li>
                             <li class="navbar__item">
                                 <a class="navbar__link" href="#">ОТЗЫВЫ</a>
@@ -86,7 +65,7 @@
                     </nav>
                 </div>
             </header>
-            <section id="section-top" class="parallax-window" data-parallax="scroll" data-image-src="/test/dist/images/bg-top.jpg" data-speed="-0.1" data-position="bottom right">
+            <section id="section-top" class="parallax-window" data-parallax="scroll" data-image-src="images/bg-top.jpg" data-speed="-0.1" data-position="bottom right">
                 <div class="container h-100 d-flex align-items-center">
                     <div class="top-info">
                         <h1 class="top-info__title">Современные мужские часы DOM</h1>
@@ -104,7 +83,7 @@
                     <div class="row advant">
                         <div class="col-lg-12 advant__header">
                             <h3 class="advant__header-text">ПРЕИМУЩЕСТВА ЧАСОВ</h3>
-                            <img src="/test/dist/images/hr.png" class="advant__hr" />
+                            <img src="images/hr.png" class="advant__hr" />
                         </div>
                         <div class="col-md-4 advant__item wow fadeInLeft">
                             <div class="advant__img advant__glass"></div>
@@ -129,7 +108,7 @@
                     <div class="row characters">
                         <div class="col-lg-12 characters__header">
                             <h3>ХАРАКТЕРИСТИКИ ЧАСОВ</h3>
-                            <img src="/test/dist/images/hr.png" class="characters__hr" />
+                            <img src="images/hr.png" class="characters__hr" />
                         </div>
                         <div class="col-lg-6 characters__carousel">
                             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -141,25 +120,25 @@
                                 </ol>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img class="d-block w-100" src="/test/dist/images/carousel-characters/0.jpg" alt="M-635L-1M9">
+                                        <img class="d-block w-100" src="images/carousel-characters/0.jpg" alt="M-635L-1M9">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h3>M-635D-1M9</h3>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="/test/dist/images/carousel-characters/1.jpg" alt="M-635L-7M">
+                                        <img class="d-block w-100" src="images/carousel-characters/1.jpg" alt="M-635L-7M">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h3>M-635BK-1M</h3>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="/test/dist/images/carousel-characters/2.jpg" alt="M-635L-7M">
+                                        <img class="d-block w-100" src="images/carousel-characters/2.jpg" alt="M-635L-7M">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h3>M-635L-1M9</h3>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="/test/dist/images/carousel-characters/3.jpg" alt="M-635L-7M">
+                                        <img class="d-block w-100" src="images/carousel-characters/3.jpg" alt="M-635L-7M">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h3>M-635L-7M</h3>
                                         </div>
@@ -210,7 +189,7 @@
                             <a class="discount__button" href="#">Заказать со скидкой</a>
                         </div>
                         <div>
-                            <img class="discount__img" src="/test/dist/images/discount.png" />
+                            <img class="discount__img" src="images/discount.png" />
                         </div>
                     </div>
                 </div>
@@ -219,13 +198,13 @@
                 <div class="container goods">
                     <div class="goods__header">
                         <h3>ЧАСЫ DOM</h3>
-                        <img src="/test/dist/images/hr.png" class="characters__hr" />
+                        <img src="images/hr.png" class="characters__hr" />
                     </div>
                     <div class="row goods__content text-lg-left text-center">
                         <div class="col-lg-3 goods__item">
                             <div class="goods__item-content">
                                 <div class="goods__img">
-                                    <img src="/test/dist/images/watches/0.png" />
+                                    <img src="images/watches/0.png" />
                                 </div>
                                 <div class="goods__discount goods__discount--few">
                                     <span>СКИДКА 20%</span>
@@ -249,7 +228,7 @@
                         <div class="col-lg-3 goods__item">
                             <div class="goods__item-content">
                                 <div class="goods__img">
-                                    <img src="/test/dist/images/watches/1.png" />
+                                    <img src="images/watches/1.png" />
                                 </div>
                                 <div class="goods__discount goods__discount--few">
                                     <span>СКИДКА 20%</span>
@@ -272,7 +251,7 @@
                         <div class="col-lg-3 goods__item">
                             <div class="goods__item-content">
                                 <div class="goods__img">
-                                    <img src="/test/dist/images/watches/2.png" />
+                                    <img src="images/watches/2.png" />
                                 </div>
                                 <div class="goods__discount">
                                     <span>СКИДКА 40%</span>
@@ -295,7 +274,7 @@
                         <div class="col-lg-3 goods__item">
                             <div class="goods__item-content">
                                 <div class="goods__img">
-                                    <img src="/test/dist/images/watches/3.png" />
+                                    <img src="images/watches/3.png" />
                                 </div>
                                 <div class="goods__discount goods__discount--few">
                                     <span>СКИДКА 30%</span>
@@ -326,34 +305,34 @@
                 <div class="container why-we wow fadeIn" data-wow-offset="150" data-wow-duration="2s">
                     <div class="why-we__header">
                         <h3>ПОЧЕМУ МЫ?</h3>
-                        <img src="/test/dist/images/hr.png" class="characters__hr" />
+                        <img src="images/hr.png" class="characters__hr" />
                     </div>
                     <div class="why-we__content">
                         <div class="row why-we__main ">
                             <div class="col-lg-6 mb-3">
                                 <div class="why-we__item">
-                                    <img src="/test/dist/images/icons/why-we/air.png">
+                                    <img src="images/icons/why-we/air.png">
                                     <h4 class="why-we__item-head">БЫСТРАЯ ДОСТАВКА</h4>
                                     <p>Срок доставки почтой России - от 1 до 10 дней (в зависимости от Вашего региона). Отправление товара осуществляется первым классом.</p>
                                 </div>
                             </div>
                             <div class="col-lg-6 mb-3">
                                 <div class="why-we__item">
-                                    <img src="/test/dist/images/icons/why-we/r.png">
+                                    <img src="images/icons/why-we/r.png">
                                     <h4 class="why-we__item-head">ОПЛАТА ПРИ ПОЛУЧЕНИИ</h4>
                                     <p>Оплата товара только при получении на руки. Никаких предоплат. Доставка за наш счет.</p>
                                 </div>
                             </div>
                             <div class="col-lg-6 mb-3">
                                 <div class="why-we__item">
-                                    <img src="/test/dist/images/icons/why-we/support.png">
+                                    <img src="images/icons/why-we/support.png">
                                     <h4 class="why-we__item-head">ТЕХНИЧЕСКАЯ ПОДДЕРЖКА</h4>
                                     <p>Служба поддержки ответит на любой Ваш вопрос. Вы можете написать нам письмо на электронную почту либо заказать звонок.</p>
                                 </div>
                             </div>
                             <div class="col-lg-6 mb-3">
                                 <div class="why-we__item why-we__item-last">
-                                    <img src="/test/dist/images/icons/why-we/lock.png">
+                                    <img src="images/icons/why-we/lock.png">
                                     <h4 class="why-we__item-head">ГАРАНТИИ</h4>
                                     <p>Продукт прошел 100% проверку. Мы также соблюдаем закон «О защите прав потребителя». Свяжитесь с нами, если по какой-либо причине решили вернуть товар. </p>
                                 </div>
@@ -366,7 +345,7 @@
                 <div class="container how-works">
                     <div class="how-works__header">
                         <h3>КАК ПОЛУЧИТЬ ЧАСЫ</h3>
-                        <img src="/test/dist/images/hr.png" class="characters__hr" />
+                        <img src="images/hr.png" class="characters__hr" />
                     </div>
                     <div class="how-works__sequence">
                         <div class="how-works__basket">Вы выбираете понравившиеся часы</div>
@@ -377,23 +356,23 @@
                     </div>
                     <div class="how-works__sequence-mobile row">
                         <div class="how-works__basket-mobile col-sm">
-                            <img src="/test/dist/images/icons/how-works/1.png" />
+                            <img src="images/icons/how-works/1.png" />
                             <p>Вы выбираете понравившиеся часы</p>
                         </div>
                         <div class="how-works__form-mobile col-sm">
-                            <img src="/test/dist/images/icons/how-works/2.png" />
+                            <img src="images/icons/how-works/2.png" />
                             <p>Оставляете заявку через форму заявки на сайте</p>
                         </div>
                         <div class="how-works__call-mobile col-sm">
-                            <img src="/test/dist/images/icons/how-works/3.png" />
+                            <img src="images/icons/how-works/3.png" />
                             <p>Мы перезваниваем Вам для подтверждения заказа</p>
                         </div>
                         <div class="how-works__send-mobile col-sm">
-                            <img src="/test/dist/images/icons/how-works/4.png" />
+                            <img src="images/icons/how-works/4.png" />
                             <p>Отправляем Ваш заказ в пункт назначения</p>
                         </div>
                         <div class="how-works__check-mobile col-sm">
-                            <img src="/test/dist/images/icons/how-works/5.png" />
+                            <img src="images/icons/how-works/5.png" />
                             <p>Вы проверяете и оплачиваете товар на почте</p>
                         </div>
                     </div>
@@ -404,14 +383,14 @@
                     <div class="review">
                         <div class="review__header">
                             <h3>ОТЗЫВЫ</h3>
-                            <img src="/test/dist/images/rev.png" class="characters__hr" />
+                            <img src="images/rev.png" class="characters__hr" />
                         </div>
                         <div class="review__carousel">
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner mx-5 w-auto">
                                     <div class="carousel-item active">
                                         <div class="review__item">
-                                            <img src="/test/dist/images/reviews/1.jpg" class="review__avatar" />
+                                            <img src="images/reviews/1.jpg" class="review__avatar" />
                                             <div class="review__text">
                                                 <h3 class="review__name">Матвей Гуляев</h3>
                                                 <p>Часы пришли через неделю после заказа. Качество отличное, проблем не встречал. Руки можно спокойно мыть, не снимая часы, но, например, нырять в них я бы не стал). Стекло действительно прочное и не царапается, что порадовало. Рекомендую к покупке.</p>
@@ -420,7 +399,7 @@
                                     </div>
                                     <div class="carousel-item">
                                         <div class="review__item">
-                                            <img src="/test/dist/images/reviews/2.jpg" class="review__avatar" />
+                                            <img src="images/reviews/2.jpg" class="review__avatar" />
                                             <div class="review__text">
                                                 <h3 class="review__name">Артем Сазонов</h3>
                                                 <p>Солидные, красивые часы. На удивление всё очень хорошо упаковано. Выглядят даже лучше, чем на картинках. Пару раз падали - никаких проблем! Ничего не люфтит, не шатается. Я очень доволен покупкой.</p>
@@ -429,7 +408,7 @@
                                     </div>
                                     <div class="carousel-item">
                                         <div class="review__item">
-                                            <img src="/test/dist/images/reviews/3.jpg" class="review__avatar" />
+                                            <img src="images/reviews/3.jpg" class="review__avatar" />
                                             <div class="review__text">
                                                 <h3 class="review__name">Сергей Фомин</h3>
                                                 <p>Часы удобно лежат на руке, смотрятся СУПЕР! Выглядят дороже своей цены. Заказал по акции еще одни для своего троюродного брата. Ему тоже они понравились!) Спасибо большое вашему сайту.</p>
@@ -499,6 +478,29 @@
         </footer>
     </div>
 
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script src="scripts/parallax.min.js"></script>
+    <script src="scripts/popper.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/fontawesome.min.js"></script>
+    <script src="scripts/jquery.flipper-responsive.min.js"></script>
+    <script src="scripts/wow.min.js"></script>
+
+    <script>
+        $(function() {
+            $('#myFlipper').flipper('init');
+            new WOW().init();
+            $('.navbar__hamburger').on('click', function(e) {
+                $(this).toggleClass('is-active');
+                $('.navbar__top-menu').stop().slideToggle(800, function() {
+                    if ($(this).css('display') === "none")
+                        $(this).removeAttr('style');
+                    else
+                        $(this).css('display', 'flex');
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

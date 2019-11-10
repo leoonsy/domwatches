@@ -14,14 +14,16 @@ var path = {
   type: {
     html: '**/[^_]*.+(html|tpl|php)',
     js: '**/[^_]*.js',
-    css: '**/[^_]*.+(sass|scss|css)',
-	img: '**/[^_]*.+(jpg|jpeg|png|svg)'
+    scss: '**/[^_]*.+(sass|scss)',
+	css: '**/[^_]*.css',
+	img: '**/[^_]*.+(jpg|jpeg|png|svg|gif)'
   },
   watch: {
     html: '**/*.+(html|tpl|php)',
     js: '**/*.js',
-    css: '**/*.+(sass|scss|css)',
-	img: '**/*.(jpg|jpeg|png|svg)'
+    css: '**/*.css',
+	scss: '**/[^_]*.+(sass|scss)',
+	img: '**/*.(jpg|jpeg|png|svg|gif)'
   }
 };
 
@@ -38,8 +40,8 @@ var gulp = require('gulp'),  // подключаем Gulp
   rimraf = require('gulp-rimraf'), // плагин для удаления файлов и каталогов,
   babel = require('gulp-babel'), //перевод с новых стандартов js в старые для кроссбраузерности
   htmlmin = require('gulp-htmlmin'), //минификация html
-  args = require('yargs').argv;
-// rename = require('gulp-rename');
+  args = require('yargs').argv, //переименование
+  rename = require('gulp-rename');
 
 /* задачи */
 var key = args.key || 'public';
@@ -56,10 +58,26 @@ gulp.task('html:build', function () {
     .pipe(gulp.dest(path.dist[key])) // выкладывание готовых файлов
 });
 
-// сбор стилей
+// css компиляция
 gulp.task('css:build', function () {
-  return gulp.src(path.src[key] + path.type.css) // получим все стили
+  return gulp.src(path.src[key] + path.type.css) // получим все стили css
     .pipe(plumber()) // для отслеживания ошибок
+	.pipe(rename({ suffix: ".min" }))
+    .pipe(sourcemaps.init()) // инициализируем sourcemap
+    .pipe(autoprefixer({ //префиксы
+        overrideBrowserslist: ['last 25 versions'],
+        cascade: false
+    }))
+    .pipe(cleanCSS()) // минимизируем CSS
+    .pipe(sourcemaps.write('./')) // записываем sourcemap
+    .pipe(gulp.dest(path.dist[key])) // выгружаем в build
+});
+
+// scss компиляция
+gulp.task('scss:build', function () {
+  return gulp.src(path.src[key] + path.type.scss) // получим все стили scss
+    .pipe(plumber()) // для отслеживания ошибок
+	.pipe(rename({ suffix: ".min" }))
     .pipe(sourcemaps.init()) // инициализируем sourcemap
     .pipe(sass()) // scss -> css
     .pipe(autoprefixer({ //префиксы
@@ -74,6 +92,7 @@ gulp.task('css:build', function () {
 // сбор js
 gulp.task('js:build', function () {
   return gulp.src(path.src[key] + path.type.js) // получим файлы js
+	.pipe(rename({ suffix: ".min" }))
     .pipe(plumber()) // для отслеживания ошибок
     .pipe(rigger()) // импортируем все указанные файлы js
     .pipe(babel({
@@ -87,7 +106,7 @@ gulp.task('js:build', function () {
       ]
     }))
     .pipe(sourcemaps.init()) //инициализируем sourcemap
-    .pipe(uglify()) // минимизируем js
+    .pipe(uglify()) // минимизируем js	
     .pipe(sourcemaps.write('./')) //  записываем sourcemap
     .pipe(gulp.dest(path.dist[key])) // положим готовый файл
 });
@@ -122,18 +141,43 @@ gulp.task('css:clean', function () {
     .pipe(rimraf());
 });
 
+// удаление scss
+gulp.task('scss:clean', function () {
+  return gulp.src(path.dist[key] + path.type.scss, { read: false })
+    .pipe(rimraf());
+});
+
+// удаление стилей
+gulp.task('style:clean',
+  gulp.series(
+    gulp.parallel(
+      'css:clean',
+      'scss:clean'
+    )
+  )
+);
+
 // удаление каталога dist 
 gulp.task('clean', function () {
   return gulp.src(path.dist[key] + '*', { read: false })
     .pipe(rimraf());
 });
 
+// сборка стилей
+gulp.task('style:build',
+  gulp.series(
+    gulp.parallel(
+      'css:build',
+      'scss:build'
+    )
+  )
+);
 
-// сборка
+// сборка всего
 gulp.task('build',
   gulp.series('clean',
     gulp.parallel(
-      'css:build',
+      'style:build',
       'js:build',
       'html:build',
 	  'img:build'
@@ -144,6 +188,7 @@ gulp.task('build',
 // запуск задач при изменении файлов
 gulp.task('watch', function () {
     gulp.watch(path.src[key] + path.watch.css, gulp.series('css:build'));
+    gulp.watch(path.src[key] + path.watch.scss, gulp.series('scss:build'));
     gulp.watch(path.src[key] + path.watch.js, gulp.series('js:build'));
     gulp.watch(path.src[key] + path.watch.html, gulp.series('html:build'));   
 });
