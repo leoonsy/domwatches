@@ -1,5 +1,5 @@
 <head>
-	<title><?= $title; ?>fff</title>
+	<title><?= $title; ?></title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<script src="/public/dist/scripts/jquery-3.4.1.js"></script>

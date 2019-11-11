@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/main.min.css">
     <link rel="stylesheet" href="styles/countdown.min.css">
-    <link rel="stylesheet" href="styles/animate.min.css">
+    <link rel="stylesheet" href="styles/aos.min.css">
 </head>
 
 <body>
@@ -44,7 +44,7 @@
                                 <a class="navbar__link" href="#">ОТЗЫВЫ</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="#">ВОПРОС-ОТВЕТ</a>
+                                <a class="navbar__link" href="faq.php">ВОПРОС-ОТВЕТ</a>
                             </li>
                             <li class="navbar__item">
                                 <a class="navbar__link" href="#">КОНТАКТЫ</a>
@@ -85,25 +85,31 @@
                             <h3 class="advant__header-text">ПРЕИМУЩЕСТВА ЧАСОВ</h3>
                             <img src="images/hr.png" class="advant__hr" />
                         </div>
-                        <div class="col-md-4 advant__item wow fadeInLeft">
-                            <div class="advant__img advant__glass"></div>
+                        <div class="col-md-4 advant__item" data-aos="fade-right" data-aos-duration="600">
+                            <div class="overflow-hidden mb-3">
+                                <div class="advant__img advant__glass"></div>
+                            </div>
                             <h4>Устойчивость к царапинам</h4>
                             <p>Закаленное минеральное стекло имеет высокую прочность и сопротивление к царапинам. Данное покрытие сложно поцарапать даже намеренно.</p>
                         </div>
-                        <div class="col-md-4 advant__item wow fadeIn" data-wow-delay="0.4s">
-                            <div class="advant__img advant__protection"></div>
+                        <div class="col-md-4 advant__item" data-aos="fade-in" data-aos-delay="400" data-aos-duration="600">
+                            <div class="overflow-hidden mb-3">
+                                <div class="advant__img advant__protection"></div>
+                            </div>
                             <h4>Защита от повреждений</h4>
                             <p>Нержавеющая сталь металлических часов защищает их от окисления и внешних повреждений. Часы также защищены от влаги.</p>
                         </div>
-                        <div class="col-md-4 advant__item wow fadeInRight" data-wow-delay="0.8s">
-                            <div class="advant__img advant__design"></div>
+                        <div class="col-md-4 advant__item" data-aos="fade-left" data-aos-delay="800" data-aos-duration="600">
+                            <div class="overflow-hidden mb-3">
+                                <div class="advant__img advant__design"></div>
+                            </div>
                             <h4>Безупречный дизайн</h4>
                             <p>Внешний вид часов отлично дополнит образ владельца и придаст статусности.</p>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="section-characters" class="wow fadeIn" data-wow-offset="130" data-wow-duration="2s"> 
+            <section id="section-characters" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
                 <div class="container">
                     <div class="row characters">
                         <div class="col-lg-12 characters__header">
@@ -171,7 +177,7 @@
             <section id="section-discount">
                 <div class="container">
                     <div class="discount">
-                        <div class="discount__left wow pulse" data-wow-delay="2s">
+                        <div class="discount__left" data-aos="fade-right" data-aos-offset="150" data-aos-duration="1000">
                             <h2 class="discount__attention">Внимание! Действует скидка</h2>
                             <h3 class="discount__amount">на часы <b>M-635D-7M</b> в размере <b>40%</b></h3>
                             <div class="price">
@@ -194,7 +200,7 @@
                     </div>
                 </div>
             </section>
-            <section id="section-goods" class="wow zoomIn" data-wow-offset="50">
+            <section id="section-goods" data-aos="zoom-in" data-aos-offset="150" data-aos-duration="1000">
                 <div class="container goods">
                     <div class="goods__header">
                         <h3>ЧАСЫ DOM</h3>
@@ -302,7 +308,7 @@
                 </div>
             </section>
             <section id="section-why-we">
-                <div class="container why-we wow fadeIn" data-wow-offset="150" data-wow-duration="2s">
+                <div class="container why-we" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
                     <div class="why-we__header">
                         <h3>ПОЧЕМУ МЫ?</h3>
                         <img src="images/hr.png" class="characters__hr" />
@@ -341,8 +347,8 @@
                     </div>
                 </div>
             </section>
-            <section id="section-how-works" class="wow fadeIn" data-wow-offset="150" data-wow-duration="1.5s">
-                <div class="container how-works">
+            <section id="section-how-works">
+                <div class="container how-works" data-aos="flip-up" data-aos-offset="150" data-aos-duration="1000">
                     <div class="how-works__header">
                         <h3>КАК ПОЛУЧИТЬ ЧАСЫ</h3>
                         <img src="images/hr.png" class="characters__hr" />
@@ -379,7 +385,7 @@
                 </div>
             </section>
             <section id="section-review">
-                <div class="container wow fadeInRight" data-wow-offset="50">
+                <div class="container" data-aos="fade-left" data-aos-offset="150" data-aos-duration="1000">
                     <div class="review">
                         <div class="review__header">
                             <h3>ОТЗЫВЫ</h3>
@@ -484,12 +490,14 @@
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/fontawesome.min.js"></script>
     <script src="scripts/jquery.flipper-responsive.min.js"></script>
-    <script src="scripts/wow.min.js"></script>
+    <script src="scripts/aos.min.js"></script>
 
     <script>
         $(function() {
+            AOS.init({
+                once: true
+            });
             $('#myFlipper').flipper('init');
-            new WOW().init();
             $('.navbar__hamburger').on('click', function(e) {
                 $(this).toggleClass('is-active');
                 $('.navbar__top-menu').stop().slideToggle(800, function() {

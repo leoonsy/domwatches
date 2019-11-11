@@ -11,6 +11,8 @@ body {
   height: 100%;
   min-width: 240px;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
 }
 
 #wrapper {
@@ -388,7 +390,7 @@ a:focus {
 
 /** Преимущества **/
 #section-advant {
-  background: url("../images/pat.jpg") left top repeat;
+  background: url("../images/seamless-bg/pat.jpg") left top repeat;
 }
 
 .advant {
@@ -396,12 +398,18 @@ a:focus {
   text-align: center;
 
   &__header {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
   }
 
   &__img {
     height: 250px;
-    margin: 0 auto 0.8rem;
+    margin: 0 auto;
+    transform: scale(1);
+    transition: 0.3s all ease-in-out;
+
+    &:hover {
+      transform: scale(1.06);
+    }
   }
 
   &__glass {
@@ -939,7 +947,7 @@ a:focus {
 /** Почему мы **/
 
 #section-why-we {
-  background: url("../images/pat.jpg") left top repeat;
+  background: url("../images/seamless-bg/pat.jpg") left top repeat;
   margin-top: 2rem;
 }
 
@@ -1112,7 +1120,7 @@ a:focus {
 
 /** Отзывы **/
 #section-review {
-  background: url("../images/pat.jpg") left top repeat;
+  background: url("../images/seamless-bg/pat.jpg") left top repeat;
   padding: 2rem 0 2.3rem;
   margin-top: 3.4rem;
 }
@@ -1299,7 +1307,7 @@ a:focus {
 /** Галерея **/
 
 #gallery-section {
-  background: url("../images/pat.jpg") left top repeat;
+  background: url("../images/seamless-bg/light-3.png") left top repeat;
   padding: 2rem 0;
   margin: 2rem 0 0 0;
 }
@@ -1308,7 +1316,7 @@ a:focus {
   text-align: center;
   &__header {
     text-align: center;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1rem 0;
   }
 
   &__main {
@@ -1365,12 +1373,51 @@ a:focus {
       color: rgb(255, 255, 255);
       font-size: 1.4rem;
       opacity: 0;
-      transition: .3s all ease;    
+      transition: 0.3s all ease;
     }
 
     &:hover &-len {
       opacity: 1;
-      transform: translate(-50%, -50%) scale(1);    
+      transform: translate(-50%, -50%) scale(1);
     }
   }
+}
+
+/** FAQ **/
+#faq-section {
+  background: url("../images/seamless-bg/light-4.png") left top repeat;
+  margin: 1rem auto 0;
+  padding: 1rem 0;
+}
+.faq {
+  &__feedback {
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.card-header {
+  background: #eeeeee;
+  button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    position: relative;
+
+    &::before {
+      content: "\f077";
+      font-family: "FontAwesome";
+      position: absolute;
+      right: 0;
+      transition: all 0.5s;
+      color: rgb(82, 82, 82);
+    }
+
+    &.collapsed::before {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.card-header.active a::before {
 }

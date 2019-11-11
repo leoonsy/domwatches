@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/countdown.min.css">
     <link rel="stylesheet" href="styles/animate.min.css">
     <link rel="stylesheet" href="styles/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="styles/aos.min.css">
 </head>
 
 <body>
@@ -38,13 +39,13 @@
                                 <a class="navbar__link" href="#">ЗАКАЗАТЬ</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link navbar__active" href="photo">ФОТО</a>
+                                <a class="navbar__link navbar__active" href="photo.php">ФОТО</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="#">ОТЗЫВЫ</a>
+                                <a class="navbar__link">ОТЗЫВЫ</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="#">ВОПРОС-ОТВЕТ</a>
+                                <a class="navbar__link" href="faq.php">ВОПРОС-ОТВЕТ</a>
                             </li>
                             <li class="navbar__item">
                                 <a class="navbar__link" href="#">КОНТАКТЫ</a>
@@ -67,12 +68,12 @@
             </header>
             <section id="gallery-section">
                 <div class="container-fluid">
-                    <div class="gallery">
+                    <div class="gallery" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
                         <div class="gallery__header">
                             <h4>ФОТОАЛЬБОМ</h4>
                         </div>
                         <div class="row gallery__main">
-                            <div class="col-3 p-0">
+                            <div class="col-lg-3 col-sm-6 col-12 p-0">
                                 <div class="gallery__item">
                                     <a class="gallery__item-wrap" data-fancybox="gallery" href="images/gallery/1.jpg">
                                         <img src="images/gallery/1.jpg">
@@ -92,7 +93,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-3 p-0">
+                            <div class="col-lg-3 col-sm-6 col-12 p-0">
                                 <div class="gallery__item">
                                     <a class="gallery__item-wrap" data-fancybox="gallery" href="images/gallery/4.jpg">
                                         <img src="images/gallery/4.jpg">
@@ -112,7 +113,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-3 p-0">
+                            <div class="col-lg-3 col-sm-6 col-12 p-0">
                                 <div class="gallery__item">
                                     <a class="gallery__item-wrap" data-fancybox="gallery" href="images/gallery/7.jpg">
                                         <img src="images/gallery/7.jpg">
@@ -132,7 +133,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-3 p-0">
+                            <div class="col-lg-3 col-sm-6 col-12 p-0">
                                 <div class="gallery__item">
                                     <a class="gallery__item-wrap" data-fancybox="gallery" href="images/gallery/10.jpg">
                                         <img src="images/gallery/10.jpg">
@@ -211,22 +212,21 @@
     <script src="scripts/fontawesome.min.js"></script>
     <script src="scripts/jquery.flipper-responsive.min.js"></script>
     <script src="scripts/jquery.fancybox.min.js"></script>
-    <script src="scripts/wow.min.js"></script>
+    <script src="scripts/aos.min.js"></script>
 
     <script>
-        //анимация блоков
         $(function() {
-            new WOW().init();
-        });
-
-        //навигация
-        $('.navbar__hamburger').on('click', function(e) {
-            $(this).toggleClass('is-active');
-            $('.navbar__top-menu').stop().slideToggle(800, function() {
-                if ($(this).css('display') === "none")
-                    $(this).removeAttr('style');
-                else
-                    $(this).css('display', 'flex');
+            AOS.init({
+                once: true
+            });
+            $('.navbar__hamburger').on('click', function(e) {
+                $(this).toggleClass('is-active');
+                $('.navbar__top-menu').stop().slideToggle(800, function() {
+                    if ($(this).css('display') === "none")
+                        $(this).removeAttr('style');
+                    else
+                        $(this).css('display', 'flex');
+                });
             });
         });
     </script>
