@@ -51,7 +51,7 @@
                                 <a class="navbar__link navbar__active" href="faq.php">ВОПРОС-ОТВЕТ</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="contacts.php">КОНТАКТЫ</a>
+                                <a class="navbar__link" href="#">КОНТАКТЫ</a>
                             </li>
                         </ul>
                         <!-- <div class="navbar__hamburger">
@@ -72,13 +72,13 @@
             <section id="faq-section">
 
                 <div class="container faq">
-                    <div class="faq__feedback alert alert-info alert-dismissible" role="alert" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
+                    <div class="faq__feedback alert alert-info alert-dismissible" role="alert" data-aos="fade-right" data-aos-offset="150" data-aos-duration="1000">
                         <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        Данный раздел содержит ответы на часто задаваемые вопросы. Если Вы не нашли ответа на свой вопрос, пожалуйста, <a class="alert-link" href="contacts.php">свяжитесь с нами</a>.
+                        Данный раздел содержит ответы на часто задаваемые вопросы. Если Вы не нашли ответа на свой вопрос, пожалуйста, <a class="alert-link" href="feedback.php">свяжитесь с нами</a>.
                     </div>
 
 
-                    <div class="row" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
+                    <div class="row" data-aos="fade-left" data-aos-offset="150" data-aos-duration="1000">
                         <div class="col-12 mx-auto">
                             <div class="accordion" id="faq__accordion">
                                 <div class="card">

@@ -47,7 +47,7 @@
                                 <a class="navbar__link" href="faq.php">ВОПРОС-ОТВЕТ</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="#">КОНТАКТЫ</a>
+                                <a class="navbar__link" href="contacts.php">КОНТАКТЫ</a>
                             </li>
                         </ul>
                         <!-- <div class="navbar__hamburger">
@@ -66,7 +66,7 @@
                 </div>
             </header>
             <section id="section-top" class="parallax-window" data-parallax="scroll" data-image-src="images/bg-top.jpg" data-speed="-0.1" data-position="bottom right">
-                <div class="container h-100 d-flex align-items-center">
+                <div class="container h-100 d-flex align-items-center" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
                     <div class="top-info">
                         <h1 class="top-info__title">Современные мужские часы DOM</h1>
                         <h2 class="top-info__desc">Наручные металлические и кожаные часы с хронографом</h2>
@@ -81,9 +81,9 @@
             <section id="section-advant">
                 <div class="container">
                     <div class="row advant">
-                        <div class="col-lg-12 advant__header">
+                        <div class="col-lg-12 advant__header" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
                             <h3 class="advant__header-text">ПРЕИМУЩЕСТВА ЧАСОВ</h3>
-                            <img src="images/hr.png" class="advant__hr" />
+                            <img src="images/hr/main.png" class="advant__hr" />
                         </div>
                         <div class="col-md-4 advant__item" data-aos="fade-right" data-aos-duration="600">
                             <div class="overflow-hidden mb-3">
@@ -114,7 +114,7 @@
                     <div class="row characters">
                         <div class="col-lg-12 characters__header">
                             <h3>ХАРАКТЕРИСТИКИ ЧАСОВ</h3>
-                            <img src="images/hr.png" class="characters__hr" />
+                            <img src="images/hr/main.png" class="characters__hr" />
                         </div>
                         <div class="col-lg-6 characters__carousel">
                             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -204,7 +204,7 @@
                 <div class="container goods">
                     <div class="goods__header">
                         <h3>ЧАСЫ DOM</h3>
-                        <img src="images/hr.png" class="characters__hr" />
+                        <img src="images/hr/main.png" class="characters__hr" />
                     </div>
                     <div class="row goods__content text-lg-left text-center">
                         <div class="col-lg-3 goods__item">
@@ -311,7 +311,7 @@
                 <div class="container why-we" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
                     <div class="why-we__header">
                         <h3>ПОЧЕМУ МЫ?</h3>
-                        <img src="images/hr.png" class="characters__hr" />
+                        <img src="images/hr/main.png" class="characters__hr" />
                     </div>
                     <div class="why-we__content">
                         <div class="row why-we__main ">
@@ -351,7 +351,7 @@
                 <div class="container how-works" data-aos="flip-up" data-aos-offset="150" data-aos-duration="1000">
                     <div class="how-works__header">
                         <h3>КАК ПОЛУЧИТЬ ЧАСЫ</h3>
-                        <img src="images/hr.png" class="characters__hr" />
+                        <img src="images/hr/question.png" class="characters__hr" />
                     </div>
                     <div class="how-works__sequence">
                         <div class="how-works__basket">Вы выбираете понравившиеся часы</div>
@@ -389,7 +389,7 @@
                     <div class="review">
                         <div class="review__header">
                             <h3>ОТЗЫВЫ</h3>
-                            <img src="images/rev.png" class="characters__hr" />
+                            <img src="images/hr/rev.png" class="characters__hr" />
                         </div>
                         <div class="review__carousel">
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">

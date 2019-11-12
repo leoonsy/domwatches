@@ -42,13 +42,13 @@
                                 <a class="navbar__link navbar__active" href="photo.php">ФОТО</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link">ОТЗЫВЫ</a>
+                                <a class="navbar__link" href="#">ОТЗЫВЫ</a>
                             </li>
                             <li class="navbar__item">
                                 <a class="navbar__link" href="faq.php">ВОПРОС-ОТВЕТ</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="#">КОНТАКТЫ</a>
+                                <a class="navbar__link" href="contacts.php">КОНТАКТЫ</a>
                             </li>
                         </ul>
                         <!-- <div class="navbar__hamburger">
@@ -71,6 +71,7 @@
                     <div class="gallery" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
                         <div class="gallery__header">
                             <h4>ФОТОАЛЬБОМ</h4>
+                            <img src="images/hr/photo.png" class="advant__hr" />
                         </div>
                         <div class="row gallery__main">
                             <div class="col-lg-3 col-sm-6 col-12 p-0">

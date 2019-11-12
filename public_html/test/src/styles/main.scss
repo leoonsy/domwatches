@@ -23,6 +23,8 @@ body {
 
 #content {
   flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 #footer {
@@ -36,6 +38,11 @@ a:visited,
 a:focus {
   color: $link-color;
   transition: color 0.3s ease 0s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $link-hover-color;
 }
 
 /** Навигация **/
@@ -1252,8 +1259,7 @@ a:focus {
     text-decoration: none;
   }
 
-  a:hover,
-  a:focus {
+  a:hover {
     text-decoration: none;
     color: rgb(147, 185, 243);
   }
@@ -1386,7 +1392,7 @@ a:focus {
 /** FAQ **/
 #faq-section {
   background: url("../images/seamless-bg/light-4.png") left top repeat;
-  margin: 1rem auto 0;
+  margin: 1rem 0 0 0;
   padding: 1rem 0;
 }
 .faq {
@@ -1419,5 +1425,88 @@ a:focus {
   }
 }
 
-.card-header.active a::before {
+/** Контакты **/
+
+#contacts-section {
+  background: url("../images/seamless-bg/light-4.png") left top repeat;
+  margin: 1rem 0 0 0;
+  padding: 1rem 0;
+  flex: 1 0 auto;
+}
+
+.contacts {
+  margin: 1rem auto;
+  &__title {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  &__communication {
+    &-info {
+      margin: 1.5rem 0;
+    }
+  }
+
+  .communication-single {
+    display: flex;
+    align-items: center;
+    margin: 0 0 1rem 0;
+
+    &:hover .communication-single__icon {
+      background: rgb(30, 146, 255);
+    }
+
+    &:hover .communication-single__icon  i {
+      color: #fff;
+    }
+
+    &__icon {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      flex: 0 0 auto;
+      border: 1px solid rgb(30, 146, 255);
+      transition: all .3s ease 0s;
+      i {
+        font-size: 25px;
+        margin: 0 auto;
+        color: rgb(30, 146, 255);
+      }
+    }
+
+    &__header {
+      font-size: 1.2rem;
+      margin: 0 0 .3rem 0;
+    }
+
+    &__text {
+      margin: 0 0 0 1rem;
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  &__form {
+    margin: 1.5rem 0 0 0;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .contacts {
+    &__title {
+      text-align: center;
+    }
+    .communication-single {
+      flex-direction: column;
+      text-align: center;
+  
+      &__text {
+        margin: .4rem 0 0 0;
+      }
+    }
+  }
 }
