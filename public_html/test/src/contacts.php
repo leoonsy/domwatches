@@ -29,7 +29,7 @@
                 <div class="nav-container">
                     <nav class="navbar">
                         <div class="navbar__brand">
-                            <a href="#" class="navbar__brand-link">
+                            <a href="index.php" class="navbar__brand-link">
                                 <img class="navbar__brand-logo" src="images/logo.png" />
                                 <span class="navbar__brand-text">DOMWATCHES</span>
                             </a>
@@ -39,19 +39,19 @@
                                 <a class="navbar__link" href="index.php">ГЛАВНАЯ</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="#">ЗАКАЗАТЬ</a>
+                                <a class="navbar__link" href="buy.php">ЗАКАЗАТЬ</a>
                             </li>
                             <li class="navbar__item">
                                 <a class="navbar__link" href="photo.php">ФОТО</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="#">ОТЗЫВЫ</a>
+                                <a class="navbar__link" href="reviews.php">ОТЗЫВЫ</a>
                             </li>
                             <li class="navbar__item">
                                 <a class="navbar__link" href="faq.php">ВОПРОС-ОТВЕТ</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link navbar__active" href="#">КОНТАКТЫ</a>
+                                <a class="navbar__link navbar__active" href="contacts.php">КОНТАКТЫ</a>
                             </li>
                         </ul>
                         <!-- <div class="navbar__hamburger">
@@ -82,7 +82,7 @@
                                         </div>
                                         <div class="communication-single__text">
                                             <h4 class="communication-single__header">Телефон:</h4>
-                                            <p>8 (919) 859-21-35</p>
+                                            <p><a href="tel:+79198592135">8 (919) 859-21-35</a></p>
                                         </div>
                                     </div>
                                     <div class="contacts__communication-single communication-single">
@@ -91,7 +91,7 @@
                                         </div>
                                         <div class="communication-single__text">
                                             <h4 class="communication-single__header">Email:</h4>
-                                            <p><a href="#">yashanovsky.sergey@ya.ru</a></p>
+                                            <p><a href="mailto:support@domwatches.ru">support@domwatches.ru</a></p>
                                         </div>
                                     </div>
                                     <div class="contacts__communication-single communication-single">
@@ -146,7 +146,6 @@
                     </div>
                 </div>
             </section>
-            <script type="text/javascript" src="//cdn.perezvoni.com/widget/js/przv.js?przv_code=30258-b140b75-0efcbbf9204e631b140-4e631b140b75-cd10efcbb" ></script>
         </div>
         <footer class="footer">
             <div class="container">
@@ -175,7 +174,7 @@
                     <div class="col-lg-2 col-sm-3">
                         <h5 class="footer__menu-name">Связь</h5>
                         <ul class="footer__list">
-                            <li><a href="#">8 (919) 859-21-35</a></li>
+                            <li><a href="tel:+79198592135">8 (919) 859-21-35</a></li>
                             <p>г. Оренбург</p>
                         </ul>
                     </div>
@@ -202,6 +201,7 @@
     <script src="scripts/fontawesome.min.js"></script>
     <script src="scripts/jquery.flipper-responsive.min.js"></script>
     <script src="scripts/aos.min.js"></script>
+    <script src="//cdn.perezvoni.com/widget/js/przv.js?przv_code=30258-b140b75-0efcbbf9204e631b140-4e631b140b75-cd10efcbb" ></script>
 
     <script>
         $(function() {

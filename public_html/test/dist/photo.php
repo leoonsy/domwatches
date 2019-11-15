@@ -26,7 +26,7 @@
                 <div class="nav-container">
                     <nav class="navbar">
                         <div class="navbar__brand">
-                            <a href="#" class="navbar__brand-link">
+                            <a href="index.php" class="navbar__brand-link">
                                 <img class="navbar__brand-logo" src="images/logo.png" />
                                 <span class="navbar__brand-text">DOMWATCHES</span>
                             </a>
@@ -36,13 +36,13 @@
                                 <a class="navbar__link" href="index.php">ГЛАВНАЯ</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="#">ЗАКАЗАТЬ</a>
+                                <a class="navbar__link" href="buy.php">ЗАКАЗАТЬ</a>
                             </li>
                             <li class="navbar__item">
                                 <a class="navbar__link navbar__active" href="photo.php">ФОТО</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="#">ОТЗЫВЫ</a>
+                                <a class="navbar__link" href="reviews.php">ОТЗЫВЫ</a>
                             </li>
                             <li class="navbar__item">
                                 <a class="navbar__link" href="faq.php">ВОПРОС-ОТВЕТ</a>
@@ -186,7 +186,7 @@
                     <div class="col-lg-2 col-sm-3">
                         <h5 class="footer__menu-name">Связь</h5>
                         <ul class="footer__list">
-                            <li><a href="#">8 (919) 859-21-35</a></li>
+                            <li><a href="tel:+79198592135">8 (919) 859-21-35</a></li>
                             <p>г. Оренбург</p>
                         </ul>
                     </div>

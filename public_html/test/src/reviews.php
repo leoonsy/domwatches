@@ -45,13 +45,13 @@
                                 <a class="navbar__link" href="photo.php">ФОТО</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="reviews.php">ОТЗЫВЫ</a>
+                                <a class="navbar__link navbar__active" href="reviews.php">ОТЗЫВЫ</a>
                             </li>
                             <li class="navbar__item">
                                 <a class="navbar__link" href="faq.php">ВОПРОС-ОТВЕТ</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link navbar__active" href="contacts.php">КОНТАКТЫ</a>
+                                <a class="navbar__link" href="contacts.php">КОНТАКТЫ</a>
                             </li>
                         </ul>
                         <!-- <div class="navbar__hamburger">
@@ -69,78 +69,74 @@
                     </nav>
                 </div>
             </header>
-            <section id="contacts-section">
-                <div class="container contacts">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="contacts__info" data-aos="fade-right" data-aos-offset="150" data-aos-duration="1000">
-                                <h4 class="contacts__title">ИНФОРМАЦИЯ</h4>
-                                <div class="contacts__communication-info">
-                                    <div class="contacts__communication-single communication-single">
-                                        <div class="communication-single__icon">
-                                            <i class="fas fa-mobile-alt"></i>
-                                        </div>
-                                        <div class="communication-single__text">
-                                            <h4 class="communication-single__header">Телефон:</h4>
-                                            <p><a href="tel:+79198592135">8 (919) 859-21-35</a></p>
-                                        </div>
-                                    </div>
-                                    <div class="contacts__communication-single communication-single">
-                                        <div class="communication-single__icon">
-                                            <i class="far fa-envelope"></i>
-                                        </div>
-                                        <div class="communication-single__text">
-                                            <h4 class="communication-single__header">Email:</h4>
-                                            <p><a href="mailto:support@domwatches.ru">support@domwatches.ru</a></p>
-                                        </div>
-                                    </div>
-                                    <div class="contacts__communication-single communication-single">
-                                        <div class="communication-single__icon">
-                                            <i class="fab fa-vk"></i>
-                                        </div>
-                                        <div class="communication-single__text">
-                                            <h4 class="communication-single__header">VK:</h4>
-                                            <p><a href="https://vk.com/domwatchesru">http://vk.com/domwatchesru</i></a></p>
-                                        </div>
-                                    </div>
-                                </div>
+            <section id="pagereviews-section">
+                <div class="container">
+                    <div class="pagereviews" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
+                        <div class="pagereviews__review">
+                            <h4 class="pagereviews__name">Владимир, Ростовская обл.</h4>
+                            <div class="pagereviews__virtues">Достоинства</div>
+                            <div class="pagereviews__virtues-text">
+                                <p>
+                                    Солидный внешний вид, качество, быстрая доставка, цена
+                                </p>
+                            </div>
+                            <div class="pagereviews__limitations">Недостатки</div>
+                            <div class="pagereviews__limitations-text">
+                                <p>
+                                    Небольшая водонепроницаемость
+                                </p>
+                            </div>
+                            <div class="pagereviews__comment">Комментарий</div>
+                            <div class="pagereviews__comment-text">
+                                <p>
+                                    Искал именно такую модель часов DOM, с таким дизайном. В других магазинах продают старые модели, а здесь то, что нужно. Заказывал часы M-635D-7M по скидке. Доставили вовремя (через неделю после заказа). На момент написания отзыва проносил часы неделю - дефектов, царапин не обнаружил. Стекло легко протирается и выглядит прочным (на практике не проверял). <br />
+                                    Из минусов - небольшая водонепроницаемость (часы способны выдержать статическое давление 30-метрового водяного столба), поэтому не рискую купаться или нырять в них (мыть руки или принимать холодный душ можно). <br />
+                                    В остальном часы действительно хорошие! Подходят почти под любой стиль, нету дискомфорта при ношении, удобно сидят. Берите, не пожалеете, это одни из лучших часов за свою цену.
+                                </p>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="contacts__message" data-aos="fade-left" data-aos-offset="150" data-aos-duration="1000">
-                                <h4 class="contacts__title">ОБРАТНАЯ СВЯЗЬ</h4>
-                                <form class="contacts__form" action="contacts.php" method="post">
-                                    <div class="form-row">
-                                        <div class="col-lg-6 form-group">
-                                            <div class="contacts__form-style">
-                                                <input name="name" class="form-control" placeholder="Имя" type="text" required="required">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 form-group">
-                                            <div class="contacts__form-style input-group">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text">@</div>
-                                                </div>
-                                                <input name="email" class="form-control" placeholder="Email" type="email" required="required">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 form-group">
-                                            <div class="contacts__form-style">
-                                                <input name="subject" class="form-control" placeholder="Тема" type="text" required="required">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 form-group">
-                                            <div class="contacts__form-style">
-                                                <textarea name="message" class="form-control" placeholder="Сообщение" required="required"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 form-group">
-                                            <div class="contacts__form-style">
-                                                <button class="contacts__form-submit btn btn-primary" type="submit">Отправить</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
+                        <hr />
+                        <div class="pagereviews__review">
+                            <h4 class="pagereviews__name">Николай, г. Самара</h4>
+                            <div class="pagereviews__virtues">Достоинства</div>
+                            <div class="pagereviews__virtues-text">
+                                <p>
+                                    Прочность, имеется хронограф, внешний вид
+                                </p>
+                            </div>
+                            <div class="pagereviews__limitations">Недостатки</div>
+                            <div class="pagereviews__limitations-text">
+                                <p>
+                                    Не нашел :)
+                                </p>
+                            </div>
+                            <div class="pagereviews__comment">Комментарий</div>
+                            <div class="pagereviews__comment-text">
+                                <p>
+                                    Купил часы и тут же вопросы от людей - "за сколько купил?". Всегда говорю, что дорого)) Один раз часы упали, я немного рукожоп, но, слава богу, они не сломались) Искал именно часы DOM с хронографом. Использую его в полетах, чтобы знать, сколько еще примерно осталось лететь. И для занятия спортом тоже удобно. В общем, я доволен покупкой)
+                                </p>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="pagereviews__review">
+                            <h4 class="pagereviews__name">Олег, г. Красноярск</h4>
+                            <div class="pagereviews__virtues">Достоинства</div>
+                            <div class="pagereviews__virtues-text">
+                                <p>
+                                    Часы соответствуют описанию, стильные, точные
+                                </p>
+                            </div>
+                            <div class="pagereviews__limitations">Недостатки</div>
+                            <div class="pagereviews__limitations-text">
+                                <p>
+                                    Долгая доставка (9 дней)
+                                </p>
+                            </div>
+                            <div class="pagereviews__comment">Комментарий</div>
+                            <div class="pagereviews__comment-text">
+                                <p>
+                                    Пользуюсь часами уже месяц, решил оставить свой отзыв. Заказывал часы со стальным браслетом. С доставкой проблем не было, разве что долговато. Порадовало, что по СМС отправили трек-код, чтобы отслеживать часы! Сами часы стильные, брутальные, довольно хорошо сидят на руке. Проблем никаких с ними не было. В будущем может еще куплю часы как подарок другу.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -201,7 +197,6 @@
     <script src="scripts/fontawesome.min.js"></script>
     <script src="scripts/jquery.flipper-responsive.min.js"></script>
     <script src="scripts/aos.min.js"></script>
-    <script src="//cdn.perezvoni.com/widget/js/przv.js?przv_code=30258-b140b75-0efcbbf9204e631b140-4e631b140b75-cd10efcbb" ></script>
 
     <script>
         $(function() {

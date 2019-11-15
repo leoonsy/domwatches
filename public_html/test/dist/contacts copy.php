@@ -39,7 +39,7 @@
                                 <a class="navbar__link" href="index.php">ГЛАВНАЯ</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="buy.php">ЗАКАЗАТЬ</a>
+                                <a class="navbar__link" href="#">ЗАКАЗАТЬ</a>
                             </li>
                             <li class="navbar__item">
                                 <a class="navbar__link" href="photo.php">ФОТО</a>
@@ -91,7 +91,7 @@
                                         </div>
                                         <div class="communication-single__text">
                                             <h4 class="communication-single__header">Email:</h4>
-                                            <p><a href="mailto:support@domwatches.ru">support@domwatches.ru</a></p>
+                                            <p><a href="mailto:yashanovsky.sergey@ya.ru">yashanovsky.sergey@ya.ru</a></p>
                                         </div>
                                     </div>
                                     <div class="contacts__communication-single communication-single">

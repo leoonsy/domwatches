@@ -5,11 +5,13 @@ var path = {
     public: 'public_html/public/dist/',
     views: 'public_html/app/views/dist/',
     test: 'public_html/test/dist/',
+    test2: 'public_html/test2/dist/',
   },
   src: {
     public: 'public_html/public/src/',
     views: 'public_html/app/views/src/',
-    test: 'public_html/test/src/'
+    test: 'public_html/test/src/',
+    test2: 'public_html/test2/src/',
   },
   type: {
     html: '**/[^_]*.+(html|tpl|php)',
@@ -45,6 +47,8 @@ var gulp = require('gulp'),  // подключаем Gulp
 
 /* задачи */
 var key = args.key || 'public';
+var modules = args.modules || 'false';
+
 console.log(key);
 // сбор html
 gulp.task('html:build', function () {
@@ -100,13 +104,13 @@ gulp.task('js:build', function () {
         [
           "@babel/preset-env",
           {
-            "modules": "false"
+            "modules": modules
           }
         ]
       ]
     }))
     .pipe(sourcemaps.init()) //инициализируем sourcemap
-    .pipe(uglify()) // минимизируем js	
+    //.pipe(uglify()) // минимизируем js	
     .pipe(sourcemaps.write('./')) //  записываем sourcemap
     .pipe(gulp.dest(path.dist[key])) // положим готовый файл
 });

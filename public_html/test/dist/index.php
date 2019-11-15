@@ -25,7 +25,7 @@
                 <div class="nav-container">
                     <nav class="navbar">
                         <div class="navbar__brand">
-                            <a href="#" class="navbar__brand-link">
+                            <a href="index.php" class="navbar__brand-link">
                                 <img class="navbar__brand-logo" src="images/logo.png" />
                                 <span class="navbar__brand-text">DOMWATCHES</span>
                             </a>
@@ -35,13 +35,13 @@
                                 <a class="navbar__link navbar__active" href="#">ГЛАВНАЯ</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="#">ЗАКАЗАТЬ</a>
+                                <a class="navbar__link" href="buy.php">ЗАКАЗАТЬ</a>
                             </li>
                             <li class="navbar__item">
                                 <a class="navbar__link" href="photo.php">ФОТО</a>
                             </li>
                             <li class="navbar__item">
-                                <a class="navbar__link" href="#">ОТЗЫВЫ</a>
+                                <a class="navbar__link" href="reviews.php">ОТЗЫВЫ</a>
                             </li>
                             <li class="navbar__item">
                                 <a class="navbar__link" href="faq.php">ВОПРОС-ОТВЕТ</a>
@@ -74,7 +74,7 @@
                         <p class="top-info__desc-2">
                             Стильные, устойчивые к царапинам водонепроницаемые часы DOM прослужат вам многие годы и подчеркнут вашу индивидуальность!
                         </p>
-                        <a class="top-info__buy" href="#" role="button">Выбрать часы</a>
+                        <a class="top-info__buy" href="#section-goods" role="button">Выбрать часы</a>
                     </div>
                 </div>
             </section>
@@ -191,7 +191,7 @@
                                 </div>
                             </div>
                             <p class="discount__end">До конца акции осталось:</p>
-                            <div class="flipper  discount__timer" data-datetime="2019-12-23 21:45:00" data-template="ddd|HH|ii|ss" data-labels="Дней|Часов|Минут|Секунд" data-reverse="true" id="myFlipper"></div>
+                            <div class="flipper discount__timer" data-datetime="2019-12-23 21:45:00" data-template="ddd|HH|ii|ss" data-labels="Дней|Часов|Минут|Секунд" data-reverse="true" id="myFlipper"></div>
                             <a class="discount__button" href="#">Заказать со скидкой</a>
                         </div>
                         <div>
@@ -200,7 +200,7 @@
                     </div>
                 </div>
             </section>
-            <section id="section-goods" data-aos="zoom-in" data-aos-offset="150" data-aos-duration="1000">
+            <section id="section-goods" data-aos="fade-left" data-aos-offset="150" data-aos-duration="1000">
                 <div class="container goods">
                     <div class="goods__header">
                         <h3>ЧАСЫ DOM</h3>
@@ -218,7 +218,7 @@
                                 <h3 class="goods__title">M-635D-1M9</h3>
                                 <p class="goods__description">Стильные часы DOM с белым стальным браслетом и желто-черным циферблатом.</p>
                                 <div class="mt-auto">
-                                    <hr class="goods__separator" />
+                                    <hr class="goods__item-separator" />
                                     <div class="goods__price">
                                         <div class="goods__price-old">
                                             2499₽
@@ -242,7 +242,7 @@
                                 <h3 class="goods__title">M-635BK-1M</h3>
                                 <p class="goods__description">Часы DOM со строгим черно-белым дизайном и стальным браслетом.</p>
                                 <div class="mt-auto">
-                                    <hr class="goods__separator" />
+                                    <hr class="goods__item-separator" />
                                     <div class="goods__price">
                                         <div class="goods__price-old">
                                             2499₽
@@ -265,7 +265,7 @@
                                 <h3 class="goods__title">M-635L-1M9</h3>
                                 <p class="goods__description">Элегантные часы DOM с натуральным кожаным ремешком и желто-черным циферблатом.</p>
                                 <div class="mt-auto">
-                                    <hr class="goods__separator" />
+                                    <hr class="goods__item-separator" />
                                     <div class="goods__price">
                                         <div class="goods__price-old">
                                             2499₽
@@ -288,7 +288,7 @@
                                 <h3 class="goods__title">M-635L-7M</h3>
                                 <p class="goods__description">Красивые часы с натуральным кожаным ремешком и черно-белым циферблатом</p>
                                 <div class="mt-auto">
-                                    <hr class="goods__separator" />
+                                    <hr class="goods__item-separator" />
                                     <div class="goods__price">
                                         <div class="goods__price-old">
                                             2499₽
@@ -384,40 +384,40 @@
                     </div>
                 </div>
             </section>
-            <section id="section-review">
+            <section id="section-reviews">
                 <div class="container" data-aos="fade-left" data-aos-offset="150" data-aos-duration="1000">
-                    <div class="review">
-                        <div class="review__header">
+                    <div class="reviews">
+                        <div class="reviews__header">
                             <h3>ОТЗЫВЫ</h3>
                             <img src="images/hr/rev.png" class="characters__hr" />
                         </div>
-                        <div class="review__carousel">
+                        <div class="reviews__carousel">
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner mx-5 w-auto">
                                     <div class="carousel-item active">
-                                        <div class="review__item">
-                                            <img src="images/reviews/1.jpg" class="review__avatar" />
-                                            <div class="review__text">
-                                                <h3 class="review__name">Матвей Гуляев</h3>
-                                                <p>Часы пришли через неделю после заказа. Качество отличное, проблем не встречал. Руки можно спокойно мыть, не снимая часы, но, например, нырять в них я бы не стал). Стекло действительно прочное и не царапается, что порадовало. Рекомендую к покупке.</p>
+                                        <div class="reviews__item">
+                                            <img src="images/reviews/1.jpg" class="reviews__avatar" />
+                                            <div class="reviews__text">
+                                                <h3 class="reviews__name">Матвей Гуляев</h3>
+                                                <p>Часы пришли через неделю после заказа. Пришли целые, без царапин, упакованы хорошо. Качество часов отличное, проблем не встречал. Стекло действительно прочное, после падения часы в порядке. Все соответствует характеристикам, указанным на сайте. Рекомендую к покупке.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <div class="review__item">
-                                            <img src="images/reviews/2.jpg" class="review__avatar" />
-                                            <div class="review__text">
-                                                <h3 class="review__name">Артем Сазонов</h3>
-                                                <p>Солидные, красивые часы. На удивление всё очень хорошо упаковано. Выглядят даже лучше, чем на картинках. Пару раз падали - никаких проблем! Ничего не люфтит, не шатается. Я очень доволен покупкой.</p>
+                                        <div class="reviews__item">
+                                            <img src="images/reviews/2.jpg" class="reviews__avatar" />
+                                            <div class="reviews__text">
+                                                <h3 class="reviews__name">Артем Сазонов</h3>
+                                                <p>Заказывал часы по скидке. Доставили за 5 дней. Красивые часы! Ничего не люфтит, не шатается. Надежные, хотя стараюсь их не мочить. Точность хода изумительная, порадовал хронограф. Ремешок хороший, качественный! Я очень доволен покупкой, спасибо)</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <div class="review__item">
-                                            <img src="images/reviews/3.jpg" class="review__avatar" />
-                                            <div class="review__text">
-                                                <h3 class="review__name">Сергей Фомин</h3>
-                                                <p>Часы удобно лежат на руке, смотрятся СУПЕР! Выглядят дороже своей цены. Заказал по акции еще одни для своего троюродного брата. Ему тоже они понравились!) Спасибо большое вашему сайту.</p>
+                                        <div class="reviews__item">
+                                            <img src="images/reviews/3.jpg" class="reviews__avatar" />
+                                            <div class="reviews__text">
+                                                <h3 class="reviews__name">Сергей Фомин</h3>
+                                                <p>Часы удобно лежат на руке, смотрятся СУПЕР! Выглядят дороже своей цены. Заказал по акции еще одни для своего троюродного брата. Ему тоже они понравились!) Эти часы подходят под любой стиль одежды! Спасибо большое вашему сайту.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -464,7 +464,7 @@
                     <div class="col-lg-2 col-sm-3">
                         <h5 class="footer__menu-name">Связь</h5>
                         <ul class="footer__list">
-                            <li><a href="#">8 (919) 859-21-35</a></li>
+                            <li><a href="tel:+79198592135">8 (919) 859-21-35</a></li>
                             <p>г. Оренбург</p>
                         </ul>
                     </div>
@@ -494,9 +494,12 @@
 
     <script>
         $(function() {
+            //плавное появление элементов
             AOS.init({
                 once: true
             });
+
+            //
             $('#myFlipper').flipper('init');
             $('.navbar__hamburger').on('click', function(e) {
                 $(this).toggleClass('is-active');
@@ -506,6 +509,14 @@
                     else
                         $(this).css('display', 'flex');
                 });
+            });
+
+            $(".top-info__buy").on('click', function(e) {
+                var fixed_offset = 15;
+                $('html,body').stop().animate({
+                    scrollTop: $(this.hash).offset().top - fixed_offset
+                }, 1000);
+                e.preventDefault();
             });
         });
     </script>
