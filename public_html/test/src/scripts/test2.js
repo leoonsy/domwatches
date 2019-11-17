@@ -1,1 +1,0 @@
-import {sayHi} from './test.js';

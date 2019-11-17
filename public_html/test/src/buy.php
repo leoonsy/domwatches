@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/main.min.css">
     <link rel="stylesheet" href="styles/countdown.min.css">
-    <link rel="stylesheet" href="styles/animate.min.css">
     <link rel="stylesheet" href="styles/jquery.fancybox.min.css">
     <link rel="stylesheet" href="styles/aos.min.css">
     <style>
@@ -70,12 +69,12 @@
                 </div>
             </header>
             <section id="buy-section">
-                <div class="container buy-goods">
+                <div class="container buy-goods" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
                     <div class="buy-goods__step1">
                         <h4 class="buy-goods__step1-text"><span>Шаг 1</span>. Выберите часы для покупки и их количество</h4>
                     </div>
                     <div class="row buy-goods__content text-lg-left text-center">
-                        <div class="col-lg-3 buy-goods__item">
+                        <div class="col-lg-3 col-sm-6 buy-goods__item">
                             <div class="buy-goods__item-content">
                                 <div class="buy-goods__img">
                                     <img src="images/watches/0.png" />
@@ -100,7 +99,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-3 buy-goods__item">
+                        <div class="col-lg-3 col-sm-6 buy-goods__item">
                             <div class="buy-goods__item-content">
                                 <div class="buy-goods__img">
                                     <img src="images/watches/1.png" />
@@ -124,7 +123,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 buy-goods__item">
+                        <div class="col-lg-3 col-sm-6 buy-goods__item">
                             <div class="buy-goods__item-content">
                                 <div class="buy-goods__img">
                                     <img src="images/watches/2.png" />
@@ -148,7 +147,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 buy-goods__item">
+                        <div class="col-lg-3 col-sm-6 buy-goods__item">
                             <div class="buy-goods__item-content">
                                 <div class="buy-goods__img">
                                     <img src="images/watches/3.png" />
@@ -173,6 +172,10 @@
                             </div>
                         </div>
                     </div>
+                    <div class="buy-goods__cost">
+                        <span class="buy-goods__cost-text">Итоговая цена: </span><span class="buy-goods__cost-number">0₽</span>
+                    </div>
+                    <hr class="my-0" />
                     <div class="buy-goods__step2">
                         <h4 class="buy-goods__step2-text"><span>Шаг 2</span>. Заполните данные для отправки часов Почтой России</h4>
                     </div>
@@ -310,45 +313,7 @@
     <script src="scripts/jquery.bootstrap-touchspin.min.js"></script>
     <script src="scripts/bootstrap-validate.min.js"></script>
     <script src="scripts/form-validation.min.js"></script>
-
-    <script>
-        $(() => {
-            AOS.init({
-                once: true
-            });
-            $('.navbar__hamburger').on('click', function(e) {
-                $(this).toggleClass('is-active');
-                $('.navbar__top-menu').stop().slideToggle(800, function() {
-                    if ($(this).css('display') === "none")
-                        $(this).removeAttr('style');
-                    else
-                        $(this).css('display', 'flex');
-                });
-            });
-
-            $('.panel-group').on('hidden.bs.collapse', toggleClose);
-            $('.panel-group').on('shown.bs.collapse', toggleOpen);
-            $("input[name='buyCount']").TouchSpin({
-                min: 0,
-                max: 100,
-                step: 1
-            });
-
-            function toggleOpen(e) {
-                $(e.target)
-                    .prev('.card-header')
-                    .find(".expand-icon")
-                    .text("remove_circle");
-            }
-
-            function toggleClose(e) {
-                $(e.target)
-                    .prev('.card-header')
-                    .find(".expand-icon")
-                    .text("add_circle");
-            }
-        });
-    </script>
+    <script src="scripts/main.min.js"></script>
 </body>
 
 </html>

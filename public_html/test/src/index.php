@@ -499,7 +499,6 @@
                 once: true
             });
 
-            //
             $('#myFlipper').flipper('init');
             $('.navbar__hamburger').on('click', function(e) {
                 $(this).toggleClass('is-active');

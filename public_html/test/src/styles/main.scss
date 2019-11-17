@@ -1579,7 +1579,7 @@ a:hover {
   }
 
   &__step2 {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 
   &__title {
@@ -1588,6 +1588,7 @@ a:hover {
   }
 
   &__item {
+    margin: 0 0 1rem 0;
     &-separator {
       width: 100%;
       border: none;
@@ -1663,6 +1664,15 @@ a:hover {
       margin: 0 0 .5rem 0;
     }
   }
+
+  &__cost {
+    margin: .5rem 0 1.5rem 0;
+    font-size: 1.3rem;
+
+    &-number {
+      font-weight: 500;
+    }
+  }
 }
 
 .buy-form {
@@ -1672,20 +1682,5 @@ a:hover {
 
   &__valid {
     border-color: #28a745;
-  }
-}
-
-@media only screen and (max-width: 298px) {
-  .goods {
-    &__item-content {
-      padding: 1rem;
-    }
-    &__title {
-      font-size: 1.3rem;
-    }
-
-    &__price {
-      font-size: 1.2rem;
-    }
   }
 }
