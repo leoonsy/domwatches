@@ -30,7 +30,7 @@
                     <nav class="navbar">
                         <div class="navbar__brand">
                             <a href="index.php" class="navbar__brand-link">
-                                <img class="navbar__brand-logo" src="images/logo.png" />
+                                <img class="navbar__brand-logo" src="images/logo.png" alt="Логотип" />
                                 <span class="navbar__brand-text">DOMWATCHES</span>
                             </a>
                         </div>
@@ -54,10 +54,6 @@
                                 <a class="navbar__link navbar__active" href="contacts.php">КОНТАКТЫ</a>
                             </li>
                         </ul>
-                        <!-- <div class="navbar__hamburger">
-                            <span class="navbar__hamburger-text">Меню</span>
-                            <i class="navbar__hamburger-img fa fa-times fa-bars"></i>
-                        </div> -->
                         <div class="hamburger navbar__hamburger" id="hamburger-1">
                             <span class="navbar__hamburger-text">Меню</span>
                             <div class="navbar__hamburger-icon">
@@ -147,7 +143,7 @@
                 </div>
             </section>
         </div>
-        <footer class="footer">
+        <footer id="footer" class="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-12 d-lg-block d-sm-none">

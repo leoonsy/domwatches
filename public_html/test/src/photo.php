@@ -27,7 +27,7 @@
                     <nav class="navbar">
                         <div class="navbar__brand">
                             <a href="index.php" class="navbar__brand-link">
-                                <img class="navbar__brand-logo" src="images/logo.png" />
+                                <img class="navbar__brand-logo" src="images/logo.png" alt="Логотип" />
                                 <span class="navbar__brand-text">DOMWATCHES</span>
                             </a>
                         </div>
@@ -51,10 +51,6 @@
                                 <a class="navbar__link" href="contacts.php">КОНТАКТЫ</a>
                             </li>
                         </ul>
-                        <!-- <div class="navbar__hamburger">
-                            <span class="navbar__hamburger-text">Меню</span>
-                            <i class="navbar__hamburger-img fa fa-times fa-bars"></i>
-                        </div> -->
                         <div class="hamburger navbar__hamburger" id="hamburger-1">
                             <span class="navbar__hamburger-text">Меню</span>
                             <div class="navbar__hamburger-icon">
@@ -71,25 +67,25 @@
                     <div class="gallery" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
                         <div class="gallery__header">
                             <h4>ФОТОАЛЬБОМ</h4>
-                            <img src="images/hr/photo.png" class="advant__hr" />
+                            <img src="images/hr/photo.png" class="advant__hr" alt="Разделитель" />
                         </div>
                         <div class="row gallery__main">
                             <div class="col-lg-3 col-sm-6 col-12 p-0">
                                 <div class="gallery__item">
                                     <a class="gallery__item-wrap" data-fancybox="gallery" href="images/gallery/1.jpg">
-                                        <img src="images/gallery/1.jpg">
+                                        <img src="images/gallery/1.jpg" alt="M-635BK-1M">
                                         <i class="gallery__item-len fas fa-search"></i>
                                     </a>
                                 </div>
                                 <div class="gallery__item">
                                     <a class="gallery__item-wrap" data-fancybox="gallery" href="images/gallery/2.jpg">
-                                        <img src="images/gallery/2.jpg">
+                                        <img src="images/gallery/2.jpg" alt="M-635L-1M9">
                                         <i class="gallery__item-len fas fa-search"></i>
                                     </a>
                                 </div>
                                 <div class="gallery__item">
                                     <a class="gallery__item-wrap" data-fancybox="gallery" href="images/gallery/3.jpg">
-                                        <img src="images/gallery/3.jpg">
+                                        <img src="images/gallery/3.jpg" alt="M-635L-7M">
                                         <i class="gallery__item-len fas fa-search"></i>
                                     </a>
                                 </div>
@@ -97,19 +93,19 @@
                             <div class="col-lg-3 col-sm-6 col-12 p-0">
                                 <div class="gallery__item">
                                     <a class="gallery__item-wrap" data-fancybox="gallery" href="images/gallery/4.jpg">
-                                        <img src="images/gallery/4.jpg">
+                                        <img src="images/gallery/4.jpg" alt="M-635L-1M9">
                                         <i class="gallery__item-len fas fa-search"></i>
                                     </a>
                                 </div>
                                 <div class="gallery__item">
                                     <a class="gallery__item-wrap" data-fancybox="gallery" href="images/gallery/5.jpg">
-                                        <img src="images/gallery/5.jpg">
+                                        <img src="images/gallery/5.jpg" alt="M-635L-7M">
                                         <i class="gallery__item-len fas fa-search"></i>
                                     </a>
                                 </div>
                                 <div class="gallery__item">
                                     <a class="gallery__item-wrap" data-fancybox="gallery" href="images/gallery/6.jpg">
-                                        <img src="images/gallery/6.jpg">
+                                        <img src="images/gallery/6.jpg" alt="M-635L-1M9">
                                         <i class="gallery__item-len fas fa-search"></i>
                                     </a>
                                 </div>
@@ -117,19 +113,19 @@
                             <div class="col-lg-3 col-sm-6 col-12 p-0">
                                 <div class="gallery__item">
                                     <a class="gallery__item-wrap" data-fancybox="gallery" href="images/gallery/7.jpg">
-                                        <img src="images/gallery/7.jpg">
+                                        <img src="images/gallery/7.jpg" alt="M-635BK-1M">
                                         <i class="gallery__item-len fas fa-search"></i>
                                     </a>
                                 </div>
                                 <div class="gallery__item">
                                     <a class="gallery__item-wrap" data-fancybox="gallery" href="images/gallery/8.jpg">
-                                        <img src="images/gallery/8.jpg">
+                                        <img src="images/gallery/8.jpg" alt="M-635L-1M9">
                                         <i class="gallery__item-len fas fa-search"></i>
                                     </a>
                                 </div>
                                 <div class="gallery__item">
                                     <a class="gallery__item-wrap" data-fancybox="gallery" href="images/gallery/9.jpg">
-                                        <img src="images/gallery/9.jpg">
+                                        <img src="images/gallery/9.jpg" alt="M-635BK-1M">
                                         <i class="gallery__item-len fas fa-search"></i>
                                     </a>
                                 </div>
@@ -137,19 +133,19 @@
                             <div class="col-lg-3 col-sm-6 col-12 p-0">
                                 <div class="gallery__item">
                                     <a class="gallery__item-wrap" data-fancybox="gallery" href="images/gallery/10.jpg">
-                                        <img src="images/gallery/10.jpg">
+                                        <img src="images/gallery/10.jpg" alt="M-635L-1M9">
                                         <i class="gallery__item-len fas fa-search"></i>
                                     </a>
                                 </div>
                                 <div class="gallery__item">
                                     <a class="gallery__item-wrap" data-fancybox="gallery" href="images/gallery/11.jpg">
-                                        <img src="images/gallery/11.jpg">
+                                        <img src="images/gallery/11.jpg" alt="M-635BK-1M">
                                         <i class="gallery__item-len fas fa-search"></i>
                                     </a>
                                 </div>
                                 <div class="gallery__item">
                                     <a class="gallery__item-wrap" data-fancybox="gallery" href="images/gallery/12.jpg">
-                                        <img src="images/gallery/12.jpg">
+                                        <img src="images/gallery/12.jpg" alt="M-635L-7M">
                                         <i class="gallery__item-len fas fa-search"></i>
                                     </a>
                                 </div>
@@ -159,7 +155,7 @@
                 </div>
             </section>
         </div>
-        <footer class="footer">
+        <footer id="footer" class="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-12 d-lg-block d-sm-none">

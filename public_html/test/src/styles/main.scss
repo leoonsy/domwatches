@@ -6,19 +6,19 @@
 @import "_hamburger";
 
 /** Общее **/
-html,
 body {
-  height: 100%;
   min-width: 240px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
+  display: flex; //for IE10-11 fix footer
 }
 
 #wrapper {
   display: flex;
-  flex-direction: column;
-  min-height: 100%;
+  flex: 1 1 auto; //for IE10-11 fix footer
+  flex-flow: column nowrap;
+  min-height: 100vh;
 }
 
 #content {
@@ -483,7 +483,8 @@ a:hover {
   }
 
   &__carousel {
-    margin: auto 0;
+    margin: auto;
+    max-width: 544px;
   }
 
   &__item {
@@ -1343,7 +1344,6 @@ a:hover {
     position: relative;
 
     &-wrap {
-      width: 100%;
       overflow: hidden;
       display: block;
       position: relative;
@@ -1374,6 +1374,7 @@ a:hover {
 
       img {
         width: 100%;
+        display: block;
         transform: scale(1);
         transition: 0.3s all ease-in-out;
       }
@@ -1394,6 +1395,20 @@ a:hover {
     &:hover &-len {
       opacity: 1;
       transform: translate(-50%, -50%) scale(1);
+    }
+  }
+}
+
+//IE10-11 hack
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+  .gallery {
+    &__item {
+      &-wrap {
+        img {
+          max-width: 1px;
+          min-width: 100%;
+        }
+      }
     }
   }
 }
@@ -1682,5 +1697,28 @@ a:hover {
 
   &__valid {
     border-color: #28a745;
+  }
+}
+
+/** Политика конфиденциальности **/
+#policy-section {
+  background: url("../images/seamless-bg/light-4.png") left top repeat;
+  margin: 1rem 0 0 0;
+  flex: 1 0 auto;
+}
+
+.policy {
+  padding: 1rem;
+  &__title {
+    font-size: 1.6rem;
+  }
+
+  &__section {
+    font-size: 1.3rem;
+    margin-top: 1.8rem;
+  }
+
+  ol {
+    margin-left: 15px;
   }
 }

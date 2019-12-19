@@ -26,7 +26,7 @@
                     <nav class="navbar">
                         <div class="navbar__brand">
                             <a href="index.php" class="navbar__brand-link">
-                                <img class="navbar__brand-logo" src="images/logo.png" />
+                                <img class="navbar__brand-logo" src="images/logo.png" alt="Логотип" />
                                 <span class="navbar__brand-text">DOMWATCHES</span>
                             </a>
                         </div>
@@ -50,10 +50,6 @@
                                 <a class="navbar__link" href="contacts.php">КОНТАКТЫ</a>
                             </li>
                         </ul>
-                        <!-- <div class="navbar__hamburger">
-                            <span class="navbar__hamburger-text">Меню</span>
-                            <i class="navbar__hamburger-img fa fa-times fa-bars"></i>
-                        </div> -->
                         <div class="hamburger navbar__hamburger" id="hamburger-1">
                             <span class="navbar__hamburger-text">Меню</span>
                             <div class="navbar__hamburger-icon">
@@ -83,7 +79,7 @@
                     <div class="row advant">
                         <div class="col-lg-12 advant__header" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
                             <h3 class="advant__header-text">ПРЕИМУЩЕСТВА ЧАСОВ</h3>
-                            <img src="images/hr/main.png" class="advant__hr" />
+                            <img src="images/hr/main.png" class="advant__hr" alt="Разделитель" />
                         </div>
                         <div class="col-md-4 advant__item" data-aos="fade-right" data-aos-duration="600">
                             <div class="overflow-hidden mb-3">
@@ -114,7 +110,7 @@
                     <div class="row characters">
                         <div class="col-lg-12 characters__header">
                             <h3>ХАРАКТЕРИСТИКИ ЧАСОВ</h3>
-                            <img src="images/hr/main.png" class="characters__hr" />
+                            <img src="images/hr/main.png" class="characters__hr" alt="Разделитель" />
                         </div>
                         <div class="col-lg-6 characters__carousel">
                             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -132,13 +128,13 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="images/carousel-characters/1.jpg" alt="M-635L-7M">
+                                        <img class="d-block w-100" src="images/carousel-characters/1.jpg" alt="M-635BK-1M">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h3>M-635BK-1M</h3>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="images/carousel-characters/2.jpg" alt="M-635L-7M">
+                                        <img class="d-block w-100" src="images/carousel-characters/2.jpg" alt="M-635L-1M9">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h3>M-635L-1M9</h3>
                                         </div>
@@ -179,7 +175,7 @@
                     <div class="discount">
                         <div class="discount__left" data-aos="fade-right" data-aos-offset="150" data-aos-duration="1000">
                             <h2 class="discount__attention">Внимание! Действует скидка</h2>
-                            <h3 class="discount__amount">на часы <b>M-635D-7M</b> в размере <b>40%</b></h3>
+                            <h3 class="discount__amount">на часы <b>M-635L-1M9</b> в размере <b>40%</b></h3>
                             <div class="price">
                                 <div class="price__text">
                                     <p class="price__text-old">Старая цена:</p>
@@ -195,7 +191,7 @@
                             <a class="discount__button" href="#">Заказать со скидкой</a>
                         </div>
                         <div>
-                            <img class="discount__img" src="images/discount.png" />
+                            <img class="discount__img" src="images/discount.png" alt="Часы M-635L-1M9" />
                         </div>
                     </div>
                 </div>
@@ -204,13 +200,13 @@
                 <div class="container goods">
                     <div class="goods__header">
                         <h3>ЧАСЫ DOM</h3>
-                        <img src="images/hr/main.png" class="characters__hr" />
+                        <img src="images/hr/main.png" class="characters__hr" alt="Разделитель" />
                     </div>
                     <div class="row goods__content text-lg-left text-center">
                         <div class="col-lg-3 goods__item">
                             <div class="goods__item-content">
                                 <div class="goods__img">
-                                    <img src="images/watches/0.png" />
+                                    <img src="images/watches/0.png" alt="M-635L-1M9" />
                                 </div>
                                 <div class="goods__discount goods__discount--few">
                                     <span>СКИДКА 20%</span>
@@ -234,7 +230,7 @@
                         <div class="col-lg-3 goods__item">
                             <div class="goods__item-content">
                                 <div class="goods__img">
-                                    <img src="images/watches/1.png" />
+                                    <img src="images/watches/1.png" alt="M-635BK-1M" />
                                 </div>
                                 <div class="goods__discount goods__discount--few">
                                     <span>СКИДКА 20%</span>
@@ -257,7 +253,7 @@
                         <div class="col-lg-3 goods__item">
                             <div class="goods__item-content">
                                 <div class="goods__img">
-                                    <img src="images/watches/2.png" />
+                                    <img src="images/watches/2.png" alt="M-635L-1M9" />
                                 </div>
                                 <div class="goods__discount">
                                     <span>СКИДКА 40%</span>
@@ -280,7 +276,7 @@
                         <div class="col-lg-3 goods__item">
                             <div class="goods__item-content">
                                 <div class="goods__img">
-                                    <img src="images/watches/3.png" />
+                                    <img src="images/watches/3.png" alt="M-635L-7M" />
                                 </div>
                                 <div class="goods__discount goods__discount--few">
                                     <span>СКИДКА 30%</span>
@@ -311,34 +307,34 @@
                 <div class="container why-we" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
                     <div class="why-we__header">
                         <h3>ПОЧЕМУ МЫ?</h3>
-                        <img src="images/hr/main.png" class="characters__hr" />
+                        <img src="images/hr/main.png" class="characters__hr" alt="Разделитель" />
                     </div>
                     <div class="why-we__content">
                         <div class="row why-we__main ">
                             <div class="col-lg-6 mb-3">
                                 <div class="why-we__item">
-                                    <img src="images/icons/why-we/air.png">
+                                    <img src="images/icons/why-we/air.png" alt="Самолет">
                                     <h4 class="why-we__item-head">БЫСТРАЯ ДОСТАВКА</h4>
                                     <p>Срок доставки почтой России - от 1 до 10 дней (в зависимости от Вашего региона). Отправление товара осуществляется первым классом.</p>
                                 </div>
                             </div>
                             <div class="col-lg-6 mb-3">
                                 <div class="why-we__item">
-                                    <img src="images/icons/why-we/r.png">
+                                    <img src="images/icons/why-we/r.png" alt="Рубль">
                                     <h4 class="why-we__item-head">ОПЛАТА ПРИ ПОЛУЧЕНИИ</h4>
                                     <p>Оплата товара только при получении на руки. Никаких предоплат. Доставка за наш счет.</p>
                                 </div>
                             </div>
                             <div class="col-lg-6 mb-3">
                                 <div class="why-we__item">
-                                    <img src="images/icons/why-we/support.png">
+                                    <img src="images/icons/why-we/support.png" alt="Письмо">
                                     <h4 class="why-we__item-head">ТЕХНИЧЕСКАЯ ПОДДЕРЖКА</h4>
                                     <p>Служба поддержки ответит на любой Ваш вопрос. Вы можете написать нам письмо на электронную почту либо заказать звонок.</p>
                                 </div>
                             </div>
                             <div class="col-lg-6 mb-3">
                                 <div class="why-we__item why-we__item-last">
-                                    <img src="images/icons/why-we/lock.png">
+                                    <img src="images/icons/why-we/lock.png" alt="Замок">
                                     <h4 class="why-we__item-head">ГАРАНТИИ</h4>
                                     <p>Продукт прошел 100% проверку. Мы также соблюдаем закон «О защите прав потребителя». Свяжитесь с нами, если по какой-либо причине решили вернуть товар. </p>
                                 </div>
@@ -351,7 +347,7 @@
                 <div class="container how-works" data-aos="flip-up" data-aos-offset="150" data-aos-duration="1000">
                     <div class="how-works__header">
                         <h3>КАК ПОЛУЧИТЬ ЧАСЫ</h3>
-                        <img src="images/hr/question.png" class="characters__hr" />
+                        <img src="images/hr/question.png" class="characters__hr" alt="Разделитель" />
                     </div>
                     <div class="how-works__sequence">
                         <div class="how-works__basket">Вы выбираете понравившиеся часы</div>
@@ -362,23 +358,23 @@
                     </div>
                     <div class="how-works__sequence-mobile row">
                         <div class="how-works__basket-mobile col-sm">
-                            <img src="images/icons/how-works/1.png" />
+                            <img src="images/icons/how-works/1.png" alt="Наручные часы" />
                             <p>Вы выбираете понравившиеся часы</p>
                         </div>
                         <div class="how-works__form-mobile col-sm">
-                            <img src="images/icons/how-works/2.png" />
+                            <img src="images/icons/how-works/2.png" alt="Сообщение" />
                             <p>Оставляете заявку через форму заявки на сайте</p>
                         </div>
                         <div class="how-works__call-mobile col-sm">
-                            <img src="images/icons/how-works/3.png" />
+                            <img src="images/icons/how-works/3.png" alt="Телефон" />
                             <p>Мы перезваниваем Вам для подтверждения заказа</p>
                         </div>
                         <div class="how-works__send-mobile col-sm">
-                            <img src="images/icons/how-works/4.png" />
+                            <img src="images/icons/how-works/4.png" alt="Самолет" />
                             <p>Отправляем Ваш заказ в пункт назначения</p>
                         </div>
                         <div class="how-works__check-mobile col-sm">
-                            <img src="images/icons/how-works/5.png" />
+                            <img src="images/icons/how-works/5.png" alt="Кошелек" />
                             <p>Вы проверяете и оплачиваете товар на почте</p>
                         </div>
                     </div>
@@ -389,23 +385,23 @@
                     <div class="reviews">
                         <div class="reviews__header">
                             <h3>ОТЗЫВЫ</h3>
-                            <img src="images/hr/rev.png" class="characters__hr" />
+                            <img src="images/hr/rev.png" class="characters__hr" alt="Разделитель" />
                         </div>
                         <div class="reviews__carousel">
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner mx-5 w-auto">
                                     <div class="carousel-item active">
                                         <div class="reviews__item">
-                                            <img src="images/reviews/1.jpg" class="reviews__avatar" />
+                                            <img src="images/reviews/1.jpg" class="reviews__avatar" alt="Матвей Гуляев" />
                                             <div class="reviews__text">
                                                 <h3 class="reviews__name">Матвей Гуляев</h3>
-                                                <p>Часы пришли через неделю после заказа. Пришли целые, без царапин, упакованы хорошо. Качество часов отличное, проблем не встречал. Стекло действительно прочное, после падения часы в порядке. Все соответствует характеристикам, указанным на сайте. Рекомендую к покупке.</p>
+                                                <p>Часы пришли через неделю после заказа. Пришли целые, без царапин, упакованы хорошо в коробку для часов DOM. Качество часов отличное, проблем не встречал. Стекло действительно прочное, после падения часы в порядке. Все соответствует характеристикам, указанным на сайте. Рекомендую к покупке.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="reviews__item">
-                                            <img src="images/reviews/2.jpg" class="reviews__avatar" />
+                                            <img src="images/reviews/2.jpg" class="reviews__avatar" alt="Артем Сазонов" />
                                             <div class="reviews__text">
                                                 <h3 class="reviews__name">Артем Сазонов</h3>
                                                 <p>Заказывал часы по скидке. Доставили за 5 дней. Красивые часы! Ничего не люфтит, не шатается. Надежные, хотя стараюсь их не мочить. Точность хода изумительная, порадовал хронограф. Ремешок хороший, качественный! Я очень доволен покупкой, спасибо)</p>
@@ -414,7 +410,7 @@
                                     </div>
                                     <div class="carousel-item">
                                         <div class="reviews__item">
-                                            <img src="images/reviews/3.jpg" class="reviews__avatar" />
+                                            <img src="images/reviews/3.jpg" class="reviews__avatar" alt="Сергей Фомин" />
                                             <div class="reviews__text">
                                                 <h3 class="reviews__name">Сергей Фомин</h3>
                                                 <p>Часы удобно лежат на руке, смотрятся СУПЕР! Выглядят дороже своей цены. Заказал по акции еще одни для своего троюродного брата. Ему тоже они понравились!) Эти часы подходят под любой стиль одежды! Спасибо большое вашему сайту.</p>
@@ -437,7 +433,7 @@
                 </div>
             </section>
         </div>
-        <footer class="footer">
+        <footer id="footer" class="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-12 d-lg-block d-sm-none">
@@ -479,7 +475,7 @@
                 </div>
             </div>
             <div class="footer__copyright">
-                <a href="#">Политика конфиденциальности</a>
+                <a href="policy.php">Политика конфиденциальности</a>
             </div>
         </footer>
     </div>
@@ -491,34 +487,7 @@
     <script src="scripts/fontawesome.min.js"></script>
     <script src="scripts/jquery.flipper-responsive.min.js"></script>
     <script src="scripts/aos.min.js"></script>
-
-    <script>
-        $(function() {
-            //плавное появление элементов
-            AOS.init({
-                once: true
-            });
-
-            $('#myFlipper').flipper('init');
-            $('.navbar__hamburger').on('click', function(e) {
-                $(this).toggleClass('is-active');
-                $('.navbar__top-menu').stop().slideToggle(800, function() {
-                    if ($(this).css('display') === "none")
-                        $(this).removeAttr('style');
-                    else
-                        $(this).css('display', 'flex');
-                });
-            });
-
-            $(".top-info__buy").on('click', function(e) {
-                var fixed_offset = 15;
-                $('html,body').stop().animate({
-                    scrollTop: $(this.hash).offset().top - fixed_offset
-                }, 1000);
-                e.preventDefault();
-            });
-        });
-    </script>
+    <script src="scripts/main.min.js"></script>
 </body>
 
 </html>

@@ -74,3 +74,25 @@ bootstrapValidate(
             $('#inputMobile').removeClass('buy-form__valid');
     }
 );
+
+bootstrapValidate(
+    '#inputCity',
+    'regex:/^\\s*[a-zа-яё]{1}[a-zа-я0-9ё\\(\\)\\.,\\s_-]+\\s*$/i:Введите корректный город',
+    (isValid) => {
+        if (isValid)
+            $('#inputCity').addClass('buy-form__valid');
+        else
+            $('#inputCity').removeClass('buy-form__valid');
+    }
+);
+
+bootstrapValidate(
+    '#inputAddress',
+    'regex:/^\\s*[a-zа-яё]{1}[a-zа-я0-9ё\\(\\)\\.,\\s_-]+\\s*$/i:Введите корректный адрес',
+    (isValid) => {
+        if (isValid)
+            $('#inputAddress').addClass('buy-form__valid');
+        else
+            $('#inputAddress').removeClass('buy-form__valid');
+    }
+);

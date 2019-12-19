@@ -161,7 +161,7 @@ gulp.task('img:build', function () {
       imagemin.gifsicle({interlaced: true}),
       imageminJpegRecompress({
         progressive: true,
-        max: 80,
+        max: 90,
         min: 70
       }),
       imageminPngquant({quality: [0.7, 0.9]}),

@@ -29,7 +29,7 @@
                     <nav class="navbar">
                         <div class="navbar__brand">
                             <a href="index.php" class="navbar__brand-link">
-                                <img class="navbar__brand-logo" src="images/logo.png" />
+                                <img class="navbar__brand-logo" src="images/logo.png" alt="Логотип" />
                                 <span class="navbar__brand-text">DOMWATCHES</span>
                             </a>
                         </div>
@@ -53,10 +53,6 @@
                                 <a class="navbar__link" href="contacts.php">КОНТАКТЫ</a>
                             </li>
                         </ul>
-                        <!-- <div class="navbar__hamburger">
-                            <span class="navbar__hamburger-text">Меню</span>
-                            <i class="navbar__hamburger-img fa fa-times fa-bars"></i>
-                        </div> -->
                         <div class="hamburger navbar__hamburger" id="hamburger-1">
                             <span class="navbar__hamburger-text">Меню</span>
                             <div class="navbar__hamburger-icon">
@@ -77,7 +73,7 @@
                         <div class="col-lg-3 col-sm-6 buy-goods__item">
                             <div class="buy-goods__item-content">
                                 <div class="buy-goods__img">
-                                    <img src="images/watches/0.png" />
+                                    <img src="images/watches/0.png" alt="M-635D-1M9" />
                                 </div>
                                 <div class="buy-goods__discount buy-goods__discount--few">
                                     <span>СКИДКА 20%</span>
@@ -94,7 +90,7 @@
                                 <hr class="buy-goods__item-separator" />
                                 <div class="buy-goods__count">
                                     <span class="buy-goods__count-text">Количество:</span>
-                                    <input class="buy-goods__count-input" type="text" value="0" name="buyCount">
+                                    <input class="buy-goods__count-input" type="text" value="0" name="buyCount_M-635D-1M9">
                                 </div>
                             </div>
                         </div>
@@ -102,7 +98,7 @@
                         <div class="col-lg-3 col-sm-6 buy-goods__item">
                             <div class="buy-goods__item-content">
                                 <div class="buy-goods__img">
-                                    <img src="images/watches/1.png" />
+                                    <img src="images/watches/1.png" alt="M-635BK-1M" />
                                 </div>
                                 <div class="buy-goods__discount buy-goods__discount--few">
                                     <span>СКИДКА 20%</span>
@@ -119,14 +115,14 @@
                                 <hr class="buy-goods__item-separator" />
                                 <div class="buy-goods__count">
                                     <span class="buy-goods__count-text">Количество:</span>
-                                    <input class="buy-goods__count-input" type="text" value="0" name="buyCount">
+                                    <input class="buy-goods__count-input" type="text" value="0" name="buyCount_M-635BK-1M">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6 buy-goods__item">
                             <div class="buy-goods__item-content">
                                 <div class="buy-goods__img">
-                                    <img src="images/watches/2.png" />
+                                    <img src="images/watches/2.png" alt="M-635L-1M9" />
                                 </div>
                                 <div class="buy-goods__discount">
                                     <span>СКИДКА 40%</span>
@@ -143,14 +139,14 @@
                                 <hr class="buy-goods__item-separator" />
                                 <div class="buy-goods__count">
                                     <span class="buy-goods__count-text">Количество:</span>
-                                    <input class="buy-goods__count-input" type="text" value="0" name="buyCount">
+                                    <input class="buy-goods__count-input" type="text" value="0" name="buyCount_M-635L-1M9">
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-sm-6 buy-goods__item">
                             <div class="buy-goods__item-content">
                                 <div class="buy-goods__img">
-                                    <img src="images/watches/3.png" />
+                                    <img src="images/watches/3.png" alt="M-635L-7M" />
                                 </div>
                                 <div class="buy-goods__discount buy-goods__discount--few">
                                     <span>СКИДКА 30%</span>
@@ -167,7 +163,7 @@
                                 <hr class="buy-goods__item-separator" />
                                 <div class="buy-goods__count">
                                     <span class="buy-goods__count-text">Количество:</span>
-                                    <input class="buy-goods__count-input" type="text" value="0" name="buyCount">
+                                    <input class="buy-goods__count-input" type="text" value="0" name="buyCount_M-635L-7M">
                                 </div>
                             </div>
                         </div>
@@ -179,35 +175,35 @@
                     <div class="buy-goods__step2">
                         <h4 class="buy-goods__step2-text"><span>Шаг 2</span>. Заполните данные для отправки часов Почтой России</h4>
                     </div>
-                    <form class="buy-goods__form buy-form">
+                    <form class="buy-goods__form buy-form" action="buy.php" method="post">
                         <div class="form-group row">
                             <label for="inputName" class="col-sm-4 col-form-label">Имя: <span class="buy-form__star">*</span></label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="inputName" placeholder="Имя">
+                                <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Имя">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputLastname" class="col-sm-4 col-form-label">Фамилия: <span class="buy-form__star">*</span></label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="inputLastname" placeholder="Фамилия">
+                                <input type="text" class="form-control" name="inputLastname" id="inputLastname" placeholder="Фамилия">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputPatronymic" class="col-sm-4 col-form-label">Отчество: <span class="buy-form__star">*</span></label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="inputPatronymic" placeholder="Отчество">
+                                <input type="text" class="form-control" name="inputPatronymic"  id="inputPatronymic" placeholder="Отчество">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputEmail" class="col-sm-4 col-form-label">Email: <span class="buy-form__star">*</span></label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                <input type="text" class="form-control" name="inputEmail" id="inputEmail" placeholder="Email">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputCity" class="col-sm-4 col-form-label">Страна: <span class="buy-form__star">*</span></label>
+                            <label for="inputCountry" class="col-sm-4 col-form-label">Страна: <span class="buy-form__star">*</span></label>
                             <div class="col-sm-8">
-                                <select size="1" class="form-control" id="inputCity">
+                                <select size="1" class="form-control" name="inputCountry" id="inputCountry">
                                     <option selected="selected">Только Россия</option>
                                 </select>
                             </div>
@@ -215,25 +211,37 @@
                         <div class="form-group row">
                             <label for="inputRegion" class="col-sm-4 col-form-label">Область (край), район: <span class="buy-form__star">*</span></label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="inputRegion" placeholder="Область (край), район">
+                                <input type="text" class="form-control" name="inputRegion" id="inputRegion" placeholder="Область (край), район">
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label for="inputCity" class="col-sm-4 col-form-label">Город/село: <span class="buy-form__star">*</span></label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="inputCity" id="inputCity" placeholder="Город/село">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputAddress" class="col-sm-4 col-form-label">Адрес (улица, дом, квартира...): <span class="buy-form__star">*</span></label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="inputAddress" id="inputAddress" placeholder="Адрес (улица, дом, квартира...)">
+                            </div>
+                        </div>                
+                        <div class="form-group row">
                             <label for="inputIndex" class="col-sm-4 col-form-label">Почтовый индекс: <span class="buy-form__star">*</span></label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="inputIndex" placeholder="Почтовый индекс">
+                                <input type="text" class="form-control" name="inputIndex" id="inputIndex" placeholder="Почтовый индекс">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputMobile" class="col-sm-4 col-form-label">Мобильный телефон (для подтверждения заказа): <span class="buy-form__star">*</span></label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="inputMobile" placeholder="Мобильный телефон">
+                                <input type="text" class="form-control" name="inputMobile" id="inputMobile" placeholder="Мобильный телефон">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputComment" class="col-sm-4 col-form-label">От себя: </label>
                             <div class="col-sm-8">
-                                <textarea class="form-control" rows="4" cols="30" id="inputComment" name="inputComment" placeholder="Пожелания, вопросы, предложения"></textarea>
+                                <textarea class="form-control" rows="4" cols="30" name="inputComment" id="inputComment" name="inputComment" placeholder="Пожелания, вопросы, предложения"></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -244,7 +252,7 @@
                                 </a>
                             </div>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="inputCode" placeholder="Код безопасности">
+                                <input type="text" class="form-control" name="inputCode" id="inputCode" placeholder="Код безопасности">
                             </div>
                         </div>
                         <div class="form-group row mt-4">
@@ -256,7 +264,7 @@
                 </div>
             </section>
         </div>
-        <footer class="footer">
+        <footer id="footer" class="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-12 d-lg-block d-sm-none">

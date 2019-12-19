@@ -28,7 +28,7 @@ $(() => {
     $('#myFlipper').flipper('init');
 
     //задание количества товаров
-    $("input[name='buyCount']").TouchSpin({
+    $("input[name^='buyCount']").TouchSpin({
         min: 0,
         max: 100,
         step: 1
