@@ -2,15 +2,8 @@
 
 return [
 	'all' => [
-		'index','news'
+		'index','buy', 'photo', 'reviews', 'faq', 'contacts'
 	],
-	'authorize' => [
-		//
-	],
-	'guest' => [
-		//
-	],
-	'admin' => [
-		//
-	]
+	'guest' => [],
+	'admin' => []
 ];

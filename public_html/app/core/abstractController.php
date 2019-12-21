@@ -50,6 +50,20 @@ abstract class AbstractController
 	protected $meta_key;
 
 	/**
+	 * Скрипты страницы
+	 *
+	 * @var array
+	 */
+	protected $scripts = [];
+
+	/**
+	 * Стили страницы
+	 *
+	 * @var array
+	 */
+	protected $styles = [];
+
+	/**
 	 * Конструктор
 	 *
 	 * @param array $route Параметры маршрута
@@ -87,7 +101,7 @@ abstract class AbstractController
 	 */
 	public function checkAcl()
 	{
-		//TODO: сделать класс User и его юзать для проверок авторизованности
+		//TODO: сделать класс Account и его юзать для проверок авторизованности
 		$this->acl = require 'app/acl/' . $this->route['controller'] . '.php';
 
 		if ($this->isAcl('all'))

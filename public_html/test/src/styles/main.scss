@@ -12,6 +12,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   display: flex; //for IE10-11 fix footer
+  overflow-x: hidden;
 }
 
 #wrapper {
@@ -547,6 +548,22 @@ a:hover {
         float: none;
       }
     }
+
+    &__header {
+      &-text {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .characters {
+    &__header {
+      &-text {
+        font-size: 1.3rem;
+      }
+    }
   }
 }
 
@@ -564,14 +581,21 @@ a:hover {
 .discount {
   position: relative;
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
+  margin-right: -15px;
 
   &__left {
-    width: 60%;
-    flex: 0 0 auto;
-    position: relative;
+    flex: 1 0 60%;
     z-index: 2;
     align-self: center;
+    margin: 2rem 0;
+  }
+
+  &__img {
+    background: url(../images/discount.png) no-repeat;
+    background-size: auto 100%;
+    background-position: left center;
+    flex: 0 1 40%;
   }
 
   &__attention {
@@ -642,7 +666,7 @@ a:hover {
 
       &-new:before {
         content: "";
-        width: 30px;
+        width: 20px;
         height: 3rem;
         background: $color-blue;
         position: absolute;
@@ -651,14 +675,6 @@ a:hover {
         transform: skewX(-15deg) skewY(0deg);
       }
     }
-  }
-
-  &__img {
-    position: relative;
-    top: 0;
-    right: 0;
-    z-index: 0;
-    width: 315px;
   }
 
   &__button,
@@ -688,9 +704,6 @@ a:hover {
     &__attention {
       font-size: 2.5rem;
     }
-    &__img {
-      width: 295px;
-    }
   }
 }
 
@@ -704,15 +717,8 @@ a:hover {
       font-size: 2rem;
     }
 
-    &__left {
-      width: 80%;
-    }
-
     &__timer {
       width: 100%;
-    }
-    &__img {
-      width: 310px;
     }
   }
 }
@@ -727,25 +733,37 @@ a:hover {
       font-size: 1.8rem;
     }
 
-    &__img {
-      right: 80px;
-      width: 330px;
+    .price {
+      &__number {
+        font-size: 1.4rem;
+      }
     }
   }
 }
 
 @media only screen and (max-width: #{map-get($grid-breakpoints, 'sm')}) {
   .discount {
+    &__left {
+      flex: 1 0 75%;
+    }
+
+    &__img {
+      flex: 0 1 25%;
+    }
+
     .price {
       width: 80%;
+      &__number {
+        font-size: 1.3rem;
+      }
     }
 
     &__end {
       font-size: 1.6rem;
     }
 
-    &__img {
-      right: 140px;
+    &__button {
+      font-size: 1.2rem !important;
     }
   }
 }
@@ -768,11 +786,6 @@ a:hover {
       font-size: 1.4rem;
     }
 
-    &__img {
-      width: 350px;
-      right: 170px;
-    }
-
     &__button,
     &__button:active,
     &__button:link,
@@ -793,9 +806,6 @@ a:hover {
   .discount {
     .price {
       width: 100%;
-      &__number {
-        font-size: 1.2rem;
-      }
     }
 
     &__button {
@@ -1155,6 +1165,11 @@ a:hover {
     align-items: flex-start;
   }
 
+  &__inner {
+    margin: 0 3rem;
+    width: auto;
+  }
+
   &__avatar {
     border-radius: 8px;
     width: 100%;
@@ -1226,6 +1241,14 @@ a:hover {
 
     &__text {
       margin: 1rem 0 0 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .reviews {
+    &__inner {
+      margin: 0 2rem;
     }
   }
 }
@@ -1316,6 +1339,12 @@ a:hover {
 @media screen and (max-width: 576px) {
   .footer {
     text-align: center;
+
+    &__logo {
+      &-href {
+        font-size: 1.8rem;
+      }
+    }
   }
 }
 
@@ -1400,7 +1429,7 @@ a:hover {
 }
 
 //IE10-11 hack
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .gallery {
     &__item {
       &-wrap {
@@ -1580,7 +1609,8 @@ a:hover {
 .buy-goods {
   padding: 2rem 1rem;
   background: url("../images/seamless-bg/light-9.png") left top repeat;
-  &__step1, &__step2 {
+  &__step1,
+  &__step2 {
     text-align: left;
     margin: 0 0 2rem 0;
     &-text {
@@ -1623,11 +1653,11 @@ a:hover {
       transition: all 0.3s ease 0s;
     }
 
-    &:hover &-content   {
+    &:hover &-content {
       border-color: #2179d6;
     }
 
-    &:hover &-separator   {
+    &:hover &-separator {
       border-color: #2179d6;
     }
   }
@@ -1672,16 +1702,15 @@ a:hover {
   }
 
   &__count {
-    
     &-text {
       display: block;
       font-size: 1.2rem;
-      margin: 0 0 .5rem 0;
+      margin: 0 0 0.5rem 0;
     }
   }
 
   &__cost {
-    margin: .5rem 0 1.5rem 0;
+    margin: 0.5rem 0 1.5rem 0;
     font-size: 1.3rem;
 
     &-number {

@@ -9,10 +9,6 @@ abstract class Config
 	 */
 	const MAIN_LAYOUT = "main";
 	/**
-	 * Шаблон администратора
-	 */
-	const ADMIN_LAYOUT = "admin";
-	/**
 	 * Шаблон кодов HTTP
 	 */
 	const CODES_LAYOUT = "codes";
@@ -31,9 +27,14 @@ abstract class Config
 	/**
 	 * Имя БД
 	 */
-	const DB_NAME = "engine";
+	const DB_NAME = "domwatches";
 	/**
 	 * Директория с видами
 	 */
-	const DIR_TMPL = "application/views/dist";
+	const DIR_TMPL = "app/views/dist";
+
+	/**
+	 * Публичная директория с изображениями, скриптами, стилями
+	 */
+	const DIR_PUBLIC = "public/dist";
 }

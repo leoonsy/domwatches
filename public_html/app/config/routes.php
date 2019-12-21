@@ -3,21 +3,26 @@
 return [
 	'' => [
 		'controller' => 'main',
-		'action' => 'index',
+		'action' => 'index'
 	],
-
-	'login' => [
-		'controller' => 'account',
-		'action' => 'login',
-	],
-
-	'register' => [
-		'controller' => 'account',
-		'action' => 'register',
-	],
-
-	'news/{id:\d+}' => [
+	'buy' => [
 		'controller' => 'main',
-		'action' => 'news',
+		'action' => 'buy'
+	],
+	'photo' => [
+		'controller' => 'main',
+		'action' => 'photo'
+	],
+	'reviews' => [
+		'controller' => 'main',
+		'action' => 'reviews'
+	],
+	'faq' => [
+		'controller' => 'main',
+		'action' => 'faq'
+	],
+	'contacts' => [
+		'controller' => 'main',
+		'action' => 'contacts'
 	]
 ];

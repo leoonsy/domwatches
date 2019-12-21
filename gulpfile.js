@@ -85,10 +85,10 @@ gulp.task('html:build', function () {
   return gulp.src(path.src[key] + path.type.html) // выбор всех html файлов по указанному пути
     .pipe(plumber()) // отслеживание ошибок
     .pipe(rigger()) // импорт вложений
-    .pipe(htmlmin({
-      collapseWhitespace: true, // удаляем все переносы
-      removeComments: true // удаляем все комментарии
-    }))	
+    // .pipe(htmlmin({
+    //   collapseWhitespace: true, // удаляем все переносы
+    //   removeComments: true // удаляем все комментарии
+    // }))	
     .pipe(gulp.dest(path.dist[key])) // выкладывание готовых файлов
 });
 
@@ -250,6 +250,7 @@ gulp.task('watch', function () {
   gulp.watch(path.src[key] + path.watch.scss, gulp.series('scss:build'));
   gulp.watch(path.src[key] + path.watch.js, gulp.series('js:build'));
   gulp.watch(path.src[key] + path.watch.html, gulp.series('html:build'));
+  gulp.watch(path.src[key] + path.watch.img, gulp.series('img:build'));
 });
 
 // очистка кэша
