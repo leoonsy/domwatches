@@ -24,5 +24,9 @@ return [
 	'contacts' => [
 		'controller' => 'main',
 		'action' => 'contacts'
+	],
+	'policy' => [
+		'controller' => 'main',
+		'action' => 'policy'
 	]
 ];

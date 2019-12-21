@@ -2,7 +2,7 @@
 
 return [
 	'all' => [
-		'index','buy', 'photo', 'reviews', 'faq', 'contacts'
+		'index','buy', 'photo', 'reviews', 'faq', 'contacts', 'policy'
 	],
 	'guest' => [],
 	'admin' => []
