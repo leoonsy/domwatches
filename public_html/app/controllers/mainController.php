@@ -3,7 +3,8 @@
 namespace app\controllers;
 
 use app\controllers\AbstractMainController;
-use app\modules\Header;
+use Exception;
+use app\config\Mail;
 
 class MainController extends AbstractMainController
 {
@@ -56,6 +57,57 @@ class MainController extends AbstractMainController
 		$params = [];
 		$content = $this->view->render('buy', $params, true);
 		$this->render($content);
+	}
+
+	/**
+	 * Проверка данных заказа и отправка на почту
+	 *
+	 * @return void
+	 */
+	public function actionBuyCheck()
+	{
+		$params = [
+			'watches' => $_POST['inputWatches'] ?? null,
+			'name' => $_POST['inputName'] ?? null,
+			'lastname' => $_POST['inputLastname'] ?? null,
+			'patronymic' => $_POST['inputPatronymic'] ?? null,
+			'email' => $_POST['inputEmail'] ?? null,
+			'region' => $_POST['inputRegion'] ?? null,
+			'city' => $_POST['inputCity'] ?? null,
+			'address' => $_POST['inputAddress'] ?? null,
+			'index' => $_POST['inputIndex'] ?? null,
+			'mobile' => $_POST['inputMobile'] ?? null,
+			'comment' => $_POST['inputComment'] ?? null
+		];
+
+		$errors = $this->model->checkBuyParams($params);
+		if (!empty($errors)) {
+			echo "Неверно заполнены поля: " . implode(", ", $errors) . '.';
+			exit();
+		}
+
+		$params['ip'] = $_SERVER['REMOTE_ADDR'];
+		$params['date'] = date("d.m.y, H:i");
+		$bodyHTML = $this->view->render('orderHTML', $params, true);
+		$bodyText = $this->view->render('orderText', $params, true);
+
+		$mailParams = [
+			'to' => Mail::$to,
+			'subject' => Mail::$subjects['order'],
+			'from' => [
+				'email' => $params['email'],
+				'name' => "{$params['lastname']} {$params['name']}"
+			],
+			'bodyHTML' => $bodyHTML,
+			'bodyText' => $bodyText
+		];
+
+		try {
+			$this->model->sendMessage($mailParams);
+		} catch (Exception $e) {
+			echo $e->getMessage();
+			exit();
+		}
 	}
 
 	/**

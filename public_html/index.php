@@ -11,7 +11,6 @@ ini_set('error_reporting', (string) E_ALL);
 require_once 'vendor/autoload.php';
 
 use app\core\Router;
-use YaLinqo\Enumerable;
 
 /**
  * Возвращает путь до файла по классу пространства имен

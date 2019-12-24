@@ -9,6 +9,10 @@ return [
 		'controller' => 'main',
 		'action' => 'buy'
 	],
+	'buy-check' => [
+		'controller' => 'main',
+		'action' => 'buyCheck'
+	],
 	'photo' => [
 		'controller' => 'main',
 		'action' => 'photo'

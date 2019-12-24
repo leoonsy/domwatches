@@ -1,115 +1,116 @@
 <section id="buy-section">
     <div class="container buy-goods" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
-        <div class="buy-goods__step1">
-            <h4 class="buy-goods__step1-text"><span>Шаг 1</span>. Выберите часы для покупки и их количество</h4>
-        </div>
-        <div class="row buy-goods__content text-lg-left text-center">
-            <div class="col-lg-3 col-sm-6 buy-goods__item">
-                <div class="buy-goods__item-content">
-                    <div class="buy-goods__img">
-                        <img src="/public/dist/images/watches/0.png" alt="M-635D-1M9" />
-                    </div>
-                    <div class="buy-goods__discount buy-goods__discount--few">
-                        <span>СКИДКА 20%</span>
-                    </div>
-                    <h3 class="buy-goods__title">M-635D-1M9</h3>
-                    <div class="buy-goods__price">
-                        <div class="buy-goods__price-old">
-                            2499₽
+        <form class="buy-goods__form buy-form" action="/buy-check" method="post">
+            <div class="buy-goods__step1">
+                <h4 class="buy-goods__step1-text"><span>Шаг 1</span>. Выберите часы для покупки и их количество</h4>
+            </div>
+            <div class="row buy-goods__content text-lg-left text-center">
+                <div class="col-lg-3 col-sm-6 buy-goods__item">
+                    <div class="buy-goods__item-content">
+                        <div class="buy-goods__img">
+                            <img src="/public/dist/images/watches/0.png" alt="M-635D-1M9" />
                         </div>
-                        <div class="buy-goods__price-new">
-                            1999₽
+                        <div class="buy-goods__discount buy-goods__discount--few">
+                            <span>СКИДКА 20%</span>
                         </div>
-                    </div>
-                    <hr class="buy-goods__item-separator" />
-                    <div class="buy-goods__count">
-                        <span class="buy-goods__count-text">Количество:</span>
-                        <input class="buy-goods__count-input" type="text" value="0" name="buyCount_M-635D-1M9">
+                        <h3 class="buy-goods__title">M-635D-1M9</h3>
+                        <div class="buy-goods__price">
+                            <div class="buy-goods__price-old">
+                                2499₽
+                            </div>
+                            <div class="buy-goods__price-new">
+                                1999₽
+                            </div>
+                        </div>
+                        <hr class="buy-goods__item-separator" />
+                        <div class="buy-goods__count">
+                            <span class="buy-goods__count-text">Количество:</span>
+                            <input class="buy-goods__count-input" type="text" value="0" name="inputWatches[M-635D-1M9]">
+                        </div>
                     </div>
                 </div>
+
+                <div class="col-lg-3 col-sm-6 buy-goods__item">
+                    <div class="buy-goods__item-content">
+                        <div class="buy-goods__img">
+                            <img src="/public/dist/images/watches/1.png" alt="M-635BK-1M" />
+                        </div>
+                        <div class="buy-goods__discount buy-goods__discount--few">
+                            <span>СКИДКА 20%</span>
+                        </div>
+                        <h3 class="buy-goods__title">M-635BK-1M</h3>
+                        <div class="buy-goods__price">
+                            <div class="buy-goods__price-old">
+                                2499₽
+                            </div>
+                            <div class="buy-goods__price-new">
+                                1999₽
+                            </div>
+                        </div>
+                        <hr class="buy-goods__item-separator" />
+                        <div class="buy-goods__count">
+                            <span class="buy-goods__count-text">Количество:</span>
+                            <input class="buy-goods__count-input" type="text" value="0" name="inputWatches[M-635BK-1M]">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 buy-goods__item">
+                    <div class="buy-goods__item-content">
+                        <div class="buy-goods__img">
+                            <img src="/public/dist/images/watches/2.png" alt="M-635L-1M9" />
+                        </div>
+                        <div class="buy-goods__discount">
+                            <span>СКИДКА 40%</span>
+                        </div>
+                        <h3 class="buy-goods__title">M-635L-1M9</h3>
+                        <div class="buy-goods__price">
+                            <div class="buy-goods__price-old">
+                                2499₽
+                            </div>
+                            <div class="buy-goods__price-new">
+                                1499₽
+                            </div>
+                        </div>
+                        <hr class="buy-goods__item-separator" />
+                        <div class="buy-goods__count">
+                            <span class="buy-goods__count-text">Количество:</span>
+                            <input class="buy-goods__count-input" type="text" value="0" name="inputWatches[M-635L-1M9]">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 buy-goods__item">
+                    <div class="buy-goods__item-content">
+                        <div class="buy-goods__img">
+                            <img src="/public/dist/images/watches/3.png" alt="M-635L-7M" />
+                        </div>
+                        <div class="buy-goods__discount buy-goods__discount--few">
+                            <span>СКИДКА 30%</span>
+                        </div>
+                        <h3 class="buy-goods__title">M-635L-7M</h3>
+                        <div class="buy-goods__price">
+                            <div class="buy-goods__price-old">
+                                2499₽
+                            </div>
+                            <div class="buy-goods__price-new">
+                                1749₽
+                            </div>
+                        </div>
+                        <hr class="buy-goods__item-separator" />
+                        <div class="buy-goods__count">
+                            <span class="buy-goods__count-text">Количество:</span>
+                            <input class="buy-goods__count-input" type="text" value="0" name="inputWatches[M-635L-7M]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buy-goods__cost">
+                <span class="buy-goods__cost-text">Итоговая цена: </span><span class="buy-goods__cost-number">0₽</span>
+            </div>
+            <hr class="my-0" />
+            <div class="buy-goods__step2">
+                <h4 class="buy-goods__step2-text"><span>Шаг 2</span>. Заполните данные для отправки часов Почтой России</h4>
             </div>
 
-            <div class="col-lg-3 col-sm-6 buy-goods__item">
-                <div class="buy-goods__item-content">
-                    <div class="buy-goods__img">
-                        <img src="/public/dist/images/watches/1.png" alt="M-635BK-1M" />
-                    </div>
-                    <div class="buy-goods__discount buy-goods__discount--few">
-                        <span>СКИДКА 20%</span>
-                    </div>
-                    <h3 class="buy-goods__title">M-635BK-1M</h3>
-                    <div class="buy-goods__price">
-                        <div class="buy-goods__price-old">
-                            2499₽
-                        </div>
-                        <div class="buy-goods__price-new">
-                            1999₽
-                        </div>
-                    </div>
-                    <hr class="buy-goods__item-separator" />
-                    <div class="buy-goods__count">
-                        <span class="buy-goods__count-text">Количество:</span>
-                        <input class="buy-goods__count-input" type="text" value="0" name="buyCount_M-635BK-1M">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 buy-goods__item">
-                <div class="buy-goods__item-content">
-                    <div class="buy-goods__img">
-                        <img src="/public/dist/images/watches/2.png" alt="M-635L-1M9" />
-                    </div>
-                    <div class="buy-goods__discount">
-                        <span>СКИДКА 40%</span>
-                    </div>
-                    <h3 class="buy-goods__title">M-635L-1M9</h3>
-                    <div class="buy-goods__price">
-                        <div class="buy-goods__price-old">
-                            2499₽
-                        </div>
-                        <div class="buy-goods__price-new">
-                            1499₽
-                        </div>
-                    </div>
-                    <hr class="buy-goods__item-separator" />
-                    <div class="buy-goods__count">
-                        <span class="buy-goods__count-text">Количество:</span>
-                        <input class="buy-goods__count-input" type="text" value="0" name="buyCount_M-635L-1M9">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 buy-goods__item">
-                <div class="buy-goods__item-content">
-                    <div class="buy-goods__img">
-                        <img src="/public/dist/images/watches/3.png" alt="M-635L-7M" />
-                    </div>
-                    <div class="buy-goods__discount buy-goods__discount--few">
-                        <span>СКИДКА 30%</span>
-                    </div>
-                    <h3 class="buy-goods__title">M-635L-7M</h3>
-                    <div class="buy-goods__price">
-                        <div class="buy-goods__price-old">
-                            2499₽
-                        </div>
-                        <div class="buy-goods__price-new">
-                            1749₽
-                        </div>
-                    </div>
-                    <hr class="buy-goods__item-separator" />
-                    <div class="buy-goods__count">
-                        <span class="buy-goods__count-text">Количество:</span>
-                        <input class="buy-goods__count-input" type="text" value="0" name="buyCount_M-635L-7M">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="buy-goods__cost">
-            <span class="buy-goods__cost-text">Итоговая цена: </span><span class="buy-goods__cost-number">0₽</span>
-        </div>
-        <hr class="my-0" />
-        <div class="buy-goods__step2">
-            <h4 class="buy-goods__step2-text"><span>Шаг 2</span>. Заполните данные для отправки часов Почтой России</h4>
-        </div>
-        <form class="buy-goods__form buy-form" action="buy.php" method="post">
             <div class="form-group row">
                 <label for="inputName" class="col-sm-4 col-form-label">Имя: <span class="buy-form__star">*</span></label>
                 <div class="col-sm-8">

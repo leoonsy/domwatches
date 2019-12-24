@@ -62,6 +62,23 @@ $(() => {
     $(window).resize((e) => {
         ChangeContainer('#section-discount', 992);
     });
+
+    //покупка товаров
+    $('form').submit(function (e) {
+        var $form = $(this);
+        $.ajax({
+            method: $form.attr('method'),
+            url: $form.attr('action'),
+            data: $form.serialize()
+        }).done((e) => {
+            alert('success');
+            alert(e);
+        }).fail(function () {
+            alert('fail');
+        });
+        //отмена действия по умолчанию для кнопки submit
+        e.preventDefault();
+    });
 });
 
 function isset(v) {

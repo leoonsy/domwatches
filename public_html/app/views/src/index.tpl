@@ -124,7 +124,7 @@
                     </div>
                 </div>
                 <p class="discount__end">До конца акции осталось:</p>
-                <div class="flipper discount__timer" data-datetime="2019-12-23 21:45:00" data-template="ddd|HH|ii|ss" data-labels="Дней|Часов|Минут|Секунд" data-reverse="true" id="myFlipper"></div>
+                <div class="flipper discount__timer" data-datetime="2019-12-29 21:45:00" data-template="ddd|HH|ii|ss" data-labels="Дней|Часов|Минут|Секунд" data-reverse="true" id="myFlipper"></div>
                 <a class="discount__button" href="#">Заказать со скидкой</a>
             </div>
             <div class="discount__img">
@@ -364,7 +364,7 @@
             </div>
         </div>
         <div class="final-buy">
-            <a href="#" class="final-buy__button">Сделать заказ</a>
+            <a href="buy" class="final-buy__button">Сделать заказ</a>
         </div>
     </div>
 </section>

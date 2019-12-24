@@ -22,6 +22,13 @@ abstract class AbstractController
 	public $view;
 
 	/**
+	 * Модель
+	 *
+	 * @var any
+	 */
+	public $model;
+
+	/**
 	 * Массив прав доступа к страницам 
 	 *
 	 * @var array
@@ -134,6 +141,5 @@ abstract class AbstractController
 	{
 		header('location: ' . $url);
 		exit;
-	}
-    
+	} 
 }
