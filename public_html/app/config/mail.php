@@ -11,7 +11,7 @@ abstract class Mail
         ]
     ];
 
-    public static $subjects = [
+    public static $topics = [
         'order' => 'Заказ часов DOM'
     ];   
 }

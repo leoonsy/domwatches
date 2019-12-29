@@ -51,7 +51,7 @@ class MainController extends AbstractMainController
 		$this->title = 'Заказать часы DOM';
 		$this->meta_desc = 'Купить мужские часы DOM M-635 по скидке. Доставка почтой России.';
 		$this->meta_key = 'заказать часы DOM, купить часы DOM, форма заказа';
-		$this->scripts = ['jquery-3.4.1.min.js', 'popper.min.js', 'bootstrap.min.js', 'fontawesome.min.js', 'aos.min.js', 'bootstrap-validate.min.js', 'form-validation.min.js', 'jquery.bootstrap-touchspin.min.js', 'main.min.js'];
+		$this->scripts = ['jquery-3.4.1.min.js', 'popper.min.js', 'bootstrap.min.js', 'fontawesome.min.js', 'aos.min.js', 'bootstrap-validate.min.js', 'buy-validation.min.js', 'jquery.bootstrap-touchspin.min.js', 'main.min.js'];
 		$this->styles = ['global:https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap', 'bootstrap.min.css', 'main.min.css', 'countdown.min.css', 'aos.min.css'];
 
 		$params = [];
@@ -80,7 +80,7 @@ class MainController extends AbstractMainController
 			'comment' => $_POST['inputComment'] ?? null
 		];
 
-		$errors = $this->model->checkBuyParams($params);
+		$errors = $this->model->getBuyParamsErrors($params);
 		if (!empty($errors)) {
 			echo "Неверно заполнены поля: " . implode(", ", $errors) . '.';
 			exit();
@@ -93,7 +93,7 @@ class MainController extends AbstractMainController
 
 		$mailParams = [
 			'to' => Mail::$to,
-			'subject' => Mail::$subjects['order'],
+			'topic' => Mail::$topics['order'],
 			'from' => [
 				'email' => $params['email'],
 				'name' => "{$params['lastname']} {$params['name']}"
@@ -108,6 +108,8 @@ class MainController extends AbstractMainController
 			echo $e->getMessage();
 			exit();
 		}
+
+		echo "success";
 	}
 
 	/**
@@ -120,8 +122,8 @@ class MainController extends AbstractMainController
 		$this->title = 'Фотоальбом часов DOM M-635';
 		$this->meta_desc = 'Демонстрация часов DOM M-635 отдельно и на руке мужчины. Качественные фото с разных ракурсов.';
 		$this->meta_key = 'фото часов DOM, фотоальбом, часы DOM в картинках, модель M-635';
-		$this->scripts = ['jquery-3.4.1.min.js', 'popper.min.js', 'bootstrap.min.js', 'fontawesome.min.js', 'aos.min.js', 'main.min.js'];
-		$this->styles = ['global:https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap', 'bootstrap.min.css', 'main.min.css', 'aos.min.css'];
+		$this->scripts = ['jquery-3.4.1.min.js', 'popper.min.js', 'bootstrap.min.js', 'fontawesome.min.js', 'aos.min.js', 'jquery.fancybox.min.js', 'main.min.js'];
+		$this->styles = ['global:https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap', 'bootstrap.min.css', 'jquery.fancybox.min.css', 'main.min.css', 'aos.min.css'];
 
 		$params = [];
 		$content = $this->view->render('photo', $params, true);
@@ -174,12 +176,58 @@ class MainController extends AbstractMainController
 		$this->title = 'Обратная связь с DOMWatches.ru';
 		$this->meta_desc = 'Свяжитесь с нами по телефону, электронной почте или через форму обратной связи, если у Вас возникли какие-либо вопросы!';
 		$this->meta_key = 'обратная связь, техническая поддержка, написать письмо, заказать звонок';
-		$this->scripts = ['jquery-3.4.1.min.js', 'popper.min.js', 'bootstrap.min.js', 'fontawesome.min.js', 'aos.min.js', 'main.min.js', 'global://cdn.perezvoni.com/widget/js/przv.js?przv_code=30258-b140b75-0efcbbf9204e631b140-4e631b140b75-cd10efcbb'];
+		$this->scripts = ['jquery-3.4.1.min.js', 'popper.min.js', 'bootstrap.min.js', 'fontawesome.min.js', 'aos.min.js', 'bootstrap-validate.min.js', 'feedback-validation.min.js', 'main.min.js', 'global://cdn.perezvoni.com/widget/js/przv.js?przv_code=30258-b140b75-0efcbbf9204e631b140-4e631b140b75-cd10efcbb'];
 		$this->styles = ['global:https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap', 'bootstrap.min.css', 'main.min.css', 'aos.min.css'];
 
 		$params = [];
 		$content = $this->view->render('contacts', $params, true);
 		$this->render($content);
+	}
+
+	/**
+	 * Проверка данных обратной связи и отправка на почту
+	 *
+	 * @return void
+	 */
+	public function actionFeedbackCheck()
+	{
+		$params = [
+			'name' => $_POST['inputName'] ?? null,
+			'topic' => $_POST['inputTopic'] ?? null,
+			'email' => $_POST['inputEmail'] ?? null,
+			'message' => $_POST['inputMessage'] ?? null
+		];
+
+		$errors = $this->model->getFeedbackParamsErrors($params);
+		if (!empty($errors)) {
+			echo "Неверно заполнены поля: " . implode(", ", $errors) . '.';
+			exit();
+		}
+
+		$params['ip'] = $_SERVER['REMOTE_ADDR'];
+		$params['date'] = date("d.m.y, H:i");
+		$bodyHTML = $this->view->render('feedbackHTML', $params, true);
+		$bodyText = $this->view->render('feedbackText', $params, true);
+
+		$mailParams = [
+			'to' => Mail::$to,
+			'topic' => $params['topic'],
+			'from' => [
+				'email' => $params['email'],
+				'name' => $params['name']
+			],
+			'bodyHTML' => $bodyHTML,
+			'bodyText' => $bodyText
+		];
+
+		try {
+			$this->model->sendMessage($mailParams);
+		} catch (Exception $e) {
+			echo $e->getMessage();
+			exit();
+		}
+
+		echo "success";
 	}
 
 	/**

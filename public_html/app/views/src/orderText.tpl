@@ -13,7 +13,7 @@
 <?php endforeach; ?> 
 
 E-mail: <?= $email ?> 
-От себя: <?= $comment ?> 
+От себя: <?= $message ?> 
  
 IP: <?= $ip ?> 
 Дата по UTC + 0: <?= $date ?> 

@@ -114,25 +114,25 @@
             <div class="form-group row">
                 <label for="inputName" class="col-sm-4 col-form-label">Имя: <span class="buy-form__star">*</span></label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Имя">
+                    <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Имя" />
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputLastname" class="col-sm-4 col-form-label">Фамилия: <span class="buy-form__star">*</span></label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" name="inputLastname" id="inputLastname" placeholder="Фамилия">
+                    <input type="text" class="form-control" name="inputLastname" id="inputLastname" placeholder="Фамилия" />
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputPatronymic" class="col-sm-4 col-form-label">Отчество: <span class="buy-form__star">*</span></label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" name="inputPatronymic" id="inputPatronymic" placeholder="Отчество">
+                    <input type="text" class="form-control" name="inputPatronymic" id="inputPatronymic" placeholder="Отчество" />
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputEmail" class="col-sm-4 col-form-label">Email: <span class="buy-form__star">*</span></label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" name="inputEmail" id="inputEmail" placeholder="Email">
+                    <input type="text" class="form-control" name="inputEmail" id="inputEmail" placeholder="Email" />
                 </div>
             </div>
             <div class="form-group row">
@@ -146,55 +146,73 @@
             <div class="form-group row">
                 <label for="inputRegion" class="col-sm-4 col-form-label">Область (край), район: <span class="buy-form__star">*</span></label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" name="inputRegion" id="inputRegion" placeholder="Область (край), район">
+                    <input type="text" class="form-control" name="inputRegion" id="inputRegion" placeholder="Область (край), район" />
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputCity" class="col-sm-4 col-form-label">Город/село: <span class="buy-form__star">*</span></label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" name="inputCity" id="inputCity" placeholder="Город/село">
+                    <input type="text" class="form-control" name="inputCity" id="inputCity" placeholder="Город/село" />
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputAddress" class="col-sm-4 col-form-label">Адрес (улица, дом, квартира...): <span class="buy-form__star">*</span></label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" name="inputAddress" id="inputAddress" placeholder="Адрес (улица, дом, квартира...)">
+                    <input type="text" class="form-control" name="inputAddress" id="inputAddress" placeholder="Адрес (улица, дом, квартира...)" />
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputIndex" class="col-sm-4 col-form-label">Почтовый индекс: <span class="buy-form__star">*</span></label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" name="inputIndex" id="inputIndex" placeholder="Почтовый индекс">
+                    <input type="text" class="form-control" name="inputIndex" id="inputIndex" placeholder="Почтовый индекс" />
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputMobile" class="col-sm-4 col-form-label">Мобильный телефон (для подтверждения заказа): <span class="buy-form__star">*</span></label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" name="inputMobile" id="inputMobile" placeholder="Мобильный телефон">
+                    <input type="text" class="form-control" name="inputMobile" id="inputMobile" placeholder="Мобильный телефон" />
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputComment" class="col-sm-4 col-form-label">От себя: </label>
                 <div class="col-sm-8">
-                    <textarea class="form-control" rows="4" cols="30" name="inputComment" id="inputComment" name="inputComment" placeholder="Пожелания, вопросы, предложения"></textarea>
+                    <textarea class="form-control" rows="4" cols="30" name="inputComment" id="inputComment" placeholder="Пожелания, вопросы, предложения"></textarea>
                 </div>
             </div>
-            <div class="form-group row">
-                <div class="col-sm-4">
-                    <label for="inputCode" class="col-form-label">Код безопасности: <span class="buy-form__star">*</span></label>
-                    <a href="#" class="nolink" style="margin-left: 0;">
-                        <img class="captcha" src="captcha.php" alt="Код безопасности">
-                    </a>
-                </div>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" name="inputCode" id="inputCode" placeholder="Код безопасности">
-                </div>
+            <!-- <div class="form-group row">
+            <div class="col-sm-4">
+                <label for="inputCode" class="col-form-label">Код безопасности: <span class="buy-form__star">*</span></label>
+                <a href="#" class="nolink" style="margin-left: 0;">
+                    <img class="captcha" src="captcha.php" alt="Код безопасности">
+                </a>
             </div>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="inputCode" id="inputCode" placeholder="Код безопасности">
+            </div>
+        </div> -->
             <div class="form-group row mt-4">
                 <div class="col-sm-12 text-center">
                     <button class="buy-form__submit btn btn-primary" type="submit">Отправить заказ</button>
                 </div>
             </div>
         </form>
+        <!-- Модальное окно -->
+        <div class="modal fade" id="bootstrapModal" tabindex="-1" role="dialog" aria-labelledby="bootstrapModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bootstrapModalLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Хорошо</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>

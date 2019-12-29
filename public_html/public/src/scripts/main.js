@@ -32,7 +32,7 @@ $(() => {
 
     //задание количества товаров
     if (isset($.fn.TouchSpin)) {
-        $("input[name^='buyCount']").TouchSpin({
+        $("input[name^='inputWatches']").TouchSpin({
             min: 0,
             max: 100,
             step: 1
@@ -40,7 +40,7 @@ $(() => {
     }
 
     //убрать красную рамку ошибок при наведении на input
-    $('.buy-form input').on('focus', function () {
+    $('.buy-form input, .contacts__form input').on('focus', function () {
         if ($(this).hasClass('is-invalid'))
             $(this).removeClass('is-invalid')
     });
@@ -64,18 +64,67 @@ $(() => {
     });
 
     //покупка товаров
-    $('form').submit(function (e) {
-        var $form = $(this);
-        $.ajax({
-            method: $form.attr('method'),
-            url: $form.attr('action'),
-            data: $form.serialize()
-        }).done((e) => {
-            alert('success');
-            alert(e);
-        }).fail(function () {
-            alert('fail');
-        });
+    $('.buy-form').submit(function (e) {
+        let $form = $(this);
+        let errors = bootstrapGetErrors(bootstrapBuyParams); //клиентская проверка на ошибки
+        if (errors.length != 0) {
+            $('#bootstrapModal .modal-title').html('<span class="text-danger">Ошибка!</span>');
+            $('#bootstrapModal .modal-body').html(`Неверно заполнены поля: ${errors.join(', ')}.`);
+            $('#bootstrapModal').modal();
+        }
+        else {
+            $.ajax({
+                method: $form.attr('method'),
+                url: $form.attr('action'),
+                data: $form.serialize()
+            }).done((e) => {
+                if (e == 'success') {
+                    $('#bootstrapModal .modal-title').html('<span class="text-success">Спасибо за заказ!</span>');
+                    $('#bootstrapModal .modal-body').html('Ваш заказ принят! В ближайшее время с Вами свяжется менеджер для подтверждения заказа!');
+                } else {
+                    $('#bootstrapModal .modal-title').html('<span class="text-danger">Ошибка!</span>');
+                    $('#bootstrapModal .modal-body').html(e);
+                }
+                $('#bootstrapModal').modal();
+            }).fail(function () {
+                $('#bootstrapModal .modal-title').html('<span class="text-danger">Ошибка!</span>');
+                $('#bootstrapModal .modal-body').html('Невозможно сделать заказ! Попробуйте снова!');
+                $('#bootstrapModal').modal();
+            });
+        }
+        //отмена действия по умолчанию для кнопки submit
+        e.preventDefault();
+    });
+
+    //обратная связь
+    $('.contacts__form').submit(function (e) {
+        let $form = $(this);
+        let errors = bootstrapGetErrors(bootstrapFeedbackParams); //клиентская проверка на ошибки
+        if (errors.length != 0) {
+            $('#bootstrapModal .modal-title').html('<span class="text-danger">Ошибка!</span>');
+            $('#bootstrapModal .modal-body').html(`Неверно заполнены поля: ${errors.join(', ')}.`);
+            $('#bootstrapModal').modal();
+        }
+        else {
+            $.ajax({
+                method: $form.attr('method'),
+                url: $form.attr('action'),
+                data: $form.serialize()
+            }).done((e) => {
+                if (e == 'success') {
+                    $('#bootstrapModal .modal-title').html('<span class="text-success">Сообщение отправлено</span>');
+                    $('#bootstrapModal .modal-body').html('Ваше сообщение отправлено службе технической поддержки. Ожидайте ответа на указанный email-адрес.');
+                } else {
+                    $('#bootstrapModal .modal-title').html('<span class="text-danger">Ошибка!</span>');
+                    $('#bootstrapModal .modal-body').html(e);
+                }
+                $('#bootstrapModal').modal();
+            }).fail(function () {
+                $('#bootstrapModal .modal-title').html('<span class="text-danger">Ошибка!</span>');
+                $('#bootstrapModal .modal-body').html('Невозможно отправить сообщение! Попробуйте снова!');
+                $('#bootstrapModal').modal();
+            });
+        }
         //отмена действия по умолчанию для кнопки submit
         e.preventDefault();
     });
@@ -85,9 +134,20 @@ function isset(v) {
     return typeof v !== 'undefined';
 }
 
+//изменить контейней на противоположный (bootstrap)
 function ChangeContainer(selector, size) {
     if ($(window).width() < size)
         $(selector + ' .container').removeClass("container").addClass("container-fluid");
     else
         $(selector + ' .container-fluid').removeClass("container-fluid").addClass("container");
+}
+
+//возвращает массив ошибок на русском языке для формы
+function bootstrapGetErrors(params) {
+    let errors = [];
+    for (let key in params)
+        if (params[key].error)
+            errors.push(params[key].rus);
+
+    return errors;
 }

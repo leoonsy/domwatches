@@ -14,7 +14,7 @@
 <?php endforeach; ?> 
 </br />
 E-mail: <?= $email ?> </br />
-От себя: <?= $comment ?> </br />
+От себя: <?= $message ?> </br />
 </br />
 IP: <?= $ip ?> </br />
 Дата по UTC + 0: <?= $date ?>

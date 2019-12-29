@@ -5,27 +5,27 @@ let path = {
     public: 'public_html/public/dist/',
     views: 'public_html/app/views/dist/',
     test: 'public_html/test/dist/',
-    test2: 'public_html/test2/dist/',
   },
   src: {
     public: 'public_html/public/src/',
     views: 'public_html/app/views/src/',
     test: 'public_html/test/src/',
-    test2: 'public_html/test2/src/',
   },
   type: {
     html: '**/[^_]*.+(html|tpl|php)',
     js: '**/[^_]*.js',
     scss: '**/[^_]*.+(sass|scss)',
     css: '**/[^_]*.css',
-    img: '**/[^_]*.+(jpg|jpeg|png|svg|gif)'
+    img: '**/[^_]*.+(jpg|jpeg|png|svg|gif)',
+    other: '**/[^_]*.!(html|tpl|php|js|sass|scss|css|jpg|jpeg|png|svg|gif)'
   },
   watch: {
     html: '**/*.+(html|tpl|php)',
     js: '**/*.js',
     css: '**/*.css',
     scss: '**/[^_]*.+(sass|scss)',
-    img: '**/*.(jpg|jpeg|png|svg|gif)'
+    img: '**/*.(jpg|jpeg|png|svg|gif)',
+    other: '**/*.!(html|tpl|php|js|sass|scss|css|jpg|jpeg|png|svg|gif)'
   }
 };
 
@@ -85,10 +85,10 @@ gulp.task('html:build', function () {
   return gulp.src(path.src[key] + path.type.html) // выбор всех html файлов по указанному пути
     .pipe(plumber()) // отслеживание ошибок
     .pipe(rigger()) // импорт вложений
-    // .pipe(htmlmin({
-    //   collapseWhitespace: true, // удаляем все переносы
-    //   removeComments: true // удаляем все комментарии
-    // }))	
+    .pipe(htmlmin({
+      collapseWhitespace: true, // удаляем все переносы
+      removeComments: true // удаляем все комментарии
+    }))	
     .pipe(gulp.dest(path.dist[key])) // выкладывание готовых файлов
 });
 
@@ -170,6 +170,12 @@ gulp.task('img:build', function () {
     .pipe(gulp.dest(path.dist[key])) // положим файлы 
 });
 
+// сбор остального
+gulp.task('other:build', function () {
+  return gulp.src(path.src[key] + path.type.other) // выбор всех html файлов по указанному пути
+    .pipe(gulp.dest(path.dist[key])) // выкладывание готовых файлов
+});
+
 // удаление js
 gulp.task('js:clean', function () {
   return gulp.src(path.dist[key] + path.type.js, { read: false })
@@ -216,6 +222,12 @@ gulp.task('style:clean',
   )
 );
 
+// удаление other
+gulp.task('other:clean', function () {
+  return gulp.src(path.dist[key] + path.type.other, { read: false })
+    .pipe(rimraf());
+});
+
 // удаление каталога dist 
 gulp.task('clean', function () {
   return gulp.src(path.dist[key] + '*', { read: false })
@@ -239,7 +251,8 @@ gulp.task('build',
       'style:build',
       'js:build',
       'html:build',
-      'img:build'
+      'img:build',
+      'other:build'
     )
   )
 );
@@ -251,6 +264,7 @@ gulp.task('watch', function () {
   gulp.watch(path.src[key] + path.watch.js, gulp.series('js:build'));
   gulp.watch(path.src[key] + path.watch.html, gulp.series('html:build'));
   gulp.watch(path.src[key] + path.watch.img, gulp.series('img:build'));
+  gulp.watch(path.src[key] + path.watch.other, gulp.series('other:build'));
 });
 
 // очистка кэша

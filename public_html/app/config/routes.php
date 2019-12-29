@@ -29,6 +29,10 @@ return [
 		'controller' => 'main',
 		'action' => 'contacts'
 	],
+	'feedback-check' => [
+		'controller' => 'main',
+		'action' => 'feedbackCheck'		
+	],
 	'policy' => [
 		'controller' => 'main',
 		'action' => 'policy'
