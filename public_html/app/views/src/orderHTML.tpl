@@ -13,8 +13,9 @@
 Модель: <?= $key ?>, количество: <?= $value ?> </br /> 
 <?php endforeach; ?> 
 </br />
+Цена: <?= $price ?> 
 E-mail: <?= $email ?> </br />
-От себя: <?= $message ?> </br />
+От себя: <?= $comment ?> </br />
 </br />
 IP: <?= $ip ?> </br />
 Дата по UTC + 0: <?= $date ?>

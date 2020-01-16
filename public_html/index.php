@@ -28,9 +28,8 @@ function classToFile($class, $ext = '.php') {
 
 spl_autoload_register(function ($class) {
     $path = classToFile($class);
-    if (file_exists($path)) {
+    if (file_exists($path))
         require $path;
-    }
 });
 
 $router = new Router;

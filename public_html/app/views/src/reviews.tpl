@@ -1,5 +1,9 @@
 <section id="pagereviews-section">
     <div class="container">
+        <div class="faq__feedback alert alert-info alert-dismissible" role="alert" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Закрыть</span></button>
+            Вы можете оставить отзыв, написав его в нашу группу Вконтакте или через <a class="alert-link" href='/contacts'>форму обратной связи</a>. Грамотные отзывы могут попасть на главную или данную страницу.
+        </div>
         <div class="pagereviews" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
             <div class="pagereviews__review">
                 <h4 class="pagereviews__name">Владимир, Ростовская обл.</h4>

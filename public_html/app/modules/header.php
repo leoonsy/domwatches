@@ -6,6 +6,12 @@ use app\config\Config;
 
 class Header
 {
+    /**
+     * Получить html скрипты по массиву путей
+     *
+     * @param array $scriptPaths
+     * @return string
+     */
     public static function getScripts(array $scriptPaths)
     {
         $result = [];
@@ -21,6 +27,12 @@ class Header
         return implode('', $result);
     }
 
+    /**
+     * Получить html link стили по массиву путей
+     *
+     * @param array $stylesPaths
+     * @return string
+     */
     public static function getStyles(array $stylesPaths)
     {
         $result = [];
@@ -36,6 +48,11 @@ class Header
         return implode('', $result);
     }
 
+    /**
+     * Получить название шаблона для модуля
+     *
+     * @return string
+     */
     public static function getTmplFile()
     {
         return 'header';

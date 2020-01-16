@@ -26,7 +26,18 @@ $(() => {
         e.preventDefault();
     });
 
-    //таймер
+    //автоматическое изменение таймера
+    let $timer = $('.discount__timer');
+    if ($timer.length != 0) {
+        const discountDuration = 4; //длительность акции в днях
+        const currentDate = moment();
+        let currentDay = currentDate.format('DD');
+        const addDay = discountDuration - currentDay % discountDuration;
+        let resultDay = currentDate.add(addDay, 'days').format('YYYY-MM-DD 00:00:00');
+        $timer.attr('data-datetime', resultDay);
+    }
+
+    //инициализация таймера
     if (isset($.fn.flipper))
         $('#myFlipper').flipper('init');
 
@@ -55,6 +66,7 @@ $(() => {
         });
 
         $('.buy-goods__cost-number').text(`${sumCost}₽`);
+        $('#inputPrice').val(sumCost);
     });
 
     //изменение контенеров при определенной ширине экрана

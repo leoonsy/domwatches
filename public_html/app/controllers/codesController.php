@@ -31,6 +31,8 @@ class CodesController extends AbstractCodesController {
 		$this->meta_desc = 'Запрошенная страница не существует';
 		$this->meta_key = 'Страница не найдена, страница не существует, 404';
 		$content = $this->view->render('404', [], true);
+		$this->scripts = ['jquery-3.4.1.min.js', 'popper.min.js', 'bootstrap.min.js'];
+		$this->styles = ['global:https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap', 'bootstrap.min.css', '404.min.css'];
 		$this->render($content);
 	}
 

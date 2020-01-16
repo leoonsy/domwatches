@@ -33,7 +33,7 @@ class MainController extends AbstractMainController
 		$this->title = 'DOMWatches.ru — Эксклюзивные часы DOM';
 		$this->meta_desc = 'На сайте предоставляются современные мужские часы DOM M-635 по низкой цене. Быстрая доставка, гарантия, оплата при получении на руки.';
 		$this->meta_key = 'часы DOM, наручные часы, мужские часы, магазин, модель M-635';
-		$this->scripts = ['jquery-3.4.1.min.js', 'parallax.min.js', 'popper.min.js', 'bootstrap.min.js', 'fontawesome.min.js', 'jquery.flipper-responsive.min.js', 'aos.min.js', 'main.min.js'];
+		$this->scripts = ['jquery-3.4.1.min.js', 'parallax.min.js', 'popper.min.js', 'bootstrap.min.js', 'fontawesome.min.js', 'jquery.flipper-responsive.min.js', 'aos.min.js', 'moment.min.js', 'main.min.js'];
 		$this->styles = ['global:https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap', 'bootstrap.min.css', 'main.min.css', 'countdown.min.css', 'aos.min.css'];
 
 		$params = [];
@@ -68,6 +68,7 @@ class MainController extends AbstractMainController
 	{
 		$params = [
 			'watches' => $_POST['inputWatches'] ?? null,
+			'price' => $_POST['inputPrice'] ?? null,
 			'name' => $_POST['inputName'] ?? null,
 			'lastname' => $_POST['inputLastname'] ?? null,
 			'patronymic' => $_POST['inputPatronymic'] ?? null,

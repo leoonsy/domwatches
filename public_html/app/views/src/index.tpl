@@ -1,7 +1,7 @@
 <section id="section-top" class="parallax-window" data-parallax="scroll" data-image-src="/public/dist/images/bg-top.jpg" data-speed="-0.1" data-position="bottom right">
     <div class="container h-100 d-flex align-items-center" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
         <div class="top-info">
-            <h1 class="top-info__title">Современные мужские часы DOM</h1>
+            <h1 class="top-info__title">Эксклюзивные мужские часы DOM</h1>
             <h2 class="top-info__desc">Наручные металлические и кожаные часы с хронографом</h2>
             <hr class="top-info__hr" />
             <p class="top-info__desc-2">
@@ -37,7 +37,7 @@
                     <div class="advant__img advant__design"></div>
                 </div>
                 <h4>Безупречный дизайн</h4>
-                <p>Внешний вид часов отлично дополнит образ владельца и придаст статусности.</p>
+                <p>Современный внешний вид часов отлично дополнит образ владельца и придаст статусности.</p>
             </div>
         </div>
     </div>
@@ -124,8 +124,8 @@
                     </div>
                 </div>
                 <p class="discount__end">До конца акции осталось:</p>
-                <div class="flipper discount__timer" data-datetime="2019-12-29 21:45:00" data-template="ddd|HH|ii|ss" data-labels="Дней|Часов|Минут|Секунд" data-reverse="true" id="myFlipper"></div>
-                <a class="discount__button" href="#">Заказать со скидкой</a>
+                <div class="flipper discount__timer" data-datetime="2020-01-19 00:00:00" data-template="ddd|HH|ii|ss" data-labels="Дней|Часов|Минут|Секунд" data-reverse="true" id="myFlipper"></div>
+                <a class="discount__button" href="/buy">Заказать со скидкой</a>
             </div>
             <div class="discount__img">
             </div>
@@ -235,7 +235,7 @@
         </div>
 
         <div class="goods__buy">
-            <a href="#" class="goods__button">Заказать часы</a>
+            <a href="/buy" class="goods__button">Заказать часы</a>
         </div>
     </div>
 </section>

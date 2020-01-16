@@ -63,7 +63,7 @@
                         </div>
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faq__accordion">
                             <div class="card-body">
-                                <b>Ответ:</b> Нет, доставка часов осуществляется за наш счет.
+                                <b>Ответ:</b> Не нужно, доставка часов осуществляется за наш счет.
                             </div>
                         </div>
                     </div>

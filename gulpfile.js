@@ -12,20 +12,20 @@ let path = {
     test: 'public_html/test/src/',
   },
   type: {
-    html: '**/[^_]*.+(html|tpl|php)',
+    html: '**/[^_]*.+(html|php)',
     js: '**/[^_]*.js',
     scss: '**/[^_]*.+(sass|scss)',
     css: '**/[^_]*.css',
     img: '**/[^_]*.+(jpg|jpeg|png|svg|gif)',
-    other: '**/[^_]*.!(html|tpl|php|js|sass|scss|css|jpg|jpeg|png|svg|gif)'
+    other: '**/[^_]*.!(html|php|js|sass|scss|css|jpg|jpeg|png|svg|gif)'
   },
   watch: {
-    html: '**/*.+(html|tpl|php)',
+    html: '**/*.+(html|php)',
     js: '**/*.js',
     css: '**/*.css',
     scss: '**/[^_]*.+(sass|scss)',
     img: '**/*.(jpg|jpeg|png|svg|gif)',
-    other: '**/*.!(html|tpl|php|js|sass|scss|css|jpg|jpeg|png|svg|gif)'
+    other: '**/*.!(html|php|js|sass|scss|css|jpg|jpeg|png|svg|gif)'
   }
 };
 

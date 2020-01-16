@@ -105,6 +105,7 @@
             </div>
             <div class="buy-goods__cost">
                 <span class="buy-goods__cost-text">Итоговая цена: </span><span class="buy-goods__cost-number">0₽</span>
+                <input type="hidden" name="inputPrice" id="inputPrice" value="0" />
             </div>
             <hr class="my-0" />
             <div class="buy-goods__step2">

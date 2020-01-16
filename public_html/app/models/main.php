@@ -112,6 +112,8 @@ class Main extends Model
                 }))
                     $errors[] = 'выберите хотя бы одни часы для покупки';
             }
+        } else {
+            $errors[] = 'не выбраны часы для покупки';
         }
 
         return $errors;
