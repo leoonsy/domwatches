@@ -161,8 +161,15 @@ class Main extends Model
     {
         $mail = new PHPMailer(true);
         try {
-            $mail->SMTPDebug = 2;
             $mail->CharSet = "utf-8";
+            $mail->isSMTP();
+            $mail->SMTPAuth = true;
+            $mail->Host = $params['host'];
+            $mail->Port = $params['port'];
+            $mail->SMTPSecure = 'ssl';
+            $mail->Username = $params['username'];
+            $mail->Password = $params['password'];
+
             $mail->setFrom($params['from']['email'], $params['from']['name']);
             foreach ($params['to'] as $address)
                 $mail->addAddress($address['email'], $address['name']);
