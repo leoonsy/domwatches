@@ -19,7 +19,7 @@ class Header
         foreach ($scriptPaths as $scriptPath) {
             $globalPos = strpos($scriptPath, $global);
             if ($globalPos === false)
-                $result[] = '<script src="' . Config::DIR_PUBLIC . "/scripts/$scriptPath" . '"></script>';
+                $result[] = '<script src="/' . Config::DIR_PUBLIC . "/scripts/$scriptPath" . '"></script>';
             else
                 $result[] = '<script src="' . substr($scriptPath, strlen($global)) . '"></script>';
         }
@@ -40,10 +40,25 @@ class Header
         foreach ($stylesPaths as $stylePaths) {
             $globalPos = strpos($stylePaths, $global);
             if ($globalPos === false)
-                $result[] = '<link rel="stylesheet" href="' . Config::DIR_PUBLIC . "/styles/$stylePaths" . '" />';
+                $result[] = '<link rel="stylesheet" href="/' . Config::DIR_PUBLIC . "/styles/$stylePaths" . '" />';
             else
                 $result[] = '<link rel="stylesheet" href="' . substr($stylePaths, strlen($global)) . '" />';
         }
+
+        return implode('', $result);
+    }
+
+    /**
+     * Получить meta теги
+     *
+     * @param array $metaData
+     * @return void
+     */
+    public static function getMeta(array $metaData)
+    {
+        $result = [];
+        foreach ($metaData as $data)
+            $result[] = '<meta name="' . $data['name'] . '" content="' . $data['content'] . '" />';
 
         return implode('', $result);
     }

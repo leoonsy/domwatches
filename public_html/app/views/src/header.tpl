@@ -6,6 +6,8 @@
     <meta name="keywords" content="<?= $meta_key ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="msapplication-config" content="/public/dist/browserconfig.xml" />
+    <meta name="og:site_name" content="DOMWatches">
+    <?= $altMeta ?>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/public/dist/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/public/dist/images/favicons/favicon-32x32.png">

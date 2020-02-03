@@ -46,6 +46,7 @@ abstract class AbstractCodesController extends AbstractController
 		$params['meta_desc'] = $this->meta_desc;
 		$params['meta_key'] = $this->meta_key;
 		$params['styles'] = Header::getStyles($this->styles);
+		$params['altMeta'] = Header::getMeta($this->meta);
 		return $this->view->render(Header::getTmplFile(), $params, true);
 	}
 }

@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <?= $header ?>
-
+    <!--[if lte IE 9]><style>#wrapper,.parallax-mirror{display:none;}</style><p class="text-center text-danger h1">Вы используете <strong>устаревшую</strong> версию браузера. Пожалуйста <a href="http://browsehappy.com/">обновите свой браузер</a>.</p><![endif]-->
 <body>
-    <!--[if lt IE 9]>
-	<p>Вы используете <strong>устаревшую</strong> версию браузера. Пожалуйста <a
-			href="http://browsehappy.com/">обновите свой браузер</a>.</p>
-    <![endif]-->
     <div id="wrapper">
         <div id="content">
             <header id="header">

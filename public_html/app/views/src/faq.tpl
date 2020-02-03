@@ -2,8 +2,8 @@
 
     <div class="container faq">
         <div class="faq__feedback alert alert-info alert-dismissible" role="alert" data-aos="fade-in" data-aos-offset="150" data-aos-duration="1000">
-            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            Данный раздел содержит ответы на часто задаваемые вопросы. Если Вы не нашли ответа на свой вопрос, пожалуйста, <a class="alert-link" href="contacts.php">свяжитесь с нами</a>.
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Закрыть</span></button>
+            Данный раздел содержит ответы на часто задаваемые вопросы. Если Вы не нашли ответа на свой вопрос, пожалуйста, <a class="alert-link" href="/contacts">свяжитесь с нами</a>.
         </div>
 
 
@@ -49,7 +49,7 @@
                         </div>
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faq__accordion">
                             <div class="card-body">
-                                <b>Ответ:</b> Возврат часов возможен в течение 14 дней после покупки либо в течение года в случае повреждения механизма, или если часы не соответствует описанию.
+                                <b>Ответ:</b> Возврат часов возможен в течение 14 дней после покупки либо в течение года в случае повреждения механизма или не соответствия описанию.
                             </div>
                         </div>
                     </div>

@@ -71,6 +71,13 @@ abstract class AbstractController
 	protected $styles = [];
 
 	/**
+	 * Мета теги
+	 *
+	 * @var array
+	 */
+	protected $meta = [];
+
+	/**
 	 * Конструктор
 	 *
 	 * @param array $route Параметры маршрута

@@ -69,10 +69,12 @@ $(() => {
         $('#inputPrice').val(sumCost);
     });
 
-    //изменение контенеров при определенной ширине экрана
-    ChangeContainer('#section-discount', 992);
+    //изменения при определенной ширине экрана
+    changeContainer('#section-discount', 992);
+    changeAttachment('#section-discount', 1024);
     $(window).resize((e) => {
-        ChangeContainer('#section-discount', 992);
+        changeContainer('#section-discount', 992);
+        changeAttachment('#section-discount', 1024);
     });
 
     //покупка товаров
@@ -147,11 +149,18 @@ function isset(v) {
 }
 
 //изменить контейней на противоположный (bootstrap)
-function ChangeContainer(selector, size) {
+function changeContainer(selector, size) {
     if ($(window).width() < size)
         $(selector + ' .container').removeClass("container").addClass("container-fluid");
     else
         $(selector + ' .container-fluid').removeClass("container-fluid").addClass("container");
+}
+
+function changeAttachment(selector, size) {
+    if ($(window).width() < size)
+        $(selector).css('backgroundAttachment', 'scroll');
+    else
+        $(selector).css('backgroundAttachment', 'fixed');
 }
 
 //возвращает массив ошибок на русском языке для формы

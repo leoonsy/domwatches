@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+	<loc>https://domwatches.ru/</loc>
+	<lastmod>2020-01-19T21:35:05+01:00</lastmod>
+	<priority>1.0</priority>
+	<changefreq>weekly</changefreq>
+</url>
+<url>
+	<loc>https://domwatches.ru/buy</loc>
+	<lastmod>2020-01-19T21:35:08+01:00</lastmod>
+	<priority>0.9</priority>
+	<changefreq>weekly</changefreq>
+</url>
+<url>
+	<loc>https://domwatches.ru/photo</loc>
+	<lastmod>2020-01-19T21:35:08+01:00</lastmod>
+	<priority>0.7</priority>
+	<changefreq>weekly</changefreq>
+</url>
+<url>
+	<loc>https://domwatches.ru/reviews</loc>
+	<lastmod>2020-01-19T21:35:08+01:00</lastmod>
+	<priority>1.0</priority>
+	<changefreq>weekly</changefreq>
+</url>
+<url>
+	<loc>https://domwatches.ru/faq</loc>
+	<lastmod>2020-01-19T21:35:08+01:00</lastmod>
+	<priority>1.0</priority>
+	<changefreq>weekly</changefreq>
+</url>
+<url>
+	<loc>https://domwatches.ru/contacts</loc>
+	<lastmod>2020-01-19T21:35:08+01:00</lastmod>
+	<priority>0.6</priority>
+	<changefreq>monthly</changefreq>
+</url>
+<url>
+	<loc>https://domwatches.ru/policy</loc>
+	<lastmod>2020-01-19T21:35:08+01:00</lastmod>
+	<priority>0.5</priority>
+	<changefreq>monthly</changefreq>
+</url>
+</urlset>

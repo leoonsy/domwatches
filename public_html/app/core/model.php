@@ -15,6 +15,6 @@ abstract class Model
 
 	public function __construct()
 	{
-		$this->db = Db::getDBO();
+		//$this->db = Db::getDBO();
 	}
 }

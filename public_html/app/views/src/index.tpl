@@ -100,8 +100,8 @@
                     <li class="characters__item"><b>Механизм:</b> <span>Кварцевый</span></li>
                     <li class="characters__item"><b>Водонепроницаемость:</b> <span>30м</span></li>
                     <li class="characters__item"><b>Производитель:</b> <span>Китай</span></li>
-                    <li class="characters__item"><b>Диаметр:</b> <span>42мм</span></li>
-                    <li class="characters__item"><b>Год:</b> <span>2019</span></li>
+                    <li class="characters__item"><b>Диаметр:</b> <span>4.2см</span></li>
+                    <li class="characters__item"><b>Длина:</b> <span>20.3см</span></li>
                 </ul>
             </div>
         </div>
