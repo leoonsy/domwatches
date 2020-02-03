@@ -13,7 +13,7 @@
 Модель: <?= $key ?>, количество: <?= $value ?> <br /> 
 <?php endforeach; ?> 
 <br />
-Цена: <?= $price ?> 
+Цена: <?= $price ?> <br />
 E-mail: <?= $email ?> <br />
 От себя: <?= $comment ?> <br />
 <br />

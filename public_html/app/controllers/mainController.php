@@ -81,7 +81,16 @@ class MainController extends AbstractMainController
 			'comment' => $_POST['inputComment'] ?? null
 		];
 
-		$params = array_map(fn($e) => htmlspecialchars($e), $params);
+		$params = array_map(function($e) { 
+			if ($e == null)
+				return $e;
+			if (is_array($e)) {
+				foreach ($e as &$value) 
+					$value = htmlspecialchars($value);
+				return $e;
+			}
+			return htmlspecialchars($e);
+		 }, $params);
 
 		$errors = $this->model->getBuyParamsErrors($params);
 		if (!empty($errors)) {
@@ -104,8 +113,6 @@ class MainController extends AbstractMainController
 			'from' => [
 				'email' => Mail::$usernameSMTP,
 				'name' => Mail::$nameSMTP	
-				// 'email' => $params['email'],
-				// 'name' => "{$params['lastname']} {$params['name']}"
 			],
 			'bodyHTML' => $bodyHTML,
 			'bodyText' => $bodyText
@@ -207,7 +214,7 @@ class MainController extends AbstractMainController
 			'message' => $_POST['inputMessage'] ?? null
 		];
 
-		$params = array_map(fn($e) => htmlspecialchars($e), $params);
+		$params = array_map(function($e) { return $e == null ? $e : htmlspecialchars($e); }, $params);
 
 		$errors = $this->model->getFeedbackParamsErrors($params);
 		if (!empty($errors)) {

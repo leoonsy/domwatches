@@ -164,6 +164,7 @@ class Main extends Model
             $mail->CharSet = "utf-8";
             $mail->isSMTP();
             $mail->SMTPAuth = true;
+            $mail->SMTPDebug = 2;
             $mail->Host = $params['host'];
             $mail->Port = $params['port'];
             $mail->SMTPSecure = 'ssl';
