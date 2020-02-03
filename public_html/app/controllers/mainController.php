@@ -99,7 +99,7 @@ class MainController extends AbstractMainController
 		}
 
 		$params['ip'] = $_SERVER['REMOTE_ADDR'];
-		$params['date'] = date("d.m.y, H:i");
+		$params['date'] = gmdate("d.m.y, H:i");
 		$bodyHTML = $this->view->render('orderHTML', $params, true);
 		$bodyText = $this->view->render('orderText', $params, true);
 
@@ -223,7 +223,7 @@ class MainController extends AbstractMainController
 		}
 
 		$params['ip'] = $_SERVER['REMOTE_ADDR'];
-		$params['date'] = date("d.m.y, H:i");
+		$params['date'] = gmdate("d.m.y, H:i");
 		$bodyHTML = $this->view->render('feedbackHTML', $params, true);
 		$bodyText = $this->view->render('feedbackText', $params, true);
 
