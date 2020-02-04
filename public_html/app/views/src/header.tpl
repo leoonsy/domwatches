@@ -9,6 +9,7 @@
     <meta name="msapplication-config" content="/public/dist/browserconfig.xml?v=BGmn5LMaKE" />
     <meta name="theme-color" content="#1462a6">
     <meta name="og:site_name" content="DOMWatches">
+    <meta name="og:url" content="<?= "https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'] ?>">
     <?= $altMeta ?>
     <link rel="apple-touch-icon" sizes="180x180" href="/public/dist/images/favicons/apple-touch-icon.png?v=BGmn5LMaKE">
     <link rel="icon" type="image/png" sizes="32x32" href="/public/dist/images/favicons/favicon-32x32.png?v=BGmn5LMaKE">

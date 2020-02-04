@@ -41,7 +41,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-12 d-lg-block d-sm-none">
                         <h2 class="footer__logo">
-                            <a class="footer__logo-href" href="#">DOMWATCHES</a>
+                            <a class="footer__logo-href" href="/">DOMWATCHES</a>
                         </h2>
                     </div>
                     <div class="col-lg-2 col-sm-2">
