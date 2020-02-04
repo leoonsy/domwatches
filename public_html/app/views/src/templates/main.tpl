@@ -69,9 +69,8 @@
                     </div>
                     <div class="col-lg-3 col-sm-4">
                         <div class="footer__icons">
-                            <a href="#" class="footer__icons-vk"><i class="fab fa-vk"></i></a>
-                            <a href="#" class="footer__icons-youtube"><i class="fab fa-youtube"></i></a>
-                            <a href="#" class="footer__icons-mail"><i class="far fa-envelope"></i></a>
+                            <a href="https://vk.com/domwatchesru" target="_blank" class="footer__icons-vk"><i class="icon-vkontakte"></i></a>
+                            <a href="mailto:support@domwatches.ru" class="footer__icons-mail"><i class="icon-mail"></i></a>
                         </div>
                         <a class="footer__button" href="/contacts">Задать вопрос</a>
                     </div>

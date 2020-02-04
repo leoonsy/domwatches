@@ -7,7 +7,7 @@
                     <div class="contacts__communication-info">
                         <div class="contacts__communication-single communication-single">
                             <div class="communication-single__icon">
-                                <i class="fas fa-mobile-alt"></i>
+                                <i class="icon-mobile"></i>
                             </div>
                             <div class="communication-single__text">
                                 <h4 class="communication-single__header">Телефон:</h4>
@@ -16,7 +16,7 @@
                         </div>
                         <div class="contacts__communication-single communication-single">
                             <div class="communication-single__icon">
-                                <i class="far fa-envelope"></i>
+                                <i class="icon-mail"></i>
                             </div>
                             <div class="communication-single__text">
                                 <h4 class="communication-single__header">Email:</h4>
@@ -25,7 +25,7 @@
                         </div>
                         <div class="contacts__communication-single communication-single">
                             <div class="communication-single__icon">
-                                <i class="fab fa-vk"></i>
+                                <i class="icon-vkontakte"></i>
                             </div>
                             <div class="communication-single__text">
                                 <h4 class="communication-single__header">VK:</h4>

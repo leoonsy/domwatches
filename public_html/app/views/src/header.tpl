@@ -10,7 +10,6 @@
     <meta name="theme-color" content="#1462a6">
     <meta name="og:site_name" content="DOMWatches">
     <?= $altMeta ?>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="180x180" href="/public/dist/images/favicons/apple-touch-icon.png?v=BGmn5LMaKE">
     <link rel="icon" type="image/png" sizes="32x32" href="/public/dist/images/favicons/favicon-32x32.png?v=BGmn5LMaKE">
     <link rel="icon" type="image/png" sizes="16x16" href="/public/dist/images/favicons/favicon-16x16.png?v=BGmn5LMaKE">

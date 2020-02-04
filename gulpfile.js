@@ -161,10 +161,10 @@ gulp.task('img:build', function () {
       imagemin.gifsicle({interlaced: true}),
       imageminJpegRecompress({
         progressive: true,
-        max: 90,
-        min: 70
+        max: 80,
+        min: 60
       }),
-      imageminPngquant({quality: [0.7, 0.9]}),
+      imageminPngquant({quality: [0.6, 0.8]}),
       imagemin.svgo({plugins: [{removeViewBox: true}]})
     ]))
     .pipe(gulp.dest(path.dist[key])) // положим файлы 
