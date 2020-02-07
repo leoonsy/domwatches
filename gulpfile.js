@@ -54,6 +54,8 @@ const gulp = require('gulp'),  // подключаем Gulp
 let key = args.key || 'public';
 let modules = args.modules || 'false';
 let mode = args.mode || 'development';
+let isDev = 'mode' == 'development' ? true : false;
+let isProd = !isDev;
 let wpFile = args.wpFile || 'main.js';
 let wpDistFile = wpFile.replace(/.js$/, '.min.js');
 
@@ -86,10 +88,10 @@ gulp.task('html:build', function () {
   return gulp.src(path.src[key] + path.type.html) // выбор всех html файлов по указанному пути
     .pipe(plumber()) // отслеживание ошибок
     .pipe(rigger()) // импорт вложений
-    .pipe(htmlmin({
+    .pipe(gulpif(isProd, htmlmin({
       collapseWhitespace: true, // удаляем все переносы
       removeComments: true // удаляем все комментарии
-    }))	
+    })))	
     .pipe(gulp.dest(path.dist[key])) // выкладывание готовых файлов
 });
 
@@ -98,13 +100,13 @@ gulp.task('css:build', function () {
   return gulp.src(path.src[key] + path.type.css) // получим все стили css
     .pipe(plumber()) // для отслеживания ошибок
     .pipe(rename({ suffix: ".min" }))
-    .pipe(gulpif(mode, sourcemaps.init())) // инициализируем sourcemap
+    .pipe(gulpif(isDev, sourcemaps.init())) // инициализируем sourcemap
     .pipe(autoprefixer({ //префиксы
       overrideBrowserslist: ['last 25 versions'],
       cascade: false
     }))
-    .pipe(cleanCSS()) // минимизируем CSS
-    .pipe(gulpif(mode, sourcemaps.write('./'))) // записываем sourcemap
+    .pipe(gulpif(isProd, cleanCSS())) // минимизируем CSS
+    .pipe(gulpif(isDev, sourcemaps.write('./'))) // записываем sourcemap
     .pipe(gulp.dest(path.dist[key])) // выгружаем в build
 });
 
@@ -113,14 +115,14 @@ gulp.task('scss:build', function () {
   return gulp.src(path.src[key] + path.type.scss) // получим все стили scss
     .pipe(plumber()) // для отслеживания ошибок
     .pipe(rename({ suffix: ".min" }))
-    .pipe(gulpif(mode, sourcemaps.init())) // инициализируем sourcemap
+    .pipe(gulpif(isDev, sourcemaps.init())) // инициализируем sourcemap
     .pipe(sass()) // scss -> css
     .pipe(autoprefixer({ //префиксы
       overrideBrowserslist: ['last 25 versions'],
       cascade: false
     }))
-    .pipe(cleanCSS()) // минимизируем CSS
-    .pipe(gulpif(mode, sourcemaps.write('./'))) // записываем sourcemap
+    .pipe(gulpif(isProd, cleanCSS())) // минимизируем CSS
+    .pipe(gulpif(isDev, sourcemaps.write('./'))) // записываем sourcemap
     .pipe(gulp.dest(path.dist[key])) // выгружаем в build
 });
 
@@ -139,7 +141,7 @@ gulp.task('js:build', function () {
     .pipe(rename({ suffix: ".min" }))
     .pipe(plumber()) // для отслеживания ошибок
     .pipe(rigger()) // импортируем все указанные файлы js
-    .pipe(gulpif(mode, sourcemaps.init())) //инициализируем sourcemap
+    .pipe(gulpif(isDev, sourcemaps.init())) //инициализируем sourcemap
     .pipe(babel({
       "presets": [
         [
@@ -150,8 +152,8 @@ gulp.task('js:build', function () {
         ]
       ]
     }))
-    .pipe(uglify()) // минимизируем js	
-    .pipe(gulpif(mode, sourcemaps.write('./'))) //  записываем sourcemap
+    .pipe(gulpif(isProd, uglify())) // минимизируем js	
+    .pipe(gulpif(isDev, sourcemaps.write('./'))) //  записываем sourcemap
     .pipe(gulp.dest(path.dist[key])) // положим готовый файл
 });
 
