@@ -30,7 +30,7 @@ let path = {
 };
 
 /* подключаем gulp и плагины */
-let gulp = require('gulp'),  // подключаем Gulp
+const gulp = require('gulp'),  // подключаем Gulp
   plumber = require('gulp-plumber'), // модуль для отслеживания ошибок
   rigger = require('gulp-rigger'), // модуль для импорта содержимого одного файла в другой
   sourcemaps = require('gulp-sourcemaps'), // модуль для генерации карты исходных файлов
@@ -45,9 +45,10 @@ let gulp = require('gulp'),  // подключаем Gulp
   args = require('yargs').argv, //работа с аргументами
   rename = require('gulp-rename'), //переименование
   wpStream = require('webpack-stream'), //работа с webpack
-  imagemin = require('gulp-imagemin'),
-  imageminJpegRecompress = require('imagemin-jpeg-recompress'),
-  imageminPngquant = require('imagemin-pngquant');
+  gulpif = require('gulp-if'),
+  imagemin = require('gulp-imagemin'), //сжатие изображений
+  imageminJpegRecompress = require('imagemin-jpeg-recompress'), //сжатие изображений
+  imageminPngquant = require('imagemin-pngquant'); //сжатие изображений
 
 /* параметры */
 let key = args.key || 'public';
@@ -97,13 +98,13 @@ gulp.task('css:build', function () {
   return gulp.src(path.src[key] + path.type.css) // получим все стили css
     .pipe(plumber()) // для отслеживания ошибок
     .pipe(rename({ suffix: ".min" }))
-//    .pipe(sourcemaps.init()) // инициализируем sourcemap
+    .pipe(gulpif(mode, sourcemaps.init())) // инициализируем sourcemap
     .pipe(autoprefixer({ //префиксы
       overrideBrowserslist: ['last 25 versions'],
       cascade: false
     }))
     .pipe(cleanCSS()) // минимизируем CSS
-//    .pipe(sourcemaps.write('./')) // записываем sourcemap
+    .pipe(gulpif(mode, sourcemaps.write('./'))) // записываем sourcemap
     .pipe(gulp.dest(path.dist[key])) // выгружаем в build
 });
 
@@ -112,14 +113,14 @@ gulp.task('scss:build', function () {
   return gulp.src(path.src[key] + path.type.scss) // получим все стили scss
     .pipe(plumber()) // для отслеживания ошибок
     .pipe(rename({ suffix: ".min" }))
-//    .pipe(sourcemaps.init()) // инициализируем sourcemap
+    .pipe(gulpif(mode, sourcemaps.init())) // инициализируем sourcemap
     .pipe(sass()) // scss -> css
     .pipe(autoprefixer({ //префиксы
       overrideBrowserslist: ['last 25 versions'],
       cascade: false
     }))
     .pipe(cleanCSS()) // минимизируем CSS
-//    .pipe(sourcemaps.write('./')) // записываем sourcemap
+    .pipe(gulpif(mode, sourcemaps.write('./'))) // записываем sourcemap
     .pipe(gulp.dest(path.dist[key])) // выгружаем в build
 });
 
@@ -138,7 +139,7 @@ gulp.task('js:build', function () {
     .pipe(rename({ suffix: ".min" }))
     .pipe(plumber()) // для отслеживания ошибок
     .pipe(rigger()) // импортируем все указанные файлы js
-//    .pipe(sourcemaps.init()) //инициализируем sourcemap
+    .pipe(gulpif(mode, sourcemaps.init())) //инициализируем sourcemap
     .pipe(babel({
       "presets": [
         [
@@ -150,7 +151,7 @@ gulp.task('js:build', function () {
       ]
     }))
     .pipe(uglify()) // минимизируем js	
-//    .pipe(sourcemaps.write('./')) //  записываем sourcemap
+    .pipe(gulpif(mode, sourcemaps.write('./'))) //  записываем sourcemap
     .pipe(gulp.dest(path.dist[key])) // положим готовый файл
 });
 
