@@ -11,7 +11,7 @@
                             <img src="/public/dist/images/watches/0.png" alt="M-635D-1M9" />
                         </div>
                         <div class="buy-goods__discount buy-goods__discount--few">
-                            <span>СКИДКА 20%</span>
+                            <span>СКИДКА 30%</span>
                         </div>
                         <h3 class="buy-goods__title">M-635D-1M9</h3>
                         <div class="buy-goods__price">
@@ -19,7 +19,7 @@
                                 2499₽
                             </div>
                             <div class="buy-goods__price-new">
-                                1999₽
+                                1750₽
                             </div>
                         </div>
                         <hr class="buy-goods__item-separator" />
@@ -36,7 +36,7 @@
                             <img src="/public/dist/images/watches/1.png" alt="M-635BK-1M" />
                         </div>
                         <div class="buy-goods__discount buy-goods__discount--few">
-                            <span>СКИДКА 20%</span>
+                            <span>СКИДКА 30%</span>
                         </div>
                         <h3 class="buy-goods__title">M-635BK-1M</h3>
                         <div class="buy-goods__price">
@@ -44,7 +44,7 @@
                                 2499₽
                             </div>
                             <div class="buy-goods__price-new">
-                                1999₽
+                                1750₽
                             </div>
                         </div>
                         <hr class="buy-goods__item-separator" />
@@ -83,8 +83,8 @@
                         <div class="buy-goods__img">
                             <img src="/public/dist/images/watches/3.png" alt="M-635L-7M" />
                         </div>
-                        <div class="buy-goods__discount buy-goods__discount--few">
-                            <span>СКИДКА 30%</span>
+                        <div class="buy-goods__discount">
+                            <span>СКИДКА 40%</span>
                         </div>
                         <h3 class="buy-goods__title">M-635L-7M</h3>
                         <div class="buy-goods__price">
@@ -92,7 +92,7 @@
                                 2499₽
                             </div>
                             <div class="buy-goods__price-new">
-                                1749₽
+                                1499₽
                             </div>
                         </div>
                         <hr class="buy-goods__item-separator" />

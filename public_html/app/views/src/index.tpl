@@ -99,7 +99,7 @@
                     <li class="characters__item"><b>Ремешок / браслет:</b> <span>Кожа / Нержавеющая сталь</span></li>
                     <li class="characters__item"><b>Механизм:</b> <span>Кварцевый</span></li>
                     <li class="characters__item"><b>Водонепроницаемость:</b> <span>30м</span></li>
-                    <li class="characters__item"><b>Производитель:</b> <span>Китай</span></li>
+                    <li class="characters__item"><b>Год:</b> <span>2020</span></li>
                     <li class="characters__item"><b>Диаметр:</b> <span>4.2см</span></li>
                     <li class="characters__item"><b>Длина:</b> <span>20.3см</span></li>
                 </ul>
@@ -145,7 +145,7 @@
                         <img src="/public/dist/images/watches/0.png" alt="M-635L-1M9" />
                     </div>
                     <div class="goods__discount goods__discount--few">
-                        <span>СКИДКА 20%</span>
+                        <span>СКИДКА 30%</span>
                     </div>
                     <h3 class="goods__title">M-635D-1M9</h3>
                     <p class="goods__description">Стильные часы DOM с белым стальным браслетом и желто-черным циферблатом.</p>
@@ -156,7 +156,7 @@
                                 2499₽
                             </div>
                             <div class="goods__price-new">
-                                1999₽
+                                1750₽
                             </div>
                         </div>
                     </div>
@@ -169,7 +169,7 @@
                         <img src="/public/dist/images/watches/1.png" alt="M-635BK-1M" />
                     </div>
                     <div class="goods__discount goods__discount--few">
-                        <span>СКИДКА 20%</span>
+                        <span>СКИДКА 30%</span>
                     </div>
                     <h3 class="goods__title">M-635BK-1M</h3>
                     <p class="goods__description">Часы DOM со строгим черно-белым дизайном и стальным браслетом.</p>
@@ -180,7 +180,7 @@
                                 2499₽
                             </div>
                             <div class="goods__price-new">
-                                1999₽
+                                1750₽
                             </div>
                         </div>
                     </div>
@@ -214,8 +214,8 @@
                     <div class="goods__img">
                         <img src="/public/dist/images/watches/3.png" alt="M-635L-7M" />
                     </div>
-                    <div class="goods__discount goods__discount--few">
-                        <span>СКИДКА 30%</span>
+                    <div class="goods__discount">
+                        <span>СКИДКА 40%</span>
                     </div>
                     <h3 class="goods__title">M-635L-7M</h3>
                     <p class="goods__description">Красивые часы с натуральным кожаным ремешком и черно-белым циферблатом</p>
@@ -226,17 +226,18 @@
                                 2499₽
                             </div>
                             <div class="goods__price-new">
-                                1749₽
+                                1499₽
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="goods__buy">
-            <a href="/buy" class="goods__button">Заказать часы</a>
-        </div>
+    <div class="goods__buy">
+        <a href="/buy" class="goods__button">Заказать часы</a>
+    </div>
     </div>
 </section>
 <section id="section-why-we">
@@ -265,7 +266,7 @@
                     <div class="why-we__item">
                         <img src="/public/dist/images/icons/why-we/support.png" alt="Письмо">
                         <h4 class="why-we__item-head">ТЕХНИЧЕСКАЯ ПОДДЕРЖКА</h4>
-                        <p>Служба поддержки ответит на любой Ваш вопрос. Вы можете написать нам письмо на электронную почту либо заказать звонок.</p>
+                        <p>Служба поддержки ответит на любой Ваш вопрос. Вы можете написать нам письмо на электронную почту либо позвонить (см. "Контакты").</p>
                     </div>
                 </div>
                 <div class="col-lg-6 mb-3">
@@ -340,7 +341,7 @@
                                 <img src="/public/dist/images/reviews/2.jpg" class="reviews__avatar" alt="Артем Сазонов" />
                                 <div class="reviews__text">
                                     <h3 class="reviews__name">Артем Сазонов</h3>
-                                    <p>Заказывал часы по скидке. Доставили за 5 дней. Красивые часы! Ничего не люфтит, не шатается. Надежные, хотя стараюсь их не мочить. Точность хода изумительная, порадовал хронограф. Ремешок хороший, качественный! Я очень доволен покупкой, спасибо)</p>
+                                    <p>Заказывал часы по скидке. Доставили за 5 дней. Красивые часы! Ничего не люфтит, не шатается. Надежные, хотя стараюсь их сильно не мочить. Точность хода изумительная, порадовал хронограф. Ремешок хороший, качественный! Я очень доволен покупкой, спасибо)</p>
                                 </div>
                             </div>
                         </div>
@@ -349,7 +350,7 @@
                                 <img src="/public/dist/images/reviews/3.jpg" class="reviews__avatar" alt="Сергей Фомин" />
                                 <div class="reviews__text">
                                     <h3 class="reviews__name">Сергей Фомин</h3>
-                                    <p>Часы удобно лежат на руке, смотрятся СУПЕР! Выглядят дороже своей цены. Заказал по акции еще одни для своего троюродного брата. Ему тоже они понравились!) Эти часы подходят под любой стиль одежды! Спасибо большое вашему сайту.</p>
+                                    <p>Часы удобно лежат на руке, смотрятся СУПЕР! Выглядят дороже своей цены. Заказал по акции еще одни для своего троюродного брата. Ему тоже они понравились!) Эти часы подходят под любой стиль одежды! Спасибо большое.</p>
                                 </div>
                             </div>
                         </div>

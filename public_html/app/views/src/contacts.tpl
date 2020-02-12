@@ -11,7 +11,7 @@
                             </div>
                             <div class="communication-single__text">
                                 <h4 class="communication-single__header">Телефон:</h4>
-                                <p><a href="tel:+79198592135">8 (919) 859-21-35</a></p>
+                                <p><a href="tel:+79871989378">8 (987) 198-93-78</a></p>
                             </div>
                         </div>
                         <div class="contacts__communication-single communication-single">
@@ -29,7 +29,7 @@
                             </div>
                             <div class="communication-single__text">
                                 <h4 class="communication-single__header">VK:</h4>
-                                <p><a href="https://vk.com/domwatchesru">http://vk.com/domwatchesru</i></a></p>
+                                <p><a href="https://vk.com/domwatchesru" target="_blank">http://vk.com/domwatchesru</i></a></p>
                             </div>
                         </div>
                     </div>

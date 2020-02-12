@@ -31,19 +31,19 @@ class MainController extends AbstractMainController
 	 */
 	public function actionIndex()
 	{
-		$this->title = 'DOMWatches.ru — Эксклюзивные часы DOM';
-		$this->meta_desc = 'На сайте предоставляются современные мужские часы DOM M-635 по низкой цене. Быстрая доставка, гарантия, оплата при получении на руки.';
-		$this->meta_key = 'часы DOM, наручные часы, мужские часы, магазин, модель M-635';
+		$this->title = 'DOMWatches.ru — Эксклюзивные мужские часы DOM';
+		$this->meta_desc = 'На сайте можно купить часы DOM по низкой цене. Быстрая доставка, гарантия, оплата при получении на руки.';
+		$this->meta_key = 'часы DOM, часы dom купить, мужские часы dom, наручные часы, магазин, эксклюзивные часы, часы дом, модель M-635';
 		$this->scripts = ['jquery-3.4.1.min.js', 'parallax.min.js', 'popper.min.js', 'bootstrap.min.js', 'jquery.flipper-responsive.min.js', 'aos.min.js', 'moment.min.js', 'main.min.js'];
 		$this->styles = ['global:https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap', 'bootstrap.min.css', 'main.min.css', 'countdown.min.css', 'aos.min.css', 'fontello.min.css'];
 		$this->meta = [
 			[
 				'name' => 'og:title',
-				'content' => 'DOMWatches.ru — Эксклюзивные часы DOM'
+				'content' => 'DOMWatches.ru — Мужские часы DOM'
 			],
 			[
 				'name' => 'og:description',
-				'content' => 'Cовременные мужские часы DOM M-635 по низкой цене. Быстрая доставка, гарантия, оплата при получении на руки'
+				'content' => 'Cовременные мужские часы DOM по низкой цене. Быстрая доставка, гарантия, оплата при получении на руки'
 			],
 			[
 				'name' => 'og:type',
@@ -75,8 +75,8 @@ class MainController extends AbstractMainController
 	 */
 	public function actionBuy()
 	{
-		$this->title = 'Заказать часы DOM';
-		$this->meta_desc = 'Купить мужские часы DOM M-635 по скидке. Доставка почтой России.';
+		$this->title = 'Купить часы DOM';
+		$this->meta_desc = 'Купить мужские часы DOM по скидке. Доставка почтой России.';
 		$this->meta_key = 'заказать часы DOM, купить часы DOM, форма заказа';
 		$this->scripts = ['jquery-3.4.1.min.js', 'popper.min.js', 'bootstrap.min.js', 'aos.min.js', 'bootstrap-validate.min.js', 'buy-validation.min.js', 'jquery.bootstrap-touchspin.min.js', 'main.min.js'];
 		$this->styles = ['global:https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap', 'bootstrap.min.css', 'main.min.css', 'countdown.min.css', 'aos.min.css', 'fontello.min.css'];
@@ -87,7 +87,7 @@ class MainController extends AbstractMainController
 			],
 			[
 				'name' => 'og:description',
-				'content' => 'Купить мужские часы DOM M-635 по скидке. Доставка почтой России.'
+				'content' => 'Купить мужские часы DOM по скидке. Доставка почтой России.'
 			],
 			[
 				'name' => 'og:type',
@@ -188,19 +188,19 @@ class MainController extends AbstractMainController
 	 */
 	public function actionPhoto()
 	{
-		$this->title = 'Фотоальбом часов DOM M-635';
-		$this->meta_desc = 'Демонстрация часов DOM M-635 отдельно и на руке мужчины. Качественные фото с разных ракурсов.';
-		$this->meta_key = 'фото часов DOM, фотоальбом, часы DOM в картинках, модель M-635';
+		$this->title = 'Фотоальбом часов DOM';
+		$this->meta_desc = 'Фото часов DOM отдельно и на руке мужчин. Качественные фото часов DOM с разных ракурсов.';
+		$this->meta_key = 'фото часов DOM, фотоальбом, часы DOM в картинках, часы DOM фото';
 		$this->scripts = ['jquery-3.4.1.min.js', 'popper.min.js', 'bootstrap.min.js', 'aos.min.js', 'jquery.fancybox.min.js', 'main.min.js'];
 		$this->styles = ['global:https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap', 'bootstrap.min.css', 'jquery.fancybox.min.css', 'main.min.css', 'aos.min.css', 'fontello.min.css'];
 		$this->meta = [
 			[
 				'name' => 'og:title',
-				'content' => 'Фотоальбом часов DOM M-635'
+				'content' => 'Фотоальбом часов DOM'
 			],
 			[
 				'name' => 'og:description',
-				'content' => 'Демонстрация часов DOM M-635 отдельно и на руке мужчины. Качественные фото с разных ракурсов.'
+				'content' => 'Фото часов DOM отдельно и на руке мужчин. Качественные фото с разных ракурсов.'
 			],
 			[
 				'name' => 'og:type',
@@ -232,15 +232,15 @@ class MainController extends AbstractMainController
 	 */
 	public function actionReviews()
 	{
-		$this->title = 'Отзывы о часах DOM M-635';
+		$this->title = 'Отзывы о часах DOM';
 		$this->meta_desc = 'Отзывы реальных людей, купивших часы DOM на данном сайте. Преимущества, недостатки и комментарии от покупателей.';
-		$this->meta_key = 'реальные отзывы, отзывы о часах DOM, отзывы о сайте, преимущества, недостатки';
+		$this->meta_key = 'часы DOM отзывы, отзывы покупателей, отзывы о мужских часах DOM';
 		$this->scripts = ['jquery-3.4.1.min.js', 'popper.min.js', 'bootstrap.min.js', 'aos.min.js', 'main.min.js'];
 		$this->styles = ['global:https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap', 'bootstrap.min.css', 'main.min.css', 'aos.min.css', 'fontello.min.css'];
 		$this->meta = [
 			[
 				'name' => 'og:title',
-				'content' => 'Отзывы о часах DOM M-635'
+				'content' => 'Отзывы о часах DOM'
 			],
 			[
 				'name' => 'og:description',
@@ -278,7 +278,7 @@ class MainController extends AbstractMainController
 	{
 		$this->title = 'Ответы на часто задаваемые вопросы';
 		$this->meta_desc = 'Ответы на вопросы доставки, гарантии, оплате, работе часов DOM';
-		$this->meta_key = 'ответы на вопросы, faq, часто задаваемые вопросы';
+		$this->meta_key = 'ответы на вопросы DOM, faq, часто задаваемые вопросы';
 		$this->scripts = ['jquery-3.4.1.min.js', 'popper.min.js', 'bootstrap.min.js', 'aos.min.js', 'main.min.js'];
 		$this->styles = ['global:https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap', 'bootstrap.min.css', 'main.min.css', 'aos.min.css', 'fontello.min.css'];
 		$this->meta = [

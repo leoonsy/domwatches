@@ -5,6 +5,10 @@
 @import "../../../../node_modules/bootstrap/scss/_mixins";
 @import "_hamburger";
 
+html, body, #wrapper {
+  overflow-x: hidden;
+}
+
 /** Общее **/
 body {
   min-width: 240px;
@@ -12,7 +16,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   display: flex; //for IE10-11 fix footer
-  overflow-x: hidden;
   font-display: swap;
 }
 
@@ -20,6 +23,7 @@ body {
   display: flex;
   flex: 1 1 auto; //for IE10-11 fix footer
   flex-flow: column nowrap;
+  //width: 100%;
   min-height: 100vh;
 }
 
@@ -1465,9 +1469,9 @@ a:hover {
     position: relative;
 
     &::before {
-      content: "\f077";
-      font-family: "FontAwesome";
+      content: url('../images/icons/chevron-up-solid.svg');;
       position: absolute;
+      width: 10px;
       right: 0;
       transition: all 0.5s;
       color: rgb(82, 82, 82);

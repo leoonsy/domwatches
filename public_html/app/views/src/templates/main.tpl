@@ -63,7 +63,7 @@
                     <div class="col-lg-2 col-sm-3">
                         <h5 class="footer__menu-name">Связь</h5>
                         <ul class="footer__list">
-                            <li><a href="tel:+79198592135">8 (919) 859-21-35</a></li>
+                            <li><a href="tel:+79871989378">8 (987) 198-93-78</a></li>
                             <p>г. Оренбург</p>
                         </ul>
                     </div>
@@ -78,6 +78,7 @@
             </div>
             <div class="footer__copyright">
                 <a href="/policy">Политика конфиденциальности</a>
+                <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(57499242, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/57499242" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
             </div>
         </footer>
     </div>
