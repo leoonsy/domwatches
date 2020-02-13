@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <?= $header ?>
-    <!--[if lte IE 9]><style>#wrapper,.parallax-mirror{display:none;}</style><p class="text-center text-danger h1">Вы используете <strong>устаревшую</strong> версию браузера. Пожалуйста <a href="http://browsehappy.com/">обновите свой браузер</a>.</p><![endif]-->
+<!--[if lte IE 9]><style>#wrapper,.parallax-mirror{display:none;}</style><p class="text-center text-danger h1">Вы используете <strong>устаревшую</strong> версию браузера. Пожалуйста <a href="http://browsehappy.com/">обновите свой браузер</a>.</p><![endif]-->
+
 <body>
     <div id="wrapper">
         <div id="content">
@@ -78,7 +79,6 @@
             </div>
             <div class="footer__copyright">
                 <a href="/policy">Политика конфиденциальности</a>
-                <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(57499242, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/57499242" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
             </div>
         </footer>
     </div>
