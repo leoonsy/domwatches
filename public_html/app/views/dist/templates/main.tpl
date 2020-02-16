@@ -70,7 +70,6 @@
                     </div>
                     <div class="col-lg-3 col-sm-4">
                         <div class="footer__icons">
-                            <a href="https://vk.com/domwatchesru" target="_blank" class="footer__icons-vk"><i class="icon-vkontakte"></i></a>
                             <a href="mailto:support@domwatches.ru" class="footer__icons-mail"><i class="icon-mail"></i></a>
                         </div>
                         <a class="footer__button" href="/contacts">Задать вопрос</a>

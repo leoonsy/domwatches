@@ -23,7 +23,7 @@
                                 <p><a href="mailto:support@domwatches.ru">support@domwatches.ru</a></p>
                             </div>
                         </div>
-                        <div class="contacts__communication-single communication-single">
+                        <!-- <div class="contacts__communication-single communication-single">
                             <div class="communication-single__icon">
                                 <i class="icon-vkontakte"></i>
                             </div>
@@ -31,7 +31,7 @@
                                 <h4 class="communication-single__header">VK:</h4>
                                 <p><a href="https://vk.com/domwatchesru" target="_blank">http://vk.com/domwatchesru</i></a></p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

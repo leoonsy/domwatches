@@ -119,7 +119,7 @@
                         </div>
                         <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#faq__accordion">
                             <div class="card-body">
-                                <b>Ответ:</b> Вы можете оставить отзыв, написав его в нашу <a class="alert-link" href='https://vk.com/domwatchesru' target="_blank">группу Вконтакте</a> или через <a class="alert-link" href='/contacts'>форму обратной связи</a>. Грамотные отзывы могут попасть на главную страницу сайта или в раздел "<a class="alert-link" href='/reviews'>Отзывы</a>".
+                                <b>Ответ:</b> Вы можете оставить отзыв, написав его через <a class="alert-link" href='/contacts'>форму обратной связи</a>. Грамотные отзывы могут попасть на главную страницу сайта или в раздел "<a class="alert-link" href='/reviews'>Отзывы</a>".
                             </div>
                         </div>
                     </div>
