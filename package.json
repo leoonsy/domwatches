@@ -35,7 +35,7 @@
     "imagemin-pngquant": "^8.0.0",
     "imagemin-jpeg-recompress": "^6.0.0",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
